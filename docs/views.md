@@ -3,7 +3,7 @@
 ## Login
 ![login]
 
-## Edit Album
+## Create/Edit/Delete Album + Photo tile view
 ![edit-album]
 
 <!-- ## NotesIndex / NoteIndexItem / NoteForm
