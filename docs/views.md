@@ -19,7 +19,7 @@
 ![component-heirarchy] -->
 
 [login]: ./wireframes/login.png
-[edit-album]: ./wireframes/edit-album.png
+[edit-album]: ./wireframes/edit_album.png
 <!-- [notes]: ./wireframes/root_notes.png
 [notebooks]: ./wireframes/root_notebooks.png
 [notebook-form]: ./wireframes/notebook_form.png
