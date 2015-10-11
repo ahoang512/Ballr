@@ -18,7 +18,7 @@
 ## Component Heirarchy
 ![component-heirarchy] -->
 
-[new-user]: ./wireframes/login.png
+[login]: ./wireframes/login.png
 [edit-album]: ./wireframes/edit-album.png
 <!-- [notes]: ./wireframes/root_notes.png
 [notebooks]: ./wireframes/root_notebooks.png
