@@ -6,9 +6,9 @@
 ## Create/Edit/Delete Album + Photo tile view
 ![edit-album]
 
-<!-- ## NotesIndex / NoteIndexItem / NoteForm
-![notes]
-
+## Photo-View
+![photo-view]
+<!--
 ## NotebooksIndex / NotebookIndexItem
 ![notebooks]
 
@@ -20,7 +20,8 @@
 
 [login]: ./wireframes/login.png
 [edit-album]: ./wireframes/edit_album.png
-<!-- [notes]: ./wireframes/root_notes.png
+[photo-view]: ./wireframes/photo_view.png
+<!--
 [notebooks]: ./wireframes/root_notebooks.png
 [notebook-form]: ./wireframes/notebook_form.png
 [component-heirarchy]: ./wireframes/component_heirarchy.png -->
