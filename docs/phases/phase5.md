@@ -1,4 +1,4 @@
-# Phase 5: Reminders and Garbage Collection
+# Phase 5: Tags/Tagging/Routes
 
 ## Rails
 ### Models
