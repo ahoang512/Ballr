@@ -40,7 +40,7 @@ and albums. Also create the navbar component that will appear on each page.
 
 ### Phase 2: Flux Architecture and Note CRUD (2.0 days)
 
-Phase 2 is focused on setting up Flux, the React Router, and the React view
+Phase 2 is focused on setting up Flux and the React view
 structure for the main application. After the basic Flux architecture has been
 set up, a Album store will be implemented and a set of actions corresponding to
 the needed CRUD functionality created. Once this is done, I will create React
