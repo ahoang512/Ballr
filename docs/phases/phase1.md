@@ -5,7 +5,7 @@
 * User
 * Album
 * Photo
-* 
+
 
 ### Controllers
 * UsersController (create, new)
