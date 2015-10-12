@@ -3,21 +3,27 @@
 ## Rails
 ### Models
 * User
-* Note
+* Album
+* Photo
+* 
 
 ### Controllers
 * UsersController (create, new)
 * SessionsController (create, new, destroy)
-* Api::NotesController (create, destroy, index, show, update)
+* Api::AlbumController (create, destroy, index, show, update)
+* Api::PhotoController (create, destroy, index, show, update)
 
 ### Views
 * users/new.html.erb
 * session/new.html.erb
-* notes/index.json.jbuilder
-* notes/show.json.jbuilder
+* album/index.json.jbuilder
+* album/show.json.jbuilder
+* photo/index.json.jbuilder
+* photo/show.json.builder
 
 ## Flux
 ### Views (React Components)
+* navbar
 
 ### Stores
 
