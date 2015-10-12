@@ -17,9 +17,9 @@
 * users/new.html.erb
 * session/new.html.erb
 * album/index.json.jbuilder
-* album/show.json.jbuilder
+* album/edit.json.jbuilder
 * photo/index.json.jbuilder
-* photo/show.json.builder
+* photo/edit.json.builder
 
 ## Flux
 ### Views (React Components)
