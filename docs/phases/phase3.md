@@ -1,39 +1,31 @@
-# Phase 3: Notebooks and Tags (2 days)
+# Phase 3: Photos and Drag/Drop UI (2 days)
 
 ## Rails
 ### Models
-* Notebook
-* Tag
-* Tagging
 
 ### Controllers
-* Api::NotebooksController (create, destroy, index, show, update)
 
 ### Views
-* notebooks/index.json.jbuilder
-* notebooks/show.json.jbuilder
-* tags/show.json.jbuilder
 
 ## Flux
 ### Views (React Components)
-* NotebooksIndex
-  - NotebookIndexItem
-* NotebookForm
-* SearchIndex
+* PhotoTilesContainer
+  - PhotoTile
+* PhotoForm
 
 ### Stores
-* Notebook
+* Photo
 
 ### Actions
-* ApiActions.receiveAllNotebooks
-* ApiActions.receiveSingleNotebook
-* ApiActions.deleteNotebook
+* ApiActions.receiveAllPhotos
+* ApiActions.receiveSinglePhoto
+* ApiActions.deletePhoto
 
 ### ApiUtil
-* ApiUtil.fetchAllNotebooks
-* ApiUtil.fetchSingleNotebook
-* ApiUtil.createNotebook
-* ApiUtil.editNotebook
-* ApiUtil.destroyNotebook
+* ApiUtil.fetchAllPhotos
+* ApiUtil.fetchSinglePhoto
+* ApiUtil.createPhoto
+* ApiUtil.editPhoto
+* ApiUtil.destroyPhoto
 
 ## Gems/Libraries
