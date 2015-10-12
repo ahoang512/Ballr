@@ -6,12 +6,16 @@
 ### Controllers
 
 ### Views
+* album/show.json.jbuilder
+* photo/show.json.jbuilder
 
 ## Flux
 ### Views (React Components)
+* PhotoComponent
+* PhotoInfoComponent
 
 ### Stores
-
+* not sure
 ### Actions
 
 ## Gems/Libraries
