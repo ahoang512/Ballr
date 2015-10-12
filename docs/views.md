@@ -12,15 +12,12 @@
 ## Navbar 
 ![navbar]
 
-<!--
-## NoteBookForm
-![notebook-form]
 
 ## Component Heirarchy
-![component-heirarchy] -->
+![component-heirarchy] 
 
 [login]: ./wireframes/login.png
 [edit-album]: ./wireframes/edit_album.png
 [photo-view]: ./wireframes/photo_view.png
 [navbar]: ./wireframes/navbar.png
-[component-heirarchy]: ./wireframes/comp_hie.png
+[component-heirarchy]: ./wireframes/comp_hei.png
