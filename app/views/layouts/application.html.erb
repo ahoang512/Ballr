@@ -5,6 +5,13 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <% if current_user %>
+    <script type="text/javascript">
+      window.current_user = <%= current_user %>
+    </script>
+  <% end %>
+  <script src="http://widget.cloudinary.com/global/all.js"></script>
+
 </head>
 <body>
 
@@ -12,12 +19,14 @@
 
 <%= yield %>
 <% if signed_in? %>
+  <br/>
   <%= current_user.username %>
   <%= button_to "Sign Out", session_url, method: :delete %>
 <% else %>
   <%= link_to "Sign In", new_session_url  %>
   <%= link_to "Sign Up", new_user_url %>
 <% end %>
+
 
 </body>
 </html>

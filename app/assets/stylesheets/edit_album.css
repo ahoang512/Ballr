@@ -1,0 +1,40 @@
+.editLabel {
+  font-size: 30px;
+}
+
+.albumTileContainer {
+  float: left;
+  width: 20%;
+  height: 95%;
+  margin-left: 3%;
+  margin-top: 1%;
+  border-style: solid;
+  border-width: 1px;
+  background-color: teal;
+}
+
+.photoTileContainer {
+  margin-right: 3%;
+  margin-top: 1%;
+  float: right;
+  width: 70%;
+  height: 95%;
+  border-style: solid;
+  border-width: 1px;
+  background-color: teal;
+}
+
+.editContainer {
+  width: 90%;
+  margin: auto;
+  height: 600px;
+  background-color: darkslategrey;
+}
+
+.editLabels{
+  text-align: center;
+  background-color: cadetblue;
+  height: 5%;
+  font-size: 25px;
+  color: turquoise;
+}
