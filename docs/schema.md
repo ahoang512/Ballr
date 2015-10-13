@@ -26,7 +26,6 @@ column name | data type | details
 id          | integer   | not null, primary key
 title       | string    | not null
 owner_id    | integer   | not null foreign (references users) indexed
-notebook_id | integer   | not null, foreign key (references notebooks), indexed
 public      | boolean   | not null, default: true
 
 
