@@ -28,6 +28,15 @@ class User < ActiveRecord::Base
   validates :password,
     length: {minimum: 6, allow_nil: true}
 
+  has_many :albums,
+    class_name: "Album",
+    foreign_key: :owner_id,
+    primary_key: :id
+
+  has_many :photos,
+    through: :albums,
+    source: :photos
+
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
     return nil unless user && user.valid_password?(password)
