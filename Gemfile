@@ -17,7 +17,7 @@ gem 'annotate'
 gem 'pry-rails'
 gem 'react-rails', '1.3.0'
 gem 'flux-rails-assets'
-
+gem 'newrelic_rpm'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
