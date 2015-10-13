@@ -1,12 +1,14 @@
 var EditAlbum = React.createClass({
   render : function () {
     return (
-      <div>
+      <div className="editAlbum">
         <span className="editLabel">Edit Your Albums</span>
         <div className="editContainer group">
           <AlbumTileContainer/>
           <PhotoTileContainer/>
-
+        </div>
+        <div className="uploadRow">
+          <UploadButton/>
         </div>
       </div>
     );
@@ -14,6 +16,13 @@ var EditAlbum = React.createClass({
 
 });
 
-// var UploadButton = React.createClass({
-//
-// })
+
+var UploadButton = React.createClass({
+  render : function() {
+    return (
+      <div className="uploadButton">
+        Upload
+      </div>
+    );
+  }
+})
