@@ -13,22 +13,19 @@
 
 class User < ActiveRecord::Base
   attr_reader :password
-  afer_initialize :ensure_session_token
+  after_initialize :ensure_session_token
 
-  validates
-    :username,
+  validates :username,
     :email,
     :password_digest,
     :session_token,
     presence: true
 
-  validates
-    :username,
+  validates :username,
     :email,
     uniqueness: true
 
-  validates
-    :password,
+  validates :password,
     length: {minimum: 6, allow_nil: true}
 
   def self.find_by_credentials(email, password)
