@@ -15,6 +15,8 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 gem 'annotate'
 gem 'pry-rails'
+gem 'react-rails', '1.3.0'
+gem 'flux-rails-assets'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
