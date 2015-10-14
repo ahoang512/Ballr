@@ -9,7 +9,7 @@ var AlbumTileContainer = React.createClass({
     this.setState({createNewAlbum: true});
   },
   _handleSubmit : function (e) {
-
+    ApiUtil.createAlbum(e.target[0].value);
   },
 
   render : function () {
