@@ -1,10 +1,10 @@
 window.ApiUtil = {
-  fetchAllAlbums : function (){
+  fetchUserAlbums : function (){
     $.ajax({
       url: "api/albums",
       type: "GET",
       success : function (albums) {
-        ApiActions.receiveAllAlbums(albums);
+        AlbumActions.receiveAllAlbums(albums);
       }
     });
   },
@@ -14,8 +14,20 @@ window.ApiUtil = {
     }};
 
     $.post('api/albums', params, function(album){
-      ApiActions.receiveNewAlbum(album);
+      AlbumActions.receiveNewAlbum(album);
+    });
+  },
+
+  deleteAlbum : function (albumId) {
+    $.ajax({
+      url: "api/albums/" + albumId,
+      type: "DELETE",
+      success : function(album){
+        AlbumActions.deleteAlbum(album);
+      }
     });
   }
+
+
 
 };

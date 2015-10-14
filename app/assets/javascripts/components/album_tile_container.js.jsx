@@ -7,11 +7,21 @@ var AlbumTileContainer = React.createClass({
        albumSelected: 0});
   },
   componentDidMount : function () {
-    ApiUtil.fetchAllAlbums();
+    ApiUtil.fetchUserAlbums();
     AlbumStore.addChangeListener(this._onChange);
   },
-  _buttonClick : function () {
-    this.setState({createNewAlbum: true});
+  _buttonClick : function (e) {
+    var type = e.target.classList[1];
+    switch (type){
+      case "add" :
+        this.setState({createNewAlbum: true});
+        break;
+      case "remove":
+        this.setState({albumSelected: 0});
+        ApiUtil.deleteAlbum(this.state.albumSelected);
+        break;
+    }
+
   },
   _handleSubmit : function (e) {
     ApiUtil.createAlbum(e.target[0].value);
@@ -23,9 +33,11 @@ var AlbumTileContainer = React.createClass({
   },
 
   _onChange : function () {
-    var selected = 0;
-    if (this.state.albumSelected === 0){
-      selected = AlbumStore.all()[0].id;
+    var selected = this.state.albumSelected;
+    if (selected === 0){
+      //if (AlbumStore.all().length > 0){
+        selected = AlbumStore.all()[0].id;
+      //}
     }
     this.setState(
       {albums: AlbumStore.all(),
@@ -78,7 +90,7 @@ var NewAlbumButtons = React.createClass({
     return (
       <div className="buttons">
         {/*still have to implement remove onclick*/}
-        <div className= "albumButtons remove" >
+        <div className= "albumButtons remove" onClick={this.props.click} >
           -
         </div>
         <div className= "albumButtons add" onClick={this.props.click}>

@@ -18,12 +18,12 @@
 * Album
 
 ### Actions
-* ApiActions.receiveAllAlbums
-* ApiActions.receiveAlbum
-* ApiActions.deleteAlbum
+* AlbumActions.receiveAllAlbums
+* AlbumActions.receiveAlbum
+* AlbumActions.deleteAlbum
 
 ### ApiUtil
-* ApiUtil.fetchAllAlbums
+* ApiUtil.fetchUserAlbums
 * ApiUtil.fetchSingleAlbum
 * ApiUtil.createAlbum
 * ApiUtil.editAlbum

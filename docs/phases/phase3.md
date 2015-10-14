@@ -17,9 +17,9 @@
 * Photo
 
 ### Actions
-* ApiActions.receiveAllPhotos
-* ApiActions.receiveSinglePhoto
-* ApiActions.deletePhoto
+* AlbumActions.receiveAllPhotos
+* AlbumActions.receiveSinglePhoto
+* AlbumActions.deletePhoto
 
 ### ApiUtil
 * ApiUtil.fetchAllPhotos

@@ -19,9 +19,9 @@
 * Reminder
 
 ### Actions
-* ApiActions.receiveAllTagss
-* ApiActions.receiveSingleTag
-* ApiActions.deleteTag
+* AlbumActions.receiveAllTagss
+* AlbumActions.receiveSingleTag
+* AlbumActions.deleteTag
 
 ### ApiUtil
 * ApiUtil.fetchAllTags

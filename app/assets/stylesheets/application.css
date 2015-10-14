@@ -43,5 +43,6 @@
 }
 
 body {
-  background: url('sports.png');
+  background: url('uefa.jpg');
+  background-position: center;
 }
