@@ -2,7 +2,7 @@ var NavBar = React.createClass({
   render : function () {
     return (
       <div className="navbar">
-        <span id="logo">Ballr</span>
+        <span id="logo">ballr</span>
 
       </div>
     );

@@ -6,10 +6,10 @@ ApiActions = {
     });
   },
 
-  receiveNewAlbum : function(newBench) {
+  receiveNewAlbum : function(album) {
     AppDispatcher.dispatch({
-      actionType: BenchConstants.NEW_BENCH_RECEIVED,
-      bench: newBench
+      actionType: AlbumConstants.ALBUM_RECEIVED,
+      album: album
     });
   }
 };
