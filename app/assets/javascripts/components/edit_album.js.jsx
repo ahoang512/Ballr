@@ -1,14 +1,20 @@
 var EditAlbum = React.createClass({
+  getInitialState : function () {
+    return ({albumSelected : 0});
+  },
+  _updateSelected : function(albumId) {
+    this.setState({albumSelected : albumId});
+  },
   render : function () {
     return (
       <div className="editAlbum">
         <span className="editLabel">Edit Your Albums</span>
         <div className="editContainer group">
-          <AlbumTileContainer/>
+          <AlbumTileContainer updateSelected={this._updateSelected}/>
           <PhotoTileContainer/>
         </div>
         <div className="uploadRow">
-          <UploadButton/>
+          <UploadButton albumSelected= {this.state.albumSelected}/>
         </div>
       </div>
     );
@@ -16,12 +22,20 @@ var EditAlbum = React.createClass({
 
 });
 
-//http://res.cloudinary.com/dayd3nm4v/image/upload/c_scale,w_618/v1444771996/obj_vto9gv.jpg
 
 var UploadButton = React.createClass({
   _handleUpload : function (error,result) {
-    var url = result[0].url
-    console.log(error, result)
+    var url = result[0].url;
+    var filename = result[0].original_filename;
+    var params = {
+      photo : {
+        "url" : url,
+        "name" : filename,
+        "album_id" : this.props.albumSelected
+      }
+    }
+    PhotoUtil.createPhoto(params);
+
   },
   _onClick : function () {
     cloudinary.openUploadWidget(

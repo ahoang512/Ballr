@@ -1,4 +1,4 @@
-window.ApiUtil = {
+window.AlbumUtil = {
   fetchUserAlbums : function (){
     $.ajax({
       url: "api/albums",
@@ -26,7 +26,9 @@ window.ApiUtil = {
         AlbumActions.deleteAlbum(album);
       }
     });
-  }
+  },
+
+
 
 
 

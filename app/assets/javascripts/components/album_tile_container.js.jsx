@@ -7,28 +7,33 @@ var AlbumTileContainer = React.createClass({
        albumSelected: 0});
   },
   componentDidMount : function () {
-    ApiUtil.fetchUserAlbums();
+    AlbumUtil.fetchUserAlbums();
     AlbumStore.addChangeListener(this._onChange);
+  },
+  componentWillUnmount: function(){
+    AlbumStore.removeChangeListener(this._onChange);
   },
   _buttonClick : function (e) {
     var type = e.target.classList[1];
+
     switch (type){
       case "add" :
         this.setState({createNewAlbum: true});
         break;
       case "remove":
         this.setState({albumSelected: 0});
-        ApiUtil.deleteAlbum(this.state.albumSelected);
+        AlbumUtil.deleteAlbum(this.state.albumSelected);
         break;
     }
 
   },
   _handleSubmit : function (e) {
-    ApiUtil.createAlbum(e.target[0].value);
+    AlbumUtil.createAlbum(e.target[0].value);
   },
 
   _albumClick : function (e) {
     var selectedId = e.target.id;
+    this.props.updateSelected(selectedId);
     this.setState({albumSelected : selectedId});
   },
 
@@ -37,8 +42,11 @@ var AlbumTileContainer = React.createClass({
     if (selected === 0){
       if (AlbumStore.all().length > 0){
         selected = AlbumStore.all()[0].id;
+        //fetch all the photos for album also
+        PhotoUtil.fetchAlbumPhotos(selected);
       }
     }
+    this.props.updateSelected(selected);
     this.setState(
       {albums: AlbumStore.all(),
        createNewAlbum: false,
