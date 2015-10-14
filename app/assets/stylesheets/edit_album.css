@@ -61,6 +61,22 @@
 .albumList {
   height: 90%;
   list-style-type: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.albumList li {
+  height: 40px;
+  border-style: solid;
+  border-width: 1px;
+  background-color: steelblue ;
+}
+
+.albumList li.selected {
+  background-color: dodgerblue;
+}
+.albumList li:hover {
+  background-color: darkturquoise;
 }
 
 .albumForm {

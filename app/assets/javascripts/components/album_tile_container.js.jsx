@@ -2,7 +2,9 @@
 
 var AlbumTileContainer = React.createClass({
   getInitialState : function(){
-    return ({createNewAlbum: false, albums: AlbumStore.all()});
+    return ({createNewAlbum: false,
+       albums: AlbumStore.all(),
+       albumSelected: 0});
   },
   componentDidMount : function () {
     ApiUtil.fetchAllAlbums();
@@ -13,6 +15,11 @@ var AlbumTileContainer = React.createClass({
   },
   _handleSubmit : function (e) {
     ApiUtil.createAlbum(e.target[0].value);
+  },
+
+  _albumClick : function (e) {
+    var selectedId = e.target.id;
+    this.setState({albumSelected : selectedId});
   },
 
   _onChange : function () {
@@ -34,13 +41,19 @@ var AlbumTileContainer = React.createClass({
 
     var tiles =
       this.state.albums.map(function(album){
-        return (<li>{album.name}</li>);
-      });
+        if (album.id === parseInt(this.state.albumSelected)){
+          return (<li key={album.id} onClick={this._albumClick}
+            id={album.id} className="selected">{album.name}</li>);
+        }else{
+          return (<li key={album.id} onClick={this._albumClick}
+            id={album.id}>{album.name}</li>);
+        }
+      }.bind(this));
 
     if (!this.state.createNewAlbum){
-      var middle = (<ul className="albumList">{tiles}</ul>);
+      var content = (<ul className="albumList">{tiles}</ul>);
     }else{
-      var middle = form;
+      var content = form;
     }
 
 
@@ -48,18 +61,19 @@ var AlbumTileContainer = React.createClass({
     return (
       <div className="albumTileContainer">
         <div className="editLabels">Albums</div>
-          {middle}
-        <AlbumButtons click={this._buttonClick}/>
+          {content}
+        <NewAlbumButtons click={this._buttonClick}/>
       </div>
     )
   }
 });
 
-var AlbumButtons = React.createClass({
+var NewAlbumButtons = React.createClass({
   render : function () {
     return (
       <div className="buttons">
-        <div className= "albumButtons remove" onClick={this.props.click}>
+        {/*still have to implement remove onclick*/}
+        <div className= "albumButtons remove" >
           -
         </div>
         <div className= "albumButtons add" onClick={this.props.click}>
