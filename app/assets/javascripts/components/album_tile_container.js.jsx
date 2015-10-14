@@ -23,9 +23,14 @@ var AlbumTileContainer = React.createClass({
   },
 
   _onChange : function () {
+    var selected = 0;
+    if (this.state.albumSelected === 0){
+      selected = AlbumStore.all()[0].id;
+    }
     this.setState(
       {albums: AlbumStore.all(),
-       createNewAlbum: false});
+       createNewAlbum: false,
+       albumSelected: selected});
   },
 
   render : function () {
