@@ -58,8 +58,9 @@
   background-color: lightskyblue;
 }
 
-.albumTiles {
+.albumList {
   height: 90%;
+  list-style-type: none;
 }
 
 .albumForm {

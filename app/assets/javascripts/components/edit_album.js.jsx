@@ -21,7 +21,6 @@ var EditAlbum = React.createClass({
 var UploadButton = React.createClass({
   _handleUpload : function (error,result) {
     var url = result[0].url
-    debugger
     console.log(error, result)
   },
   _onClick : function () {

@@ -1,4 +1,4 @@
-u1 = User.create(email: "a@aa.com", username: "ant", password: "password")
+u1 = User.create(email: "a@a.com", username: "ant", password: "password")
 a1 = Album.create(owner_id: u1.id, name: "album1")
 p1 = Photo.create(url: "www.pic", name: "photo1", album_id: a1.id)
 p2 = Photo.create(url: "www.pic1", name: "photo2", album_id: a1.id)

@@ -10,7 +10,7 @@
   };
 
   var addNewAlbum = function (album) {
-    _benches.push(album.slice());
+    _albums.push(album);
   };
 
   root.AlbumStore = $.extend({}, EventEmitter.prototype, {
@@ -27,7 +27,7 @@
           resetAlbums(action.albums);
           root.AlbumStore.emit(CHANGE_EVENT);
           break;
-        case AlbumConstants.ALBUMS_RECEIVED:
+        case AlbumConstants.ALBUM_RECEIVED:
           addNewAlbum(action.album);
           root.AlbumStore.emit(CHANGE_EVENT);
           break;

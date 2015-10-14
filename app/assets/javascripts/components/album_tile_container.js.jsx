@@ -5,10 +5,10 @@ var AlbumTileContainer = React.createClass({
     return ({createNewAlbum: false, albums: AlbumStore.all()});
   },
   componentDidMount : function () {
+    ApiUtil.fetchAllAlbums();
     AlbumStore.addChangeListener(this._onChange);
   },
   _buttonClick : function () {
-    console.log("click");
     this.setState({createNewAlbum: true});
   },
   _handleSubmit : function (e) {
@@ -16,7 +16,9 @@ var AlbumTileContainer = React.createClass({
   },
 
   _onChange : function () {
-    this.setState({albums: AlbumStore.all()});
+    this.setState(
+      {albums: AlbumStore.all(),
+       createNewAlbum: false});
   },
 
   render : function () {
@@ -30,8 +32,13 @@ var AlbumTileContainer = React.createClass({
       </form>
     );
 
+    var tiles =
+      this.state.albums.map(function(album){
+        return (<li>{album.name}</li>);
+      });
+
     if (!this.state.createNewAlbum){
-      var middle = (<div className="albumTiles"></div>);
+      var middle = (<ul className="albumList">{tiles}</ul>);
     }else{
       var middle = form;
     }

@@ -1,4 +1,9 @@
 class Api::AlbumsController < ApplicationController
+  def index
+    @albums = current_user.albums
+    render json: @albums
+  end
+
   def create
     id = current_user.id
     name = params[:album][:name]
@@ -11,5 +16,7 @@ class Api::AlbumsController < ApplicationController
       render json: "error"
     end
   end
+
+
 
 end
