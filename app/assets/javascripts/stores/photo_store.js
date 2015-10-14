@@ -15,7 +15,7 @@
 
   root.PhotoStore = $.extend({}, EventEmitter.prototype, {
     all : function () {
-
+      return _photos.slice();
     },
     addChangeListener : function (callback) {
       this.on(CHANGE_EVENT, callback);
@@ -29,7 +29,7 @@
           resetPhotos(action.photos);
           root.PhotoStore.emit(CHANGE_EVENT);
           break;
-        case PhotoConstants.PHOTOS_RECEIVED:
+        case PhotoConstants.PHOTO_RECEIVED:
           addNewPhoto(action.photo);
           root.PhotoStore.emit(CHANGE_EVENT);
           break;

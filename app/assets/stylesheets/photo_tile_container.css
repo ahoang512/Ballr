@@ -1,0 +1,15 @@
+.photoTiles {
+  width: 300px;
+  height: 200px;
+
+}
+
+.photoTileContainer ul {
+  list-style-type: none;
+  padding: 25px;
+}
+
+.photoTileContainer li {
+  width: 310px;
+  float: left
+}
