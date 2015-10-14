@@ -1,8 +1,8 @@
 ApiActions = {
-  receiveAll : function (albums) {
+  receiveAllAlbums : function (albums) {
     AppDispatcher.dispatch({
-      actionType : AlbumConstants.ALBUM_RECEIVED,
-      albums : album
+      actionType : AlbumConstants.ALBUMS_RECEIVED,
+      albums : albums
     });
   },
 

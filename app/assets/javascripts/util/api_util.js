@@ -5,7 +5,7 @@ window.ApiUtil = {
     }};
 
     $.post('api/albums', params, function(album){
-      ApiActions.receiveNewAlbum(album);
+      ApiActions.receiveNewAlbum([album]);
     });
   }
 
