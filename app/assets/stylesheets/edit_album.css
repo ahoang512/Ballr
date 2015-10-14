@@ -25,6 +25,8 @@
 }
 
 .editContainer {
+
+  opacity: 0.98;
   width: 90%;
   margin: auto;
   height: 700px;
@@ -65,9 +67,7 @@
 }
 
 .albumButtons {
-  float: left;
   width: 48%;
-
   text-align: center;
   font-size: 30px;
   border-style: solid;
@@ -75,9 +75,11 @@
 }
 
 .remove {
+  float: left;
   background-color: silver;
 }
 
 .add {
+  float: right;
   background-color: white;
 }

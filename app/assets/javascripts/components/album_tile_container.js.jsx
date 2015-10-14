@@ -2,7 +2,10 @@
 
 var AlbumTileContainer = React.createClass({
   getInitialState : function(){
-    return ({createNewAlbum: false });
+    return ({createNewAlbum: false, albums: AlbumStore.all()});
+  },
+  componentDidMount : function () {
+    AlbumStore.addChangeListener(this._onChange);
   },
   _buttonClick : function () {
     console.log("click");
@@ -10,6 +13,10 @@ var AlbumTileContainer = React.createClass({
   },
   _handleSubmit : function (e) {
     ApiUtil.createAlbum(e.target[0].value);
+  },
+
+  _onChange : function () {
+    this.setState({albums: AlbumStore.all()});
   },
 
   render : function () {
@@ -44,7 +51,7 @@ var AlbumTileContainer = React.createClass({
 var AlbumButtons = React.createClass({
   render : function () {
     return (
-      <div >
+      <div className="buttons">
         <div className= "albumButtons remove" onClick={this.props.click}>
           -
         </div>
