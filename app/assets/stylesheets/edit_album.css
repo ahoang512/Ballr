@@ -1,3 +1,8 @@
+.editAlbum {
+  background: url('uefa.jpg');
+  background-position: center;
+}
+
 .editLabel {
   font-size: 30px;
 }
@@ -27,7 +32,6 @@
 }
 
 .editContainer {
-
   opacity: 0.8;
   width: 90%;
   margin: auto;

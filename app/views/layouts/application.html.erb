@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<%= yield %>
+
 <% if signed_in? %>
   <br/>
   <%= current_user.username %>
@@ -25,7 +25,7 @@
   <%= link_to "Sign In", new_session_url  %>
   <%= link_to "Sign Up", new_user_url %>
 <% end %>
-
+<%= yield %>
 
 </body>
 </html>

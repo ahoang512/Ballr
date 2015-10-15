@@ -17,7 +17,9 @@ $(function(){
   React.render((
     <Router>
       <Route path="/" component= {App}>
-        <IndexRoute component={EditAlbum}/>
+      <IndexRoute component={LandingPage}/>
+        {/*<IndexRoute component={EditAlbum}/>*/}
+        <Route path="edit" component={EditAlbum}/>
       </Route>
     </Router>
   ), root);

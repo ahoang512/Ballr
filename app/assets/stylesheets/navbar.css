@@ -7,6 +7,17 @@
 
 }
 
-#logo {
+.logo {
+  float: left;
   margin-left: 15%;
+}
+
+.navbar .navButtons {
+  float: right;
+  margin-right: 10%;
+}
+
+.navbar .loginButtons {
+  float :left;
+  padding-left: 10px;
 }
