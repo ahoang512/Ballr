@@ -1,20 +1,37 @@
-var PhotoTileContainer = React.createClass( {
+var PhotoTileContainer = React.createClass({
+  //this.props.photoSelected
   getInitialState : function () {
     return ({photos : PhotoStore.all()});
   },
   componentDidMount : function () {
     PhotoStore.addChangeListener(this._onChange);
   },
+  componentWillUnmount: function(){
+    PhotoStore.removeChangeListener(this._onChange);
+  },
 
   _onChange : function () {
     this.setState({photos : PhotoStore.all()});
   },
+  _handleClick : function (e) {
+    PhotoActions.updateSelected(parseInt(e.currentTarget.id));
+  },
   render : function (){
+
     var tiles =
       this.state.photos.map(function(photo){
-        return (<li key={photo.id}>
-                  <img src={photo.url}  className="photoTiles"/>
-                </li>);
+        if (this.props.photoSelected === photo.id){
+          return (<li key={photo.id}
+                      id={photo.id}
+                      onClick={this._handleClick}
+                      className="selected">
+                    <img src={photo.url}  className="photoTiles selected"/>
+                  </li>);
+        }else {
+          return (<li key={photo.id} id={photo.id} onClick={this._handleClick}>
+                    <img src={photo.url}  className="photoTiles"/>
+                  </li>);
+        }
       }.bind(this));
     return (
       <div className="photoTileContainer">
@@ -56,7 +73,7 @@ var UploadButton = React.createClass({
   },
   render : function() {
     return (
-      <div className="uploadButton" id="uploadButton" Click={this._onClick}>
+      <div className="uploadButton" id="uploadButton" onClick={this._onClick}>
         Upload
       </div>
     );
@@ -79,15 +96,15 @@ var DeleteButton = React.createClass({
 
   },
   _onClick : function () {
-    cloudinary.openUploadWidget(
-      { cloud_name: 'dayd3nm4v',
-        upload_preset: 'xwgzpiek'},
-        this._handleUpload
-    );
+    // cloudinary.openUploadWidget(
+    //   { cloud_name: 'dayd3nm4v',
+    //     upload_preset: 'xwgzpiek'},
+    //     this._handleUpload
+    // );
   },
   render : function() {
     return (
-      <div className="deleteButton" id="deleteButton"onClick={this._onClick}>
+      <div className="deleteButton" id="deleteButton" onClick={this._onClick}>
         Delete
       </div>
     );
