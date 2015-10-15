@@ -1,5 +1,6 @@
 var PhotoTileContainer = React.createClass({
   //this.props.photoSelected
+  //this.props.albumSelected
   getInitialState : function () {
     return ({photos : PhotoStore.all()});
   },
@@ -37,8 +38,9 @@ var PhotoTileContainer = React.createClass({
       <div className="photoTileContainer">
         <div className="group"><label className="photoLabel">Photos</label>
           <div className="photoButtons group">
-            <DeleteButton albumSelected= {this.state.albumSelected}/>
-            <UploadButton albumSelected= {this.state.albumSelected}/>
+            <DeleteButton photoSelected= {this.props.photoSelected}
+                          albumSelected= {this.props.albumSelected}/>
+            <UploadButton albumSelected= {this.props.albumSelected}/>
           </div>
         </div>
         <ul className="group photoList">
@@ -82,6 +84,8 @@ var UploadButton = React.createClass({
 
 
 var DeleteButton = React.createClass({
+  //this.props.photoSelected
+  //this.props.albumSelected
   _handleUpload : function (error,result) {
     var url = result[0].url;
     var filename = result[0].original_filename;
@@ -95,12 +99,8 @@ var DeleteButton = React.createClass({
     PhotoUtil.createPhoto(params);
 
   },
-  _onClick : function () {
-    // cloudinary.openUploadWidget(
-    //   { cloud_name: 'dayd3nm4v',
-    //     upload_preset: 'xwgzpiek'},
-    //     this._handleUpload
-    // );
+  _onClick : function (e) {
+    PhotoUtil.deletePhoto(this.props.photoSelected);
   },
   render : function() {
     return (

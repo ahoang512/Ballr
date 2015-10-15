@@ -28,7 +28,8 @@ var EditAlbum = React.createClass({
         <span className="editLabel">{username} Library</span>
         <div className="editContainer group">
           <AlbumTileContainer updateSelected={this._updateAlbumSelected}/>
-          <PhotoTileContainer photoSelected={this.state.photoSelected}/>
+          <PhotoTileContainer photoSelected={this.state.photoSelected}
+                              albumSelected={this.state.albumSelected}/>
         </div>
 
       </div>

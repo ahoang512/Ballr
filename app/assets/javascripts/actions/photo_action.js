@@ -17,5 +17,12 @@ PhotoActions = {
       actionType: PhotoConstants.PHOTO_SELECTED,
       photoId: photoId
     });
+  },
+
+  deletePhoto : function(photo){
+    AppDispatcher.dispatch({
+      actionType: PhotoConstants.PHOTO_DELETED,
+      photo: photo
+    });
   }
 };

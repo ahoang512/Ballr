@@ -20,7 +20,9 @@ class Api::PhotosController < ApplicationController
   end
 
   def destroy
-    debugger
+    @photo = Photo.find(params[:id])
+    @photo.delete
+    render json: @photo
   end
 
 end
