@@ -4,6 +4,8 @@
   height: 300px;
   margin: auto;
   background-color: white;
+  background-color: skyblue
+
 }
 
 .loginBox h1 {
@@ -18,8 +20,22 @@
 
 .loginBox input {
   width: 60%;
-  clear: both;
+  height: 20px;
 }
 .loginPage {
   margin-top: 200px;
+}
+
+.email {
+  padding-right: 30px;
+}
+
+#loginButton {
+  width: auto;
+  margin-left:71%;
+}
+
+#signupButton {
+  width: auto;
+  margin-left:71%;
 }
