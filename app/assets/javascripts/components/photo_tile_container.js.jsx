@@ -19,7 +19,7 @@ var PhotoTileContainer = React.createClass( {
     return (
       <div className="photoTileContainer">
         <div className="editLabels">Photos</div>
-        <ul className="group">
+        <ul className="group photoList">
           {tiles}
         </ul>
       </div>

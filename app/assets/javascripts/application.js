@@ -18,6 +18,5 @@
 //= require react
 //= require react_ujs
 //= require reactrouter.min.js
-//= require popup.js
 //= require components
 //= require_tree .

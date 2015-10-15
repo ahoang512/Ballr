@@ -1,15 +1,18 @@
 .photoTiles {
-  width: 300px;
+  width: 280px;
   height: 200px;
 
 }
 
-.photoTileContainer ul {
+.photoList {
   list-style-type: none;
-  padding: 25px;
+  padding: 15px;
+  height: 90%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .photoTileContainer li {
-  width: 310px;
+  width: 290px;
   float: left
 }
