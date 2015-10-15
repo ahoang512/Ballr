@@ -25,4 +25,15 @@ class Api::PhotosController < ApplicationController
     render json: @photo
   end
 
+  def random
+    numPhotos = Photo.count
+    nums= (1..numPhotos).to_a
+    start=nums.sample
+    if start >= 5
+      start -= 4
+    end
+    photos = Photo.get(start, 4)
+    render json: photos
+  end
+
 end

@@ -16,4 +16,9 @@ class Photo < ActiveRecord::Base
     foreign_key: :album_id,
     primary_key: :id
 
+
+  def get(start, count)
+    last = start + count;
+    Photo.where("id >= ? AND id <= ?", start, last);
+  end
 end

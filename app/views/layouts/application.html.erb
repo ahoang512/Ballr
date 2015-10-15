@@ -19,11 +19,12 @@
 
 <% if signed_in? %>
   <br/>
-  <%= current_user.username %>
   <%= button_to "Sign Out", session_url, method: :delete %>
+  Must use this for now.
 <% else %>
   <%= link_to "Sign In", new_session_url  %>
   <%= link_to "Sign Up", new_user_url %>
+  Must use these for now.
 <% end %>
 <%= yield %>
 
