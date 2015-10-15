@@ -1,0 +1,25 @@
+.loginBox {
+  opacity: 0.8;
+  width: 400px;
+  height: 300px;
+  margin: auto;
+  background-color: white;
+}
+
+.loginBox h1 {
+  padding-top: 60px;
+  margin-left: 15%;
+  margin-bottom: 10px;
+}
+
+.loginBox form {
+  margin-left: 60px;
+}
+
+.loginBox input {
+  width: 60%;
+  clear: both;
+}
+.loginPage {
+  margin-top: 200px;
+}
