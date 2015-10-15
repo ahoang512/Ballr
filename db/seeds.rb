@@ -1,7 +1,9 @@
 u1 = User.create(email: "a@a.com", username: "ant", password: "password")
 a1 = Album.create(owner_id: u1.id, name: "album1")
 p1 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444867036/xz0tgtuck8jrqvl0xvgy.jpg", name: "photo1", album_id: a1.id)
-p2 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444771996/obj_vto9gv.jpg", name: "photo2", album_id: a1.id)
+# p2 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444771996/obj_vto9gv.jpg", name: "photo2", album_id: a1.id)
+# http://res.cloudinary.com/dayd3nm4v/image/upload/v1444771996/obj_vto9gv.jpg
+
 p3 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444866977/kqmv6t5p3quxrj6qwqo3.jpg", name: "photo3", album_id: a1.id)
 p4 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444866499/rwct6tkg5jwskhthmdwv.jpg", name: "photo4", album_id: a1.id)
 p5 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444866327/qbe95hjswzf9hiei5njy.jpg", name: "photo5", album_id: a1.id)

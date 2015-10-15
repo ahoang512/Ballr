@@ -17,7 +17,7 @@ class Photo < ActiveRecord::Base
     primary_key: :id
 
 
-  def get(start, count)
+  def self.getRandom(start, count)
     last = start + count;
     Photo.where("id >= ? AND id <= ?", start, last);
   end

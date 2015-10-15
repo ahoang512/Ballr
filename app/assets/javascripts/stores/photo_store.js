@@ -1,7 +1,7 @@
 (function(root) {
   'use strict';
 
-  var CHANGE_EVENT = "photos_changed";
+
 
   var _photos = [];
   var _photoSelected = 0;

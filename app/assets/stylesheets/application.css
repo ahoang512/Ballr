@@ -34,6 +34,7 @@
   font-family: "Roboto", sans-serif;
   font-weight: 400;
  	vertical-align: baseline;
+  list-style-type: none;
  }
 
  .group:after {
@@ -43,5 +44,5 @@
 }
 
 body {
-  
+
 }

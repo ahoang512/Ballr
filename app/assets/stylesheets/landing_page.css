@@ -1,7 +1,7 @@
 .landingPage {
-  background: url('football_wallpaper.jpg');
-  background-position: center;
-  height: 100vh;
+  /*background: url('football_wallpaper.jpg');
+  background-position: center;*/
+  height: auto;
   width:100%;
 }
 
@@ -11,9 +11,12 @@
 }
 
 .photoFeed {
-  height: 85%;
-  width: 60%;
-  background-color: grey;
-  opacity: 0.5;
+  /*height: 85%;
+  width: 60%;*/
   margin-left: 10%;
+}
+
+.feedPhotos {
+  width: 750px;
+  height: 400px;
 }

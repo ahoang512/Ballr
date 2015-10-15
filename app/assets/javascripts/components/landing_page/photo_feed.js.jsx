@@ -1,19 +1,56 @@
 var PhotoFeed = React.createClass({
+  getInitialState : function () {
+    return ({
+      photos : LandingStore.all()
+    });
+  },
+
+  componentDidMount : function() {
+    LandingUtil.fetchRandomPhotos();
+    LandingStore.addChangeListener(this._onChange);
+  },
+
+  componentWillUnmount : function () {
+    LandingStore.removeChangeListener(this._onChange);
+  },
+
+  _onChange : function () {
+    this.setState({photos : LandingStore.all()});
+  },
+
   render : function () {
     return (
       <div className="photoFeed">
-        <PhotoList/>
+        <PhotoList photos={this.state.photos}/>
       </div>
     );
   }
 });
 
 var PhotoList = React.createClass({
+  //this.props.photos
 
 
   render : function() {
-    return (
+    var photos = this.props.photos.map(function (photo) {
+      return (<PhotoItem photo ={photo}/>);
 
+    }.bind(this))
+
+    return (
+      <ul>
+        {photos}
+      </ul>
+
+    );
+  }
+});
+
+
+var PhotoItem = React.createClass({
+  render : function () {
+    return (
+      <li key={this.props.photo.id}><img src={this.props.photo.url} className="feedPhotos"/></li>
     );
   }
 });

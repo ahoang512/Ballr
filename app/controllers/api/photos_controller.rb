@@ -32,7 +32,7 @@ class Api::PhotosController < ApplicationController
     if start >= 5
       start -= 4
     end
-    photos = Photo.get(start, 4)
+    photos = Photo.getRandom(start, 4)
     render json: photos
   end
 
