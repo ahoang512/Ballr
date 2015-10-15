@@ -23,9 +23,18 @@
   overflow-x: hidden;
 }
 
+.photoList li.selected {
+  border-color: yellow;
+  border-width: 3px;
+  border-style: solid;
+
+}
+
 .photoTileContainer li {
-  width: 290px;
-  float: left
+  margin: 10px;
+  float: left;
+  height: 200px;
+  margin-bottom: 10px;
 }
 
 .photoTileContainer div {

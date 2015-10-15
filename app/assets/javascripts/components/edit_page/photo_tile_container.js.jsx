@@ -25,7 +25,7 @@ var PhotoTileContainer = React.createClass({
                       id={photo.id}
                       onClick={this._handleClick}
                       className="selected">
-                    <img src={photo.url}  className="photoTiles selected"/>
+                    <img src={photo.url}  className="photoTiles"/>
                   </li>);
         }else {
           return (<li key={photo.id} id={photo.id} onClick={this._handleClick}>

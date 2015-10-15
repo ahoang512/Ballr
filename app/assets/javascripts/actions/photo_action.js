@@ -11,4 +11,11 @@ PhotoActions = {
       photo: photo
     });
   },
+
+  updateSelected : function(photoId) {
+    AppDispatcher.dispatch({
+      actionType: PhotoConstants.PHOTO_SELECTED,
+      photoId: photoId
+    });
+  }
 };
