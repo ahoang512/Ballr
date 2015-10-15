@@ -21,5 +21,3 @@
 //= require popup.js
 //= require components
 //= require_tree .
-
-alert("lol");
