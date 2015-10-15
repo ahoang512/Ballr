@@ -16,9 +16,7 @@ var EditAlbum = React.createClass({
           <AlbumTileContainer updateSelected={this._updateSelected}/>
           <PhotoTileContainer/>
         </div>
-        <div className="uploadRow">
-          <UploadButton albumSelected= {this.state.albumSelected}/>
-        </div>
+
       </div>
     );
   }

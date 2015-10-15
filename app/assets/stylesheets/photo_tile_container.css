@@ -4,6 +4,17 @@
 
 }
 
+.photoLabel {
+  float: left;
+  width: 85%;
+  font-size: 30px;
+  text-align: center;
+  background-color: cadetblue;
+  height: 5%;
+  font-size: 25px;
+  color: turquoise;
+}
+
 .photoList {
   list-style-type: none;
   padding: 15px;
@@ -15,4 +26,26 @@
 .photoTileContainer li {
   width: 290px;
   float: left
+}
+
+.photoTileContainer div {
+  background-color: cadetblue;
+}
+
+.uploadRow {
+  width: 90%;
+  margin: auto;
+  text-align: right;
+}
+
+.uploadButton {
+  float: left;
+  margin-top: 5px;
+  text-align: center;
+  width: 80px;
+  height: 20px;
+  /*margin-left: 85%;*/
+  border-style: solid;
+  border-width: 1px;
+  background-color: lightskyblue;
 }

@@ -18,7 +18,9 @@ var PhotoTileContainer = React.createClass( {
       }.bind(this));
     return (
       <div className="photoTileContainer">
-        <div className="editLabels">Photos</div>
+        <div className="group"><label className="photoLabel">Photos</label>
+            <UploadButton albumSelected= {this.state.albumSelected}/>
+        </div>
         <ul className="group photoList">
           {tiles}
         </ul>
