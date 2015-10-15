@@ -6,7 +6,7 @@
 
 .albumTileContainer {
   float: left;
-  width: 150px;
+  width: 10%;
   height: 95%;
   margin-left: 1%;
   margin-top: 1%;
@@ -19,7 +19,7 @@
   margin-right: 1%;
   margin-top: 1%;
   float: right;
-  width: 88%;
+  width: 86%;
   height: 95%;
   border-style: solid;
   border-width: 1px;
