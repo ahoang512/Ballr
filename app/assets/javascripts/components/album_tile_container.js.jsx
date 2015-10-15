@@ -34,6 +34,7 @@ var AlbumTileContainer = React.createClass({
   _albumClick : function (e) {
     var selectedId = e.target.id;
     this.props.updateSelected(selectedId);
+    PhotoUtil.fetchAlbumPhotos(e.target.id);
     this.setState({albumSelected : selectedId});
   },
 
