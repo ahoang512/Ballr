@@ -10,19 +10,19 @@ var NavBar = React.createClass({
       <div className="navbar">
         <span className="logo">ballr</span>
           <div className="navButtons">
-            {loggedIn ? <Logout/> : <Login/> }
+            {loggedIn ? <LoggedIn/> : <NotLogged/> }
           </div>
       </div>
     );
   }
 });
 
-var Login = React.createClass({
+var NotLogged = React.createClass({
   _login : function (e) {
-    location.assign("http://ballrapp.herokuapp.com/session/new");
+    location.assign("http://localhost:3000/session/new");
   },
   _signUp : function (e) {
-    location.assign("http://ballrapp.herokuapp.com/users/new");
+    location.assign("http://localhost:3000/users/new");
   },
   render : function () {
     return(
@@ -37,13 +37,16 @@ var Login = React.createClass({
 
 
 
-var Logout = React.createClass({
+var LoggedIn = React.createClass({
   _signOut : function() {
     ApiUtil.destroySession();
   },
   render : function () {
     return(
-      <div onClick={this._signOut}>signout</div>
+      <div>
+        <div onClick={this._signOut}>signout</div>
+        <div>library</div>
+      </div>
     );
   }
 });

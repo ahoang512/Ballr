@@ -12,9 +12,9 @@
   margin-left: 15%;
 }
 
-.navbar .navButtons {
+.navbar .navButtons > div > * {
   float: right;
-  margin-right: 10%;
+  padding-right: 15px;
 }
 
 .navbar .loginButtons {
