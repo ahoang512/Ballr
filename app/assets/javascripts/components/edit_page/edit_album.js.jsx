@@ -1,4 +1,6 @@
 var EditAlbum = React.createClass({
+
+
   getInitialState : function () {
     return ({albumSelected : 0,
              photoSelected : PhotoStore.photoSelected()});
@@ -22,6 +24,7 @@ var EditAlbum = React.createClass({
   },
 
   render : function () {
+    
     var username = window.current_username + "'s";
     return (
       <div className="editAlbum">

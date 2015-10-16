@@ -18,8 +18,9 @@ $(function(){
     <Router>
       <Route path="/" component= {App}>
       <IndexRoute component={LandingPage}/>
-        {/*<IndexRoute component={EditAlbum}/>*/}
-        <Route path="edit" component={EditAlbum}/>
+        <Route path="user/:userid/edit"
+          components={{edit : EditAlbum,
+                       nav : NavBar}}/>
       </Route>
     </Router>
   ), root);

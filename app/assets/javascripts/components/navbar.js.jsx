@@ -1,4 +1,6 @@
 var NavBar = React.createClass({
+  mixins : [ReactRouter.History],
+
   render : function () {
     var loggedIn = true;
     if (typeof window.current_user === 'undefined'){
@@ -38,14 +40,18 @@ var NotLogged = React.createClass({
 
 
 var LoggedIn = React.createClass({
+  mixins : [ReactRouter.History],
   _signOut : function() {
     ApiUtil.destroySession();
+  },
+  _library : function () {
+    this.history.pushState(null, '/user/'+window.current_user+'/edit', {});
   },
   render : function () {
     return(
       <div>
         <div onClick={this._signOut}>signout</div>
-        <div>library</div>
+        <div onClick={this._library}>library</div>
       </div>
     );
   }
