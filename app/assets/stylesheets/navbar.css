@@ -11,10 +11,16 @@
   float: left;
   margin-left: 15%;
 }
+.logo:hover {
+  color: turquoise;
+}
 
 .navbar .navButtons > div > * {
   float: right;
   padding-right: 15px;
+}
+.navbar .navButtons > div > *:hover {
+  color: turquoise;
 }
 
 .navbar .loginButtons {

@@ -1,6 +1,9 @@
 var NavBar = React.createClass({
   mixins : [ReactRouter.History],
 
+  _logo : function () {
+    this.history.pushState(null, '/', {});
+  },
   render : function () {
     var loggedIn = true;
     if (typeof window.current_user === 'undefined'){
@@ -10,7 +13,7 @@ var NavBar = React.createClass({
 
     return (
       <div className="navbar">
-        <span className="logo">ballr</span>
+        <span className="logo" onClick={this._logo}>ballr</span>
           <div className="navButtons">
             {loggedIn ? <LoggedIn/> : <NotLogged/> }
           </div>

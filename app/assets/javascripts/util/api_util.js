@@ -1,4 +1,4 @@
-ApiUtil = {
+window.ApiUtil = {
   destroySession : function () {
     $.ajax({
       url : "/session",
@@ -7,5 +7,6 @@ ApiUtil = {
         window.location.assign("http://localhost:3000/");
       }
     });
-  }
+  },
+
 };
