@@ -26,13 +26,10 @@ class Api::PhotosController < ApplicationController
   end
 
   def random
-    numPhotos = Photo.count
-    nums= (1..numPhotos).to_a
-    start=nums.sample
-    if start >= 5
-      start -= 4
-    end
-    @photos = Photo.includes(:album).getRandom(start, 4)
+    @photos = Photo.includes(:album).all.to_a
+    @photos.shuffle!
+    @photos = @photos.take(4)
+
     render :index
   end
 

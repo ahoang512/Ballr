@@ -8,21 +8,3 @@ var PhotoItem = React.createClass({
     );
   }
 });
-
-var PhotoInfo = React.createClass({
-  render : function () {
-    var photo = this.props.photo;
-    var name = photo.name;
-    var owner = photo.owner;
-    var album = photo.album;
-
-
-    return (
-      <div className="photoInfo">
-        <label className="name">{name}</label><br/>
-        <label>{owner}</label><br/>
-        <label>{album}</label>
-      </div>
-    )
-  }
-});

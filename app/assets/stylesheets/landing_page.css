@@ -1,6 +1,8 @@
 .landingPage {
-  /*background: url('football_wallpaper.jpg');
-  background-position: center;*/
+  background: url('curry.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   height: auto;
   width:100%;
   background-color: lightgrey;
@@ -29,9 +31,48 @@
 .photoInfo {
   width: 750px;
   height: 60px;
-  background-color: white;
+  background-color: rgba(255,255,255, 0.8);
 }
+
+
 
 .photoInfo .name {
   text-size:  40px;
+}
+
+
+
+.photoLink:hover{
+  color: turquoise;
+}
+
+/*user photo and name*/
+.photoInfo > *:nth-child(-n+2) {
+  float: left;
+  padding: 5px;
+  font-size: 30px;
+}
+
+/* album and photoname*/
+.photoInfo > *:nth-last-child(-n+1) {
+  float: right;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.photoAlbum {
+  font-size: smaller;
+  text-align: right;
+}
+
+.photoName {
+  font-size: x-large;
+  text-decoration: underline;
+}
+
+
+.photoInfo img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
 }
