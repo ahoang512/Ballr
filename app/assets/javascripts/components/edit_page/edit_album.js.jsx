@@ -24,7 +24,7 @@ var EditAlbum = React.createClass({
   },
 
   render : function () {
-    
+
     var username = window.current_username + "'s";
     return (
       <div className="editAlbum">

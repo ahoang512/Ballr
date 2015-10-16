@@ -80,12 +80,3 @@
   width: 50px;
   border-radius: 50%;
 }
-
-#userBar {
-  width: 20%;
-  margin-left: 5%;
-  height: 85%;
-  background-color: lightblue;
-  opacity: 0.5;
-  position: fixed;
-}

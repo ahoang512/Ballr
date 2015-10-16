@@ -1,0 +1,14 @@
+#userBar {
+  width: 20%;
+  margin-left: 5%;
+  height: 85%;
+  background-color: rgba(173,216,230,0.5);
+  position: fixed;
+}
+
+#userBar img {
+  border-radius: 50%;
+  width: 75%;
+  margin-left: 13%;
+  margin-top: 10%;
+}
