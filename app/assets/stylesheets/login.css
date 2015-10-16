@@ -3,8 +3,8 @@
   width: 400px;
   height: 300px;
   margin: auto;
+  margin-top: 200px;
   background-color: white;
-  background-color: skyblue
 
 }
 
@@ -23,7 +23,28 @@
   height: 20px;
 }
 .loginPage {
-  margin-top: 200px;
+  background: url('uefa.jpg');
+  background-position: center;
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.loginLogo {
+  height: 20%;
+  width: auto;
+  background-color: #0B0B3B;
+  color: white;
+  text-align: center;
+  font-size: 55px;
 }
 
 .email {

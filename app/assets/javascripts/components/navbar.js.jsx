@@ -18,11 +18,17 @@ var NavBar = React.createClass({
 });
 
 var Login = React.createClass({
+  _login : function (e) {
+    location.assign("http://localhost:3000/session/new");
+  },
+  _signUp : function (e) {
+    location.assign("http://localhost:3000/users/new");
+  },
   render : function () {
     return(
       <div>
-        <div className="loginButtons">login</div>
-        <div className="loginButtons">signup</div>
+        <div className="loginButtons" onClick={this._login}>login</div>
+        <div className="loginButtons" onClick={this._signUp}>signup</div>
       </div>
     );
   }
@@ -32,9 +38,12 @@ var Login = React.createClass({
 
 
 var Logout = React.createClass({
+  _signOut : function() {
+    ApiUtil.destroySession();
+  },
   render : function () {
     return(
-      <div>signout</div>
+      <div onClick={this._signOut}>signout</div>
     );
   }
 });

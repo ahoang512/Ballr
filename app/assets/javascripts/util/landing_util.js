@@ -4,7 +4,7 @@ window.LandingUtil = {
       url: "api/photos/random",
       type: "GET",
       success : function (photos) {
-        LandingActions.receiveRandomPhotos(photos);
+        LandingActions.receiveRandomPhotos(photos.photos);
       }
     });
   },

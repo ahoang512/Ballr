@@ -16,6 +16,10 @@ class Photo < ActiveRecord::Base
     foreign_key: :album_id,
     primary_key: :id
 
+  has_many :owner,
+    through: :album,
+    source: :owner
+
 
   def self.getRandom(start, count)
     last = start + count;

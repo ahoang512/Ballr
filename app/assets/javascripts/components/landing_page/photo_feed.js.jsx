@@ -29,8 +29,6 @@ var PhotoFeed = React.createClass({
 
 var PhotoList = React.createClass({
   //this.props.photos
-
-
   render : function() {
     var photos = this.props.photos.map(function (photo) {
       return (<PhotoItem photo ={photo}/>);
@@ -42,15 +40,6 @@ var PhotoList = React.createClass({
         {photos}
       </ul>
 
-    );
-  }
-});
-
-
-var PhotoItem = React.createClass({
-  render : function () {
-    return (
-      <li key={this.props.photo.id}><img src={this.props.photo.url} className="feedPhotos"/></li>
     );
   }
 });

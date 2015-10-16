@@ -3,6 +3,8 @@
   background-position: center;*/
   height: auto;
   width:100%;
+  background-color: lightgrey;
+  overflow-x: auto;
 }
 
 .landingContainer {
@@ -15,8 +17,21 @@
   width: 60%;*/
   margin-left: 10%;
 }
-
 .feedPhotos {
   width: 750px;
-  height: 400px;
+  height: 500px;
+}
+
+.photoItems {
+  margin-bottom: 15px;
+}
+
+.photoInfo {
+  width: 750px;
+  height: 60px;
+  background-color: white;
+}
+
+.photoInfo .name {
+  text-size:  40px;
 }

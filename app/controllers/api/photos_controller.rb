@@ -32,8 +32,8 @@ class Api::PhotosController < ApplicationController
     if start >= 5
       start -= 4
     end
-    photos = Photo.getRandom(start, 4)
-    render json: photos
+    @photos = Photo.includes(:album).getRandom(start, 4)
+    render :index
   end
 
 end
