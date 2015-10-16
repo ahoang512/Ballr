@@ -4,7 +4,7 @@ ApiUtil = {
       url : "/session",
       type : "DELETE",
       success : function (user) {
-        window.location.assign("http://localhost:3000/");
+        window.location.assign("http://ballrapp.herokuapp.com/");
       }
     });
   }
