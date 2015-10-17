@@ -97,7 +97,7 @@ var AlbumTileContainer = React.createClass({
 var NewAlbumButtons = React.createClass({
   render : function () {
     return (
-      <div className="buttons">
+      <div className="buttons group">
         {/*still have to implement remove onclick*/}
         <div className= "albumButtons remove" onClick={this.props.click} >
           -

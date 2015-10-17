@@ -1,9 +1,10 @@
 .navbar {
   background-color: #0B0B3B;
   color: white;
-  height: 5%;
+  height: 7%;
   font-size: 40px;
   width: 100%;
+  position: fixed;
 }
 
 .logo {

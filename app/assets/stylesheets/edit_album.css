@@ -44,9 +44,9 @@
 }
 
 .editContainer {
-  margin-top: 3%;
-  width: 90%;
   margin: auto;
+  margin-top: 5%;
+  width: 90%;
   height: 80%;
   background: rgba(49,79,79,0.8);
 }
@@ -64,7 +64,7 @@
 
 
 .albumList {
-  height: 90%;
+  height: 88%;
   list-style-type: none;
   overflow-y: auto;
   overflow-x: hidden;
@@ -91,6 +91,7 @@
 
 .albumButtons {
   width: 48%;
+  height: auto;
   text-align: center;
   font-size: 30px;
   border-style: solid;
@@ -103,6 +104,7 @@
 }
 
 .add {
-  float: right;
+  float: left;
   background-color: white;
+  border-left-width: 0px;
 }
