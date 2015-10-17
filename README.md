@@ -10,10 +10,11 @@ Ballr is a web application implemented in Ruby on Rails and React.js that is des
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
-- [- ] Create an account
-- [- ] Log in / Log out
-- [- ] Create, edit, view, delete photo albums
-- [ ] Organize photos by sport/team/location/date
+- [x] Create an account
+- [x] Log in / Log out
+- [x] Create, edit, view, delete photo albums
+- [x] Upload, Delete Photos
+- [ ] Edit Photo Names and add Tags
 - [ ] Tag pictures with location of where it was taken
 - [ ] Manage a public album that others can upload to
 - [ ] make captions for their photos
@@ -90,12 +91,6 @@ searching by location/date is the nextfeature to be done.
 Go through the different views and make the UI better visually and physically
 by adding transitons and shortcuts.
 
-### Bonus Features (TBD)
-- [ ] Prettify transitions
-- [ ] Use javascript library for cleaner tag selection
-- [ ] Changelogs for Notes
-- [ ] Pagination / infinite scroll for Notes Index
-- [ ] Multiple sessions
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
