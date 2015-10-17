@@ -1,17 +1,17 @@
 .editAlbum {
   background: url('uefa.jpg');
   background-position: center;
-  min-height: 100%;
-  min-width: 1024px;
+  height: 100%;
+  /*min-width: 1024px;*/
 
   /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
+  /*width: 100%;
+  height: 95%;
 
   /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
+  /*position: fixed;*/
+  /*top: 0;
+  left: 0;*/
 }
 
 .editLabel {
@@ -34,6 +34,7 @@
 .photoTileContainer {
   margin-right: 1%;
   margin-top: 1%;
+  margin-bottom: 1%;
   float: right;
   width: 86%;
   height: 95%;
@@ -43,10 +44,11 @@
 }
 
 .editContainer {
+  margin-top: 3%;
   opacity: 0.8;
   width: 90%;
   margin: auto;
-  height: 800px;
+  height: 80%;
   background-color: darkslategrey;
 }
 

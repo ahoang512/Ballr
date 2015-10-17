@@ -22,8 +22,7 @@ $(function(){
       <Route path="/" component= {App}>
       <IndexRoute component={LandingPage}/>
         <Route path="user/:userid/edit"
-          components={{edit : EditAlbum,
-                       nav : NavBar}}/>
+          components={{edit : EditAlbum}}/>
       </Route>
     </Router>
   ), root);
