@@ -28,7 +28,7 @@
   margin-top: 1%;
   border-style: solid;
   border-width: 1px;
-  background-color: teal;
+  background-color: rgba(0,128,128,0.6);
 }
 
 .photoTileContainer {
@@ -40,16 +40,15 @@
   height: 95%;
   border-style: solid;
   border-width: 1px;
-  background-color: teal;
+  background-color: rgba(0,128,128,0.6);
 }
 
 .editContainer {
   margin-top: 3%;
-  opacity: 0.8;
   width: 90%;
   margin: auto;
   height: 80%;
-  background-color: darkslategrey;
+  background: rgba(49,79,79,0.8);
 }
 
 .editLabels{
