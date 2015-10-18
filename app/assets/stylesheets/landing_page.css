@@ -2,26 +2,28 @@
   background: url('curry.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: auto;
-  width:100%;
-  background-color: lightgrey;
-  overflow-x: auto;
+  position: fixed;
+  height: 100%;
+  width: 100%;
 }
 
 .landingContainer {
-  height: 90%;
-  padding-top: 5%;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  padding-top: 3%;
 }
 
 .photoFeed {
-  width: 50%;
-  float: left;
-  margin-left: 40%;
+  height: 100%;
+  width: 70%;
+  float: right;
 }
 
 .photoFeed ul {
   width: 100%;
+  overflow-y: auto;
+  height: 100%;
 }
 .feedPhotos {
   width: 100%;

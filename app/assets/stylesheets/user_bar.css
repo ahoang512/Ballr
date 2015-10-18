@@ -1,6 +1,6 @@
 #userBar {
-  width: 20%;
-  margin-left: 5%;
+  float: left;
+  width: 25%;
   height: 85%;
   background-color: rgba(173,216,230,0.5);
 }
