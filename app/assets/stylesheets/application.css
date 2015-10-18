@@ -48,6 +48,7 @@ html,body {
 
 .app {
   height: 100%;
+  font-size: 0;
 }
 
  .group:after {

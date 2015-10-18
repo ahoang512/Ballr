@@ -11,10 +11,10 @@
   height: 100%;
   width: 80%;
   margin: auto;
-  padding-top: 3%;
 }
 
 .photoFeed {
+  padding-top: 3%;
   height: 100%;
   width: 70%;
   float: right;

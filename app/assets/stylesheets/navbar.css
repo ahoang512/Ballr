@@ -1,7 +1,7 @@
 .navbar {
   background-color: #0B0B3B;
   color: white;
-  height: 7%;
+  display: inline-block;
   font-size: 40px;
   width: 100%;
 }
