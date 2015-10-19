@@ -9,21 +9,25 @@
 
 .landingContainer {
   height: 100%;
-  width: 80%;
-  margin: auto;
+  /*width: 80%;*/
+  /*margin: auto;*/
+  margin-left: 10%;
+  margin-right: 0;
 }
 
 .photoFeed {
-  padding-top: 3%;
+  padding-bottom: 3%;
   height: 100%;
-  width: 70%;
-  float: right;
+  width: 65%;
+  float: left;
+  margin-left: 5%;
 }
 
 .photoFeed ul {
+  padding-right: 8%;
   width: 100%;
   overflow-y: auto;
-  height: 85%;
+  height: 100%;
 }
 .feedPhotos {
   width: 100%;

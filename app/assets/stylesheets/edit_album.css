@@ -2,7 +2,7 @@
   background: url('uefa.jpg');
   background-position: center;
   height: 100%;
-  
+
 }
 
 .editLabel {
@@ -12,6 +12,7 @@
 
 
 .albumTileContainer {
+  position: relative;
   float: left;
   width: 10%;
   height: 95%;
@@ -54,7 +55,8 @@
 
 
 .albumList {
-  height: 87%;
+  height: 90%;
+  position: relative;
   list-style-type: none;
   overflow-y: auto;
   overflow-x: hidden;
@@ -101,4 +103,7 @@
 
 .buttons {
   height: auto;
+  position: absolute;
+  buttom: 0;
+  width: 100%;
 }

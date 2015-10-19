@@ -28,6 +28,18 @@ var UserInfo = React.createClass({
   render : function(){
     return (<div className="userInfo">
           <img src={this.props.user.photo_url}/>
+          <uploadUserPhotoButton/>
         </div>);
+  }
+});
+
+
+var uploadUserPhotoButton = React.class({
+  render : function() {
+    return (
+      <div >
+
+      </div>
+    )
   }
 });
