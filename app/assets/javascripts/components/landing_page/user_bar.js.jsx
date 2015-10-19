@@ -5,6 +5,7 @@ var UserBar = React.createClass({
     if (typeof this.props.user.id !== 'undefined' ){
       loggedIn = true;
     }
+
     return (
       <div id="userBar">
         <div className="userName">{this.props.user.username}</div>
@@ -25,10 +26,20 @@ var DefaultInfo = React.createClass({
 });
 
 var UserInfo = React.createClass({
+  //this.props.user
   render : function(){
     return (<div className="userInfo">
           <img src={this.props.user.photo_url}/>
           <UploadUserPhotoButton/>
+          <div className="userStats">
+            <label>Number of Photos:
+              {this.props.user.photo_count}
+            </label>
+            <br/>
+            <label>Number of Albums:
+              {this.props.user.album_count}
+            </label>
+          </div>
         </div>);
   }
 });

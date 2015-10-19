@@ -14,7 +14,7 @@ window.LandingUtil = {
       url: "/users/"+window.current_user,
       type: "GET",
       success : function (user){
-        LandingActions.receiveUser(user);
+        LandingActions.receiveUser(user.user);
       }
     });
   },
