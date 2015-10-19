@@ -19,6 +19,7 @@
 }
 
 .userInfo > .userPhotoUpload {
+  background-color: teal;
   font-size: large;
   text-align: center;
   width: 100%;
@@ -29,6 +30,7 @@
   margin: auto;
 
 }
+
 
 .userInfo {
   height: 100%;

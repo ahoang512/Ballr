@@ -4,7 +4,7 @@ window.LandingUtil = {
       url: "api/photos/random",
       type: "GET",
       success : function (photos) {
-        LandingActions.receiveRandomPhotos(photos.photos);
+        LandingActions.receivePhotos(photos.photos);
       }
     });
   },
@@ -28,5 +28,17 @@ window.LandingUtil = {
         LandingActions.receiveUser(user);
       }
     });
-  }
+  },
+
+  fetchUserPhotos : function(){
+    $.ajax({
+      url: "api/photos/user_photos",
+      type: "GET",
+      success : function (photos) {
+        LandingActions.receivePhotos(photos.photos);
+      }
+
+    });
+  },
+
 };

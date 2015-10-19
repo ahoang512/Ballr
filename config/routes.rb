@@ -6,9 +6,12 @@ Rails.application.routes.draw do
     resources :photos, only: [:index, :create, :destroy] do
       collection do
         get 'random'
+        get 'user_photos'
       end
     end
   end
-  resources :users , only: [:new, :show, :create, :update]
+  resources :users , only: [:new, :show, :create, :update] do
+
+  end
   resource :session, only: [:new, :create, :destroy]
 end

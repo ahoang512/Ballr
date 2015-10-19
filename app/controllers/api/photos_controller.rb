@@ -28,8 +28,13 @@ class Api::PhotosController < ApplicationController
   def random
     @photos = Photo.includes(:album).all.to_a
     @photos.shuffle!
-    @photos = @photos.take(4)
+    @photos = @photos.take(8)
 
+    render :index
+  end
+
+  def user_photos
+    @photos = current_user.photos
     render :index
   end
 

@@ -1,7 +1,7 @@
 LandingActions = {
-  receiveRandomPhotos : function (photos) {
+  receivePhotos : function (photos) {
     AppDispatcher.dispatch({
-      actionType : LandingConstants.RANDOMS_RECEIVED,
+      actionType : LandingConstants.PHOTOS_RECEIVED,
       photos : photos
     });
   },
@@ -13,11 +13,5 @@ LandingActions = {
     });
   }
 
-  // receiveUpdatedUser : function (user) {
-  //   AppDispatcher.dispatch({
-  //     actionType : LandingConstants.UPDATE_RECEIVED,
-  //     user: user
-  //   });
-  // }
 
 };

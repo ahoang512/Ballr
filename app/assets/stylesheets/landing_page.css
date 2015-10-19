@@ -27,7 +27,7 @@
   padding-right: 8%;
   width: 100%;
   overflow-y: auto;
-  height: 95%;
+  height: 90%;
 }
 .feedPhotos {
   width: 100%;
@@ -82,4 +82,26 @@
 
 .photoInfo img {
   height: 100%;
+}
+
+.feedOptions {
+  background-color: rgba(173,216,230,0.5);
+  float: left;
+  width: 64%;
+  height: 5%;
+  margin-left: 5%;
+  font-size: xx-large;
+}
+
+.feedOptions div {
+  float: right;
+  padding-right: 1%;
+}
+
+.feedOptions .option:hover {
+  color: turquoise;
+}
+
+.divider {
+  color: cadetblue;
 }
