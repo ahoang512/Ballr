@@ -28,17 +28,36 @@ var UserInfo = React.createClass({
   render : function(){
     return (<div className="userInfo">
           <img src={this.props.user.photo_url}/>
-          <uploadUserPhotoButton/>
+          <UploadUserPhotoButton/>
         </div>);
   }
 });
 
 
-var uploadUserPhotoButton = React.class({
+var UploadUserPhotoButton = React.createClass({
+  _handleUpload : function (error, result) {
+    var url = result[0].url;
+    var filename = result[0].original_filename;
+    var params = {
+      user : {
+        "photo_url" : url,
+      }
+    }
+    LandingUtil.updateUserPhoto(params);
+  },
+
+  _onClick : function () {
+    cloudinary.openUploadWidget(
+      { cloud_name: 'dayd3nm4v',
+        upload_preset: 'xwgzpiek'},
+        this._handleUpload
+    );
+  },
+
   render : function() {
     return (
-      <div >
-
+      <div className= "userPhotoUpload" onClick={this._onClick}>
+        Upload
       </div>
     )
   }

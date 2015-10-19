@@ -17,3 +17,15 @@
   text-align: center;
   background-color: steelblue;
 }
+
+.userInfo > .userPhotoUpload {
+  font-size: large;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  border-width: thin;
+  border-style: solid;
+  width: 80%;
+  margin: auto;
+
+}

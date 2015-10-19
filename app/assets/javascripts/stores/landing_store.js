@@ -36,6 +36,10 @@
           updateUser(action.user);
           root.LandingStore.emit(CHANGE_EVENT);
           break;
+        // case LandingConstants.UPDATE_RECEIVED:
+        //   updateUser(action.user);
+        //   root.LandingStore.emit(CHANGE_EVENT);
+        //   break;
       }
     })
   });

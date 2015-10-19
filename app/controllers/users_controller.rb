@@ -21,6 +21,12 @@ class UsersController < ApplicationController
     render json: @user
   end
 
+  def update
+    url = params[:user][:photo_url]
+    current_user.update!(photo_url: url)
+    render json: current_user
+  end
+
   private
   def user_params
     params.require(:user).permit(:password, :username, :email, :photo_url)
