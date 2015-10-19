@@ -4,11 +4,12 @@ var PhotoInfo = React.createClass({
     var name = photo.name;
     var owner = photo.owner;
     var album = photo.album;
-
+    var owner_url = photo.owner_url;
 
     return (
+
       <div className="photoInfo">
-        <img src="assets/anon.png"></img>
+        <img src={owner_url}></img>
         <div className="name photoLink">{owner}</div>
         <div>
           <div className="photoName photoLink">{name}</div>

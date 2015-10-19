@@ -24,12 +24,12 @@ var NavBar = React.createClass({
 
 var NotLogged = React.createClass({
   _login : function (e) {
-    //location.assign("http://localhost:3000/session/new");
-    location.assign("http://ballrapp.herokuapp.com/session/new");
+    location.assign("http://localhost:3000/session/new");
+    // location.assign("http://ballrapp.herokuapp.com/session/new");
   },
   _signUp : function (e) {
-    //location.assign("http://localhost:3000/users/new");
-    location.assign("http://ballrapp.herokuapp.com/users/new");
+    location.assign("http://localhost:3000/users/new");
+    // location.assign("http://ballrapp.herokuapp.com/users/new");
   },
   render : function () {
     return(

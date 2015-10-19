@@ -7,6 +7,7 @@ LandingActions = {
   },
 
   receiveUser : function (user){
+    
     AppDispatcher.dispatch({
       actionType : LandingConstants.USER_RECEIVED,
       user : user

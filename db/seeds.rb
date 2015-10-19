@@ -1,4 +1,8 @@
-u1 = User.create(email: "a@a.com", username: "ant", password: "password")
+u1 = User.create(email: "a@a.com",
+                 username: "ant",
+                 password: "password",
+    photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445213333/3985_kkdd8i.png"
+)
 a1 = Album.create(owner_id: u1.id, name: "album1")
 p1 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444867036/xz0tgtuck8jrqvl0xvgy.jpg", name: "photo1", album_id: a1.id)
 # p2 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444771996/obj_vto9gv.jpg", name: "photo2", album_id: a1.id)
