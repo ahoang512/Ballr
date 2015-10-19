@@ -1,6 +1,6 @@
 .landingPage {
-  background: url('curry.png');
-  background-position: center;
+  background: url('uefa.jpg');
+  background-position:center;
   background-repeat: no-repeat;
   position: fixed;
   height: 100%;
@@ -23,7 +23,7 @@
 .photoFeed ul {
   width: 100%;
   overflow-y: auto;
-  height: 100%;
+  height: 85%;
 }
 .feedPhotos {
   width: 100%;
@@ -55,7 +55,6 @@
 /*user photo and name*/
 .photoInfo > *:nth-child(-n+2) {
   float: left;
-  padding: 5px;
   font-size: 30px;
 }
 
@@ -78,7 +77,6 @@
 
 
 .photoInfo img {
-  height: 50px;
-  width: 50px;
+  height: 100%;
   border-radius: 50%;
 }

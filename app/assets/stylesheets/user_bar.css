@@ -6,7 +6,14 @@
 }
 
 #userBar img {
-  width: 75%;
-  margin-left: 13%;
-  margin-top: 10%;
+  width: 100%;
+}
+
+/*username*/
+#userBar .userName {
+  width: 100%;
+  height: auto;
+  font-size: x-large;
+  text-align: center;
+  background-color: steelblue;
 }

@@ -7,6 +7,7 @@ var UserBar = React.createClass({
     }
     return (
       <div id="userBar">
+        <div className="userName">{this.props.user.username}</div>
         {loggedIn ? <UserInfo user={this.props.user}/> : <DefaultInfo/>}
       </div>
     );
@@ -25,7 +26,7 @@ var DefaultInfo = React.createClass({
 
 var UserInfo = React.createClass({
   render : function(){
-    return (<div>
+    return (<div className="userInfo">
           <img src={this.props.user.photo_url}/>
         </div>);
   }

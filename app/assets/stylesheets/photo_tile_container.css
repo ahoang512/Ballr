@@ -10,7 +10,7 @@
   font-size: 30px;
   text-align: center;
   background-color: cadetblue;
-  height: 5%;
+  height: auto;
   font-size: 25px;
   color: turquoise;
 }
@@ -18,7 +18,7 @@
 .photoList {
   list-style-type: none;
   padding: 15px;
-  height: 88%; 
+  height: 88%;
   overflow-y: auto;
   overflow-x: hidden;
 }

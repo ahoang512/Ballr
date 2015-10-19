@@ -30,7 +30,7 @@
  	margin: 0;
  	padding: 0;
  	border: 0;
- 	/*font-size: 100%;*/
+ 	font-size: 100%;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
  	vertical-align: baseline;
@@ -55,8 +55,4 @@ html,body {
   content: "";
   display: block;
   clear: both;
-}
-
-body {
-
 }
