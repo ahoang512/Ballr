@@ -38,14 +38,49 @@
   margin-bottom: 10px;
 }
 
+input.editName {
+  width: 70%;
+}
+/* photo names */
+.photoTileContainer h2 {
+  float: left;
+  width: auto;
+  height: 10%;
+  font-size: initial;
+  text-align: center;
+}
+
 .photoTileContainer div {
   background-color: cadetblue;
 }
+
+.photoTileInfo {
+  margin-top: 2px;
+}
+
+/*edit button*/
+.photoTileInfo > div {
+  text-align: center;
+  float: right;
+  height: 20px;
+  width: 20%;
+  font-size: initial;
+  background: steelblue;
+}
+
+.photoTileInfo > div:hover {
+  background: yellow;
+}
+
+
+
+
 
 
 
 .photoButtons div {
   float: left;
+  font-size: medium
 }
 
 

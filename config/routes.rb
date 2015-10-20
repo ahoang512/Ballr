@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: :json} do
     resources :albums, only: [:create, :destroy, :index]
-    resources :photos, only: [:index, :create, :destroy] do
+    resources :photos, only: [:index, :create, :destroy, :update] do
       collection do
         get 'random'
         get 'user_photos'

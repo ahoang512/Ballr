@@ -25,4 +25,19 @@ window.PhotoUtil = {
       }
     });
   },
+
+  editPhoto : function (photoId, newName){
+    var params = {
+      photoName : newName
+    };
+    $.ajax({
+      url: "/api/photos/"+photoId,
+      type: "PATCH",
+      data: params,
+      success : function(photo){
+        PhotoActions.updatePhotoName(photo);
+      }
+    });
+
+  }
 };

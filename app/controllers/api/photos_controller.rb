@@ -25,6 +25,14 @@ class Api::PhotosController < ApplicationController
     render json: @photo
   end
 
+  def update
+    newName = params[:photoName];
+    id = params[:id];
+    @photo = Photo.find(id)
+    @photo.update(name: newName)
+    render json: @photo
+  end
+
   def random
     @photos = Photo.includes(:album).all.to_a
     @photos.shuffle!

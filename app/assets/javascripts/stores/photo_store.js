@@ -5,6 +5,7 @@
 
   var _photos = [];
   var _photoSelected = 0;
+  var _editSelected = 0;
 
   var resetPhotos = function (photos) {
     _photos = photos.slice();
@@ -27,8 +28,25 @@
     }
   };
 
+  var updatePhoto = function (updatedPhoto) {
+    var idx;
+    _photos.find(function(photo,index){
+      if (photo.id === updatedPhoto.id){
+        idx = index;
+        return;
+      }
+    });
+    if (idx !== -1){
+      _photos[idx] = updatedPhoto;
+    }
+  };
+
   var updateSelected = function(photoId) {
     _photoSelected = photoId;
+  };
+
+  var updateEditSelected = function(id) {
+    _editSelected  = id;
   };
 
 
@@ -38,6 +56,9 @@
     },
     photoSelected : function () {
       return _photoSelected;
+    },
+    editSelected : function () {
+      return _editSelected;
     },
     addChangeListener : function (callback) {
       this.on(CHANGE_EVENT, callback);
@@ -61,6 +82,15 @@
           break;
         case PhotoConstants.PHOTO_DELETED:
           removePhoto(action.photo);
+          root.PhotoStore.emit(CHANGE_EVENT);
+          break;
+        case PhotoConstants.EDIT_PHOTO_PRESSED:
+          updateEditSelected(action.id);
+          root.PhotoStore.emit(CHANGE_EVENT);
+          break;
+        case PhotoConstants.PHOTO_EDITED:
+          updatePhoto(action.photo);
+          updateEditSelected(0);
           root.PhotoStore.emit(CHANGE_EVENT);
           break;
       }

@@ -2,7 +2,8 @@ var PhotoTileContainer = React.createClass({
   //this.props.photoSelected
   //this.props.albumSelected
   getInitialState : function () {
-    return ({photos : PhotoStore.all()});
+    return ({photos : PhotoStore.all(),
+             editSelected : PhotoStore.editSelected()});
   },
   componentDidMount : function () {
     PhotoStore.addChangeListener(this._onChange);
@@ -12,25 +13,50 @@ var PhotoTileContainer = React.createClass({
   },
 
   _onChange : function () {
-    this.setState({photos : PhotoStore.all()});
+    this.setState({photos : PhotoStore.all(),
+                   editSelected : PhotoStore.editSelected()});
   },
   _handleClick : function (e) {
     PhotoActions.updateSelected(parseInt(e.currentTarget.id));
   },
-  render : function (){
+  _handleSubmit : function (e) {
+    var newName = e.target[0].value;
+    var id = parseInt(e.target[0].id);
+    PhotoUtil.editPhoto(id, newName);
+  },
 
+  render : function (){
+    var photoTileInfo;
     var tiles =
       this.state.photos.map(function(photo){
+        if (photo.id !== this.state.editSelected){
+          photoTileInfo = ( <div className="group photoTileInfo">
+              <h2>{photo.name}</h2>
+              <EditNameButton photo={photo}/>
+            </div>
+          );
+        }else {
+          photoTileInfo = ( <div className="group photoTileInfo">
+            <form onSubmit={this._handleSubmit}>
+              <input type="text" className="editName" defaultValue={photo.name} id={photo.id}/>
+              <input type="submit" />
+            </form>
+            </div>
+          );
+        }
+
         if (this.props.photoSelected === photo.id){
           return (<li key={photo.id}
                       id={photo.id}
                       onClick={this._handleClick}
                       className="selected">
                     <img src={photo.url}  className="photoTiles"/>
+                    {photoTileInfo}
                   </li>);
         }else {
           return (<li key={photo.id} id={photo.id} onClick={this._handleClick}>
                     <img src={photo.url}  className="photoTiles"/>
+                    {photoTileInfo}
                   </li>);
         }
       }.bind(this));
@@ -110,3 +136,18 @@ var DeleteButton = React.createClass({
     );
   }
 })
+
+var EditNameButton = React.createClass({
+  //this.props.photo
+  _handleClick : function (e) {
+    var id = this.props.photo.id;
+    PhotoActions.editPhotoPressed(id);
+  },
+  render : function () {
+    return (
+      <div className="editButton" onClick={this._handleClick}>
+        Edit
+      </div>
+    )
+  }
+});
