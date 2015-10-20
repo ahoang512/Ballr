@@ -2,21 +2,26 @@
   background-color: #0B0B3B;
   color: white;
   display: inline-block;
-  font-size: 40px;
   width: 100%;
 }
 
 .logo {
   float: left;
+  font-size: 40px;
   margin-left: 15%;
 }
 .logo:hover {
   color: turquoise;
 }
 
+.navbar .navButtons {
+  margin-right: 5%;
+}
+
 .navbar .navButtons > div > * {
   float: right;
-  padding-right: 15px;
+  padding: 10px;
+  font-size:  x-large;
 }
 .navbar .navButtons > div > *:hover {
   color: turquoise;
