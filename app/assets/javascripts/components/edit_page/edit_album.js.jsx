@@ -16,7 +16,7 @@ var EditAlbum = React.createClass({
     PhotoStore.addChangeListener(this._onChange);
   },
   componentWillUnmount: function(){
-    PhotoStore.addChangeListener(this._onChange);
+    PhotoStore.removeChangeListener(this._onChange);
   },
 
   _onChange : function () {

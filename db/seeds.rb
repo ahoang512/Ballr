@@ -1,30 +1,30 @@
 u1 = User.create(email: "a@a.com",
-                 username: "Joe Pavelski",
+                 username: "JoePavelski",
                  password: "password",
     photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445213333/3985_kkdd8i.png"
 )
 
 
 u2 = User.create(email: "b@b.com",
-                 username: "Buster Posey",
+                 username: "BusterPosey",
                  password: "password",
     photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445216296/rw30hit29yf3mk2rohft.png"
 )
 
 u3 = User.create(email: "c@c.com",
-                 username: "Stephen Curry",
+                 username: "StephenCurry",
                  password: "password",
     photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445290252/feukwg6w97c7vk1lcixu.png"
 )
 
 u4 = User.create(email: "d@d.com",
-                 username: "Marco Reus",
+                 username: "MarcoReus",
                  password: "password",
     photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445290471/phiwkmpse3wuytrp8pjd.jpg"
 )
 
 u5 = User.create(email: "e@e.com",
-                 username: "Jerry Rice",
+                 username: "JerryRice",
                  password: "password",
     photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445291015/xotuhzacsf4j8zzi7wua.jpg"
 )

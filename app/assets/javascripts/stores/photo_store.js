@@ -1,14 +1,16 @@
 (function(root) {
   'use strict';
 
-  var CHANGE_EVENT = "photos_changed"
+  var CHANGE_EVENT = "photos_changed";
 
   var _photos = [];
   var _photoSelected = 0;
   var _editSelected = 0;
+  var _showSelected = 0;
 
   var resetPhotos = function (photos) {
     _photos = photos.slice();
+    console.log("photos_set");
   };
 
   var addNewPhoto = function(photo) {
@@ -49,6 +51,20 @@
     _editSelected  = id;
   };
 
+  var updateShowSelected = function (dir, idx) {
+    var next = dir + idx;
+    if (next >= _photos.length) {
+      next = 0;
+    }else if(next < 0) {
+      next = _photos.length-1;
+    }
+    _showSelected = _photos[next].id;
+  };
+
+  var setShowSelected = function (selected) {
+    _showSelected = selected;
+  };
+
 
   root.PhotoStore = $.extend({}, EventEmitter.prototype, {
     all : function () {
@@ -60,6 +76,9 @@
     editSelected : function () {
       return _editSelected;
     },
+    showSelected : function () {
+      return _showSelected;
+    },
     addChangeListener : function (callback) {
       this.on(CHANGE_EVENT, callback);
     },
@@ -69,7 +88,8 @@
     dispatcherId: AppDispatcher.register(function(action){
       switch (action.actionType){
         case PhotoConstants.PHOTOS_RECEIVED:
-          resetPhotos(action.photos);
+          resetPhotos(action.args.photos);
+          setShowSelected(action.args.selected);
           root.PhotoStore.emit(CHANGE_EVENT);
           break;
         case PhotoConstants.PHOTO_RECEIVED:
@@ -91,6 +111,14 @@
         case PhotoConstants.PHOTO_EDITED:
           updatePhoto(action.photo);
           updateEditSelected(0);
+          root.PhotoStore.emit(CHANGE_EVENT);
+          break;
+        case PhotoConstants.ITERATE_CLICKED:
+          updateShowSelected(action.args.dir, action.args.idx);
+          root.PhotoStore.emit(CHANGE_EVENT);
+          break;
+        case PhotoConstants.TILE_CLICKED:
+          setShowSelected(action.id);
           root.PhotoStore.emit(CHANGE_EVENT);
           break;
       }

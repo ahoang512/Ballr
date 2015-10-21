@@ -1,8 +1,12 @@
 PhotoActions = {
-  receiveAlbumPhotos : function (photos) {
+  receiveAlbumPhotos : function (photos, selected_id) {
+    var args = {
+      photos : photos,
+      selected : selected_id
+    };
     AppDispatcher.dispatch({
       actionType : PhotoConstants.PHOTOS_RECEIVED,
-      photos : photos
+      args : args
     });
   },
   receiveNewPhoto : function(photo) {
@@ -37,6 +41,31 @@ PhotoActions = {
     AppDispatcher.dispatch({
       actionType: PhotoConstants.PHOTO_EDITED,
       photo: photo
+    });
+  },
+
+  photoClicked : function(id) {
+    AppDispatcher.dispatch({
+      actionType : PhotoConstants.PHOTO_CLICKED,
+      id : id
+    });
+  },
+
+  iterateClicked : function (dir, idx) {
+    var args= {
+      dir : dir,
+      idx : idx
+    };
+    AppDispatcher.dispatch({
+      actionType : PhotoConstants.ITERATE_CLICKED,
+      args : args
+    });
+  },
+
+  photoTileClicked : function (id) {
+    AppDispatcher.dispatch ({
+      actionType : PhotoConstants.TILE_CLICKED,
+      id: id
     });
   }
 

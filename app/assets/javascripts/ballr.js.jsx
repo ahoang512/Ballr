@@ -21,8 +21,8 @@ $(function(){
     <Router>
       <Route path="/" component= {App}>
       <IndexRoute component={LandingPage}/>
-        <Route path="user/:userid/edit"
-          components={{edit : EditAlbum}}/>
+        <Route path="user/:userid/edit" component={EditAlbum}/>
+        <Route path="photos/:username" component={UserPage}/>
       </Route>
     </Router>
   ), root);

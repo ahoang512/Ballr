@@ -1,0 +1,73 @@
+.userPage {
+  height: 100%;
+  background-color: grey;
+}
+
+.photoStream {
+  height: 80%;
+  background: #212124;
+}
+
+.photoStream .stream {
+  height: 95%;
+}
+
+.photoStream .stream div {
+  float:left;
+  height: 100%;
+}
+
+.photoStream .stream .change {
+  width: 15%;
+  font-size: xx-large;
+  color: white;
+  line-height: 22;
+  text-align: center;
+}
+
+.photoStream .stream .change:hover {
+  color: blue;
+}
+
+
+
+.photoStream .stream .photo {
+  width: 70%;
+  text-align: center;
+}
+
+.photo img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.photoStream .albumPhotos {
+  height: 15%;
+  background-color: lightgrey;
+  text-align: center;
+}
+
+.albumPhotos img {
+  max-height: 95%;
+}
+
+.albumPhotos img.tileSelected {
+  border: solid;
+  border-color: green;
+}
+
+
+
+
+.albumPhotos img:hover {
+
+  -webkit-transform:scale(1.25); /* Safari and Chrome */
+  -moz-transform:scale(1.25); /* Firefox */
+  -ms-transform:scale(1.25); /* IE 9 */
+  -o-transform:scale(1.25); /* Opera */
+   transform:scale(1.25);
+}

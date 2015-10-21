@@ -1,11 +1,11 @@
 window.PhotoUtil = {
-  fetchAlbumPhotos : function (albumId){
+  fetchAlbumPhotos : function (albumId, selectedId){
     $.ajax({
       url: "api/photos",
       type: "GET",
       data: {photo : {albumId : albumId}},
       success : function (photos) {
-        PhotoActions.receiveAlbumPhotos(photos);
+        PhotoActions.receiveAlbumPhotos(photos, selectedId);
       }
     });
   },
