@@ -41,7 +41,7 @@ var FeedOptions = React.createClass({
           LandingUtil.fetchUserPhotos();
         } //else do nothing
         break;
-      case "front page":
+      case "explore":
         LandingUtil.fetchRandomPhotos();
         break;
     }
@@ -50,7 +50,7 @@ var FeedOptions = React.createClass({
   render : function() {
     return (
       <div className="feedOptions">
-        <div className="option" onClick={this._handleClick}>front page</div>
+        <div className="option" onClick={this._handleClick}>explore</div>
         <div className="divider">|</div>
         <div className="option" onClick={this._handleClick}>personal</div>
       </div>
