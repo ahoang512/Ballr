@@ -38,7 +38,7 @@ var NotLogged = React.createClass({
   render : function () {
     return(
       <div>
-        <div className="loginButtons" onClick={this._login}>login</div>
+        <div className="loginButtons" onClick={this._login}>login(guest)</div>
         <div className="loginButtons" onClick={this._signUp}>signup</div>
       </div>
     );
