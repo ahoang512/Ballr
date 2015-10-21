@@ -19,7 +19,7 @@
   var removePhoto = function (oldPhoto){
     var idx;
     _photos.find(function(photo,index){
-      if (photo.id === oldPhoto.id){
+      if (photo.photo_id === oldPhoto.photo_id){
         idx = index;
         return photo;
       }
@@ -32,7 +32,7 @@
   var updatePhoto = function (updatedPhoto) {
     var idx;
     _photos.find(function(photo,index){
-      if (photo.id === updatedPhoto.id){
+      if (photo.photo_id === updatedPhoto.photo_id){
         idx = index;
         return;
       }

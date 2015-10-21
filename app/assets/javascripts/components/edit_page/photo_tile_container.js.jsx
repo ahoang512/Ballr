@@ -22,6 +22,7 @@ var PhotoTileContainer = React.createClass({
   _handleSubmit : function (e) {
     var newName = e.target[0].value;
     var id = parseInt(e.target[0].id);
+    debugger
     PhotoUtil.editPhoto(id, newName);
   },
 
@@ -38,7 +39,7 @@ var PhotoTileContainer = React.createClass({
         }else {
           photoTileInfo = ( <div className="group photoTileInfo">
             <form onSubmit={this._handleSubmit}>
-              <input type="text" className="editName" defaultValue={photo.name} id={photo.id}/>
+              <input type="text" className="editName" defaultValue={photo.name} id={photo.photo_id}/>
               <input type="submit" />
             </form>
             </div>
