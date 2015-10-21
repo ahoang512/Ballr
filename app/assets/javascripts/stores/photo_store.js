@@ -10,7 +10,6 @@
 
   var resetPhotos = function (photos) {
     _photos = photos.slice();
-    console.log("photos_set");
   };
 
   var addNewPhoto = function(photo) {
