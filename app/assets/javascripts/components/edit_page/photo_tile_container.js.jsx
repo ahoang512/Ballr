@@ -29,7 +29,7 @@ var PhotoTileContainer = React.createClass({
     var photoTileInfo;
     var tiles =
       this.state.photos.map(function(photo){
-        if (photo.id !== this.state.editSelected){
+        if (photo.photo_id !== this.state.editSelected){
           photoTileInfo = ( <div className="group photoTileInfo">
               <h2>{photo.name}</h2>
               <EditNameButton photo={photo}/>
@@ -45,16 +45,16 @@ var PhotoTileContainer = React.createClass({
           );
         }
 
-        if (this.props.photoSelected === photo.id){
-          return (<li key={photo.id}
-                      id={photo.id}
+        if (this.props.photoSelected === photo.photo_id){
+          return (<li key={photo.photo_id}
+                      id={photo.photo_id}
                       onClick={this._handleClick}
                       className="selected">
                     <img src={photo.url}  className="photoTiles"/>
                     {photoTileInfo}
                   </li>);
         }else {
-          return (<li key={photo.id} id={photo.id} onClick={this._handleClick}>
+          return (<li key={photo.photo_id} id={photo.photo_id} onClick={this._handleClick}>
                     <img src={photo.url}  className="photoTiles"/>
                     {photoTileInfo}
                   </li>);
@@ -140,7 +140,7 @@ var DeleteButton = React.createClass({
 var EditNameButton = React.createClass({
   //this.props.photo
   _handleClick : function (e) {
-    var id = this.props.photo.id;
+    var id = this.props.photo.photo_id;
     PhotoActions.editPhotoPressed(id);
   },
   render : function () {

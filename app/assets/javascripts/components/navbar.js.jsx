@@ -31,6 +31,10 @@ var NotLogged = React.createClass({
     // location.assign("http://localhost:3000/users/new");
     location.assign("http://ballrapp.herokuapp.com/users/new");
   },
+
+  _guest : function (e) {
+    ApiUtil.guestLogin();
+  },
   render : function () {
     return(
       <div>

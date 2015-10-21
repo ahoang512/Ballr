@@ -30,10 +30,10 @@ u5 = User.create(email: "e@e.com",
 )
 
 
-a1 = Album.create(owner_id: u1.id, name: "Shark Tank")
+a1 = Album.create(owner_id: u1.id, name: "Hockey")
 a2 = Album.create(owner_id: u2.id, name: "World Series")
 a3 = Album.create(owner_id: u3.id, name: "Roaracle")
-a4 = Album.create(owner_id: u4.id, name: "Borussia Dortmund!!")
+a4 = Album.create(owner_id: u4.id, name: "futbol!")
 a5 = Album.create(owner_id: u5.id, name: "FOOTBALL")
 
 p1 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444867036/xz0tgtuck8jrqvl0xvgy.jpg", name: "photo1", album_id: a1.id)
@@ -58,3 +58,13 @@ p12 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v14453
 p13 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445387618/DJ9oIIW2UiJcQ_tp4m4t.gif", name: "Hertl", album_id: a1.id)
 
 p14 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445388055/1sNDIB0SPHhBK_yvuzcc.gif", name: "goalie dance", album_id: a1.id)
+
+p15 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445400057/GwiTbyyoAT2c8_wkskml.gif", name: "megatron", album_id: a5.id)
+
+p16 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445444620/JCtMFY_dkflrk.gif", name: "Messi Magician", album_id: a4.id)
+
+p17 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445445648/u7fdfm9w0inh1o0mmt9k.gif", name: "Pavel Datsyuk Solo", album_id: a1.id)
+
+p18 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445453255/giphy_t9gxfz.gif", name: "So unlucky", album_id: a1.id)
+
+p19 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445453474/Untitled-main_rzvsfs.jpg", name: "Because its the cup", album_id: a1.id)

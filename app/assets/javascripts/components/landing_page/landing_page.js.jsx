@@ -37,7 +37,9 @@ var FeedOptions = React.createClass({
   _handleClick : function (e) {
     switch (e.target.textContent) {
       case "personal":
-        LandingUtil.fetchUserPhotos();
+        if (typeof window.current_user !== 'undefined'){
+          LandingUtil.fetchUserPhotos();
+        } //else do nothing
         break;
       case "front page":
         LandingUtil.fetchRandomPhotos();

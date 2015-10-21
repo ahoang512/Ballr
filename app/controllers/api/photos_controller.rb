@@ -15,8 +15,8 @@ class Api::PhotosController < ApplicationController
 
   def index
     albumId = params[:photo][:albumId].to_i
-    photos = Album.find(albumId).photos
-    render json: photos
+    @photos = Album.find(albumId).photos
+    render :index
   end
 
   def destroy

@@ -8,9 +8,7 @@ var UserPage = React.createClass({
 
   },
   componentDidMount : function () {
-    // PhotoUtil.fetchAlbumPhotos(this.props.location.query.album_id,
-    //   this.props.location.query.photo_id
-    // );
+
     PhotoStore.addChangeListener(this._onChange);
   },
   componentWillUnmount: function(){

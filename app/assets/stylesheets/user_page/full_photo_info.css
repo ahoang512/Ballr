@@ -1,0 +1,11 @@
+.fullPhotoInfoContainer {
+  height: 50%;
+}
+
+.fullPhotoInfo {
+  font-size:  large;
+  width: 70%;
+  height: 100%;
+  background-color: lightgrey;
+  margin: auto;
+}

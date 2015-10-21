@@ -5,7 +5,7 @@ window.PhotoUtil = {
       type: "GET",
       data: {photo : {albumId : albumId}},
       success : function (photos) {
-        PhotoActions.receiveAlbumPhotos(photos, selectedId);
+        PhotoActions.receiveAlbumPhotos(photos.photos, selectedId);
       }
     });
   },

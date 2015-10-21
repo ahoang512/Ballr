@@ -1,14 +1,14 @@
 .userPage {
-  height: 100%;
+  height: 150%;
 }
 
 .photoStream {
-  height: 80%;
+  height: 50%;
   background: #212124;
 }
 
 .photoStream .stream {
-  height: 95%;
+  height: 85%;
 }
 
 .photoStream .stream div {

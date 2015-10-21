@@ -21,6 +21,7 @@
 .loginBox input {
   width: 60%;
   height: 20px;
+
 }
 .loginPage {
   background: url('uefa.jpg');
@@ -53,10 +54,15 @@
 
 #loginButton {
   width: auto;
-  margin-left:71%;
+  font-size: 25px;
 }
 
 #signupButton {
   width: auto;
-  margin-left:71%;
+  font-size: 25px;
+  /*margin-left:71%;*/
+}
+
+#guestButton {
+  font-size: 25px;
 }
