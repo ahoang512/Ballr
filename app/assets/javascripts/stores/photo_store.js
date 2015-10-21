@@ -57,7 +57,7 @@
     }else if(next < 0) {
       next = _photos.length-1;
     }
-    _showSelected = _photos[next].id;
+    _showSelected = _photos[next].photo_id;
   };
 
   var setShowSelected = function (selected) {
