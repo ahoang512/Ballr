@@ -52,3 +52,9 @@ p8 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v144488
 p9 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444883597/ejqoeistkvvpzffuqy5s.jpg", name: "photo9", album_id: a5.id)
 p10 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445292040/USATSI_8527928_p2psaj.jpg", name: "photo10", album_id: a2.id)
 p11 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445292135/b1c37161ef041de60b750a7fb2df02b3.1000x545x1_ywirzu.jpg", name: "photo11", album_id: a4.id)
+
+p12 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445387275/ycvaswy44pacwrd5cqgs.gif", name: "OBJ", album_id: a5.id)
+
+p13 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445387618/DJ9oIIW2UiJcQ_tp4m4t.gif", name: "Hertl", album_id: a1.id)
+
+p14 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445388055/1sNDIB0SPHhBK_yvuzcc.gif", name: "goalie dance", album_id: a1.id)
