@@ -9,3 +9,19 @@
   background-color: lightgrey;
   margin: auto;
 }
+.fullPhotoInfo div {
+  float: left;
+}
+
+.fullPhotoInfo h2 {
+  font-size: xx-large;
+  color: royalblue;
+}
+
+.photoOwner {
+  max-width: 100%;
+}
+
+.userData {
+  width: 15%;
+}

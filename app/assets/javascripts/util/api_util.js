@@ -9,11 +9,4 @@ window.ApiUtil = {
     });
   },
 
-  guestlogin : function () {
-    $.ajax({
-      url : "/session",
-
-    });
-  },
-
 };

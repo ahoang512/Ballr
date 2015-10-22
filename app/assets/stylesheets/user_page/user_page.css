@@ -48,6 +48,8 @@
   height: 15%;
   background-color: #212124;
   text-align: center;
+  width: 100%;
+  overflow: auto;
 }
 
 .albumPhotos img {
