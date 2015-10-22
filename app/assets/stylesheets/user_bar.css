@@ -28,6 +28,7 @@
 
 .userInfo > .userPhotoUpload {
   background-color: teal;
+  cursor: pointer;
   font-size: large;
   width: 100%;
   height: auto;

@@ -5,10 +5,10 @@
   width: 100%;
 }
 
-.logo {
+.logo img {
   float: left;
-  font-size: 40px;
   margin-left: 15%;
+  width: 120px;
 }
 .logo:hover {
   color: turquoise;
