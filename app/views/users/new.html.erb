@@ -23,6 +23,7 @@
       <input type="submit"  value="Sign Up" id="signupButton">
     </form>
     <form action="<%= new_session_url %>" method="get">
+      <%= auth_token_input %>
       <input type="submit"
              name="name"
              value="Have an account? or enter as guest",

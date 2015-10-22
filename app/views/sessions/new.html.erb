@@ -2,10 +2,11 @@
 <div class="loginPage">
   <div class="loginBox">
     <div class="loginLogo"><img src="/logo.png"/></div>
-    <h1>Login</h1>
+    <h1>Welcome back!</h1>
+
     <form  action="<%= session_url %>" method="post">
       <%= auth_token_input %>
-
+      <%= flash[:errors].join("<br>").html_safe if flash[:errors] %><br/><br/>
       <label class="email">Email
       </label>
         <input type="text" name="user[email]" >
@@ -17,6 +18,7 @@
 
       <input type="submit"  id="loginButton" value="Login">
     </form>
+
     <form action="<%= session_url %>" method="post">
       <%= auth_token_input %>
       <input type="hidden" name="user[email]" value="a@a.com">
