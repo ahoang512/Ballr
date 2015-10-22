@@ -1,36 +1,37 @@
 var UserBar = React.createClass({
   //this.props.user
+  //this.props.featured
   render : function () {
     var loggedIn = false;
     if (typeof this.props.user.id !== 'undefined' ){
       loggedIn = true;
     }
+    if (this.props.featured.length == 2 ){
+      var featured = this.props.featured.map(function(user){
+        return (<UserInfo user={user}/>);
+      });
+    }
 
     return (
       <div id="userBar">
-        <div className="userName">{this.props.user.username}</div>
-        {loggedIn ? <UserInfo user={this.props.user}/> : <DefaultInfo/>}
+
+        {loggedIn ? <UserInfo user={this.props.user}/> : {}}
+        {featured}
       </div>
     );
   }
 });
 
 
-var DefaultInfo = React.createClass({
-  render : function(){
-    return (
-      <div className="userInfo">
-        <img src="http://res.cloudinary.com/dayd3nm4v/image/upload/v1445033817/dzkg6i40xsb16orsipu8.jpg"/>
-      </div>);
-  }
-});
 
 var UserInfo = React.createClass({
   //this.props.user
   render : function(){
+    var loggedIn = window.current_user === this.props.user.id;
     return (<div className="userInfo">
+          <div className="userName">{this.props.user.username}</div>
           <img src={this.props.user.photo_url}/>
-          <UploadUserPhotoButton/>
+          {loggedIn ? <UploadUserPhotoButton/> : {}}
           <div className="userStats">
             <label>Number of Photos:
               {this.props.user.photo_count}

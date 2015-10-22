@@ -4,9 +4,14 @@
   var _photos = [];
   var _user = {};
   var _option = "personal";
+  var _featuredUsers = [];
 
   var resetPhotos = function (photos) {
     _photos = photos.slice();
+  };
+
+  var resetFeaturedUsers = function (users) {
+    _featuredUsers = users;
   };
 
   var updateUser = function (user) {
@@ -27,6 +32,10 @@
     option : function() {
       return _option;
     },
+
+    featuredUsers : function () {
+      return _featuredUsers.slice();
+    },
     addChangeListener : function (callback) {
       this.on(CHANGE_EVENT, callback);
     },
@@ -43,7 +52,10 @@
           updateUser(action.user);
           root.LandingStore.emit(CHANGE_EVENT);
           break;
-
+        case LandingConstants.FEATURED_USERS_RECEIVED:
+          resetFeaturedUsers(action.users);
+          root.LandingStore.emit(CHANGE_EVENT);
+          break;
       }
     })
   });

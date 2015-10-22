@@ -1,7 +1,9 @@
 var FullPhotoInfo = React.createClass({
   getInitialState : function () {
     return ({photoSelected : 0,
-             photos : []});
+             photos : [],
+             albums : []
+           });
   },
 
   componentDidMount : function () {

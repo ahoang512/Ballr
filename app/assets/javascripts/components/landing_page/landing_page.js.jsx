@@ -2,7 +2,8 @@ var LandingPage = React.createClass({
   getInitialState : function() {
     return ({user : LandingStore.user(),
              photos : LandingStore.all(),
-             option : LandingStore.option()});
+             option : LandingStore.option(),
+             featuredUsers : []});
   },
   componentDidMount : function() {
     if (typeof window.current_user !== 'undefined' ){
@@ -10,6 +11,7 @@ var LandingPage = React.createClass({
     }
     LandingStore.addChangeListener(this._onChange);
     LandingUtil.fetchRandomPhotos();
+    LandingUtil.fetchRandomUsers();
   },
   componentWillUnmount : function () {
     LandingStore.removeChangeListener(this._onChange);
@@ -17,14 +19,17 @@ var LandingPage = React.createClass({
   _onChange : function () {
     this.setState({user : LandingStore.user(),
                    photos : LandingStore.all(),
-                   option : LandingStore.option()});
+                   option : LandingStore.option(),
+                   featuredUsers : LandingStore.featuredUsers()});
   },
 
   render : function () {
     return (
       <div className="landingPage">
         <div className="landingContainer group">
-          <UserBar user={this.state.user}/>
+          <UserBar user={this.state.user}
+                   featured={this.state.featuredUsers}
+          />
           <FeedOptions/>
           <PhotoFeed photos={this.state.photos}/>
         </div>

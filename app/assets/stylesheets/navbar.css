@@ -12,10 +12,13 @@
 }
 .logo:hover {
   color: turquoise;
+  cursor: pointer;
+
 }
 
 .navbar .navButtons {
   margin-right: 5%;
+  cursor: pointer;
 }
 
 .navbar .navButtons > div > * {

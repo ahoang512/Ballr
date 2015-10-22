@@ -3,6 +3,7 @@
   width: 25%;
   height: 100%;
   background-color: rgba(173,216,230,0.5);
+  overflow-y: auto;
 }
 
 #userBar img {
@@ -33,7 +34,7 @@
 
 
 .userInfo {
-  height: 100%;
+  height: auto;
 }
 
 .userInfo label {

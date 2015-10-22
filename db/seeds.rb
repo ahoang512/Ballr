@@ -70,3 +70,5 @@ p18 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v14454
 p19 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445453474/Untitled-main_rzvsfs.jpg", name: "Because its the cup", album_id: a1.id)
 
 p20 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445467600/tumblr_luinciVz3m1r5oj22o4_250_kmwbkk.gif", name: "goaaalll!", album_id: a1.id)
+
+p21 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445473966/OeOYYGTsPO8ZW_kgju3y.gif", name: "oops", album_id: a5.id)

@@ -1,9 +1,9 @@
 .userPage {
-  height: 150%;
+  height: 90%;
 }
 
 .photoStream {
-  height: 50%;
+  height: 85%;
   background: #212124;
 }
 
@@ -26,6 +26,7 @@
 
 .photoStream .stream .change:hover {
   color: blue;
+  cursor: pointer;
 }
 
 
@@ -54,6 +55,7 @@
 
 .albumPhotos img {
   max-height: 95%;
+  cursor: pointer;
 }
 
 .albumPhotos img.tileSelected {

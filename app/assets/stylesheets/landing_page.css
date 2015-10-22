@@ -9,8 +9,6 @@
 
 .landingContainer {
   height: 100%;
-  /*width: 80%;*/
-  /*margin: auto;*/
   margin-left: 10%;
   margin-right: 0;
 }
@@ -36,6 +34,8 @@
 
 .photoItems {
   margin-bottom: 15px;
+  cursor: pointer;
+  
 }
 
 .photoInfo {

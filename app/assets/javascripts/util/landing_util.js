@@ -41,4 +41,14 @@ window.LandingUtil = {
     });
   },
 
+  fetchRandomUsers : function () {
+    $.ajax({
+      url : "/users",
+      type: "GET",
+      success : function(users){
+        LandingActions.receiveFeaturedUsers(users.users);
+      }
+    });
+  }
+
 };

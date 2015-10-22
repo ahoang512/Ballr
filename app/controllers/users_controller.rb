@@ -1,4 +1,13 @@
 class UsersController < ApplicationController
+  def index
+    #get 2 featured users
+    id  = current_user.id
+    @users = User.where("id != #{id}");
+    @users = @users.to_a
+    @users.shuffle!
+    @users = @users.take(2)
+    render :index
+  end
 
   def new
     @user = User.new
