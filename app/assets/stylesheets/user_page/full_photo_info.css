@@ -14,10 +14,17 @@
   float: left;
 }
 
+.fullPhotoInfo .photoData {
+  width: 85%;
+}
+
+
 .fullPhotoInfo h2 {
   font-size: xx-large;
   color:  navy;
 }
+
+
 
 .photoOwner {
   max-width: 100%;

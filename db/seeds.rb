@@ -72,3 +72,28 @@ p19 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v14454
 p20 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445467600/tumblr_luinciVz3m1r5oj22o4_250_kmwbkk.gif", name: "goaaalll!", album_id: a1.id)
 
 p21 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445473966/OeOYYGTsPO8ZW_kgju3y.gif", name: "oops", album_id: a5.id)
+
+p22 = Photo.create(url:
+"http://res.cloudinary.com/dayd3nm4v/image/upload/v1445548822/3rgXBKBlcvBmnhbf7W_burqf1.gif", name:
+"Curry with the dime", album_id: a3.id)
+
+p23 = Photo.create(url:
+"http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549205/Nax6whtH6xd4s_tmzebf.gif", name:
+"Trey", album_id: a3.id)
+
+p24 = Photo.create(url:
+"http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549344/2015-06-17t043537z_1154834890_nocid_rtrmadp_3_nba-playoffs-golden-state-warriors-at-cleveland-cavaliers_0_bsnwbr.jpg", name:
+"Championship", album_id: a3.id)
+
+
+p25 = Photo.create(url:
+"http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549532/yoJC2RdW6zCIcCOZvW_tar6vy.gif", name:
+"Handles", album_id: a3.id)
+
+p26 = Photo.create(url:
+"http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549700/andre-iguodala-stephen-curry-harrison-barnes-klay-thompson-nba-golden-state-warriors-memphis-grizzlies-850x560_q5brzn.jpg", name:
+"Squad", album_id: a3.id)
+
+p27 = Photo.create(url:
+"http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549946/StQsmNZXcx3sk_t4yrne.gif", name:
+"Klay with the monster slam!", album_id: a3.id)

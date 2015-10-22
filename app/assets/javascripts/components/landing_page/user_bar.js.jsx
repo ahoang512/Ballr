@@ -50,6 +50,9 @@ var UserInfo = React.createClass({
 
 var UploadUserPhotoButton = React.createClass({
   _handleUpload : function (error, result) {
+    if (error.message === "User closed widget") {
+      return;
+    }
     var url = result[0].url;
     var filename = result[0].original_filename;
     var params = {
