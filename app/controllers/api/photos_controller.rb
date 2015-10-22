@@ -15,7 +15,7 @@ class Api::PhotosController < ApplicationController
 
   def index
     albumId = params[:photo][:albumId].to_i
-    @photos = Album.find(albumId).photos
+    @photos = Album.find(albumId).photos.includes(:album, :owner)
     render :index
   end
 

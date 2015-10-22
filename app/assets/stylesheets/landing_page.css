@@ -35,7 +35,7 @@
 .photoItems {
   margin-bottom: 15px;
   cursor: pointer;
-  
+
 }
 
 .photoInfo {
@@ -54,6 +54,7 @@
 
 .photoLink:hover{
   color: turquoise;
+
 }
 
 /*user photo and name*/
@@ -100,6 +101,8 @@
 
 .feedOptions .option:hover {
   color: turquoise;
+  border-bottom: solid;
+    border-color: blue;
 }
 
 .divider {
