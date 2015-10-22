@@ -35,19 +35,21 @@ a2 = Album.create(owner_id: u2.id, name: "World Series")
 a3 = Album.create(owner_id: u3.id, name: "Roaracle")
 a4 = Album.create(owner_id: u4.id, name: "futbol!")
 a5 = Album.create(owner_id: u5.id, name: "FOOTBALL")
+a6 = Album.create(owner_id: u1.id, name: "Shark Tank!")
 
-p1 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444867036/xz0tgtuck8jrqvl0xvgy.jpg", name: "photo1", album_id: a1.id)
+p1 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444867036/xz0tgtuck8jrqvl0xvgy.jpg", name: "Whats good?", album_id: a6.id)
 
 p2 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445291961/mlb_a_giantswinwar_668x376_dzayke.jpg", name: "photo2", album_id: a2.id)
 
 
 
-p3 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444866977/kqmv6t5p3quxrj6qwqo3.jpg", name: "photo3", album_id: a1.id)
+p3 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444866977/kqmv6t5p3quxrj6qwqo3.jpg", name: "Where'd it go? - goalie", album_id: a6.id)
 p4 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444866499/rwct6tkg5jwskhthmdwv.jpg", name: "photo4", album_id: a5.id)
 p5 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444866327/qbe95hjswzf9hiei5njy.jpg", name: "photo5", album_id: a5.id)
 
 p6 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444883662/zaaccw4ylptrdmqc1vpp.jpg", name: "photo6", album_id: a4.id)
-p7 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444883634/ilybzwzwuaaj0ei1ymnj.jpg", name: "photo7", album_id: a1.id)
+p7 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444883634/ilybzwzwuaaj0ei1ymnj.jpg", name: "cross the line!", album_id: a6.id)
+
 p8 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444883610/mojbd77g3lyb4v4fwgz6.jpg", name: "photo8", album_id: a4.id)
 p9 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444883597/ejqoeistkvvpzffuqy5s.jpg", name: "photo9", album_id: a5.id)
 p10 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445292040/USATSI_8527928_p2psaj.jpg", name: "photo10", album_id: a2.id)
@@ -55,9 +57,9 @@ p11 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v14452
 
 p12 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445387275/ycvaswy44pacwrd5cqgs.gif", name: "OBJ", album_id: a5.id)
 
-p13 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445387618/DJ9oIIW2UiJcQ_tp4m4t.gif", name: "Hertl", album_id: a1.id)
+p13 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445387618/DJ9oIIW2UiJcQ_tp4m4t.gif", name: "WHAT A GOAL!", album_id: a6.id)
 
-p14 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445388055/1sNDIB0SPHhBK_yvuzcc.gif", name: "goalie dance", album_id: a1.id)
+p14 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445388055/1sNDIB0SPHhBK_yvuzcc.gif", name: "boooya", album_id: a6.id)
 
 p15 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445400057/GwiTbyyoAT2c8_wkskml.gif", name: "megatron", album_id: a5.id)
 
@@ -69,7 +71,7 @@ p18 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v14454
 
 p19 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445453474/Untitled-main_rzvsfs.jpg", name: "Because its the cup", album_id: a1.id)
 
-p20 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445467600/tumblr_luinciVz3m1r5oj22o4_250_kmwbkk.gif", name: "goaaalll!", album_id: a1.id)
+p20 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445467600/tumblr_luinciVz3m1r5oj22o4_250_kmwbkk.gif", name: "goaaalll!", album_id: a6.id)
 
 p21 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445473966/OeOYYGTsPO8ZW_kgju3y.gif", name: "oops", album_id: a5.id)
 
