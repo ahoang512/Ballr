@@ -1,7 +1,7 @@
 .loginBox {
   opacity: 0.8;
   width: 400px;
-  height: 300px;
+  height: auto;
   margin: auto;
   margin-top: 200px;
   background-color: white;
@@ -9,9 +9,9 @@
 }
 
 .loginBox h1 {
-  padding-top: 60px;
   margin-left: 15%;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .loginBox form {
@@ -21,6 +21,7 @@
 .loginBox input {
   width: 60%;
   height: 20px;
+  margin-bottom: 5px;
 
 }
 .loginPage {
@@ -40,7 +41,7 @@
 }
 
 .loginLogo {
-  height: 20%;
+  /*height: 20%;*/
   width: auto;
   background-color: #0B0B3B;
   color: white;
@@ -49,7 +50,11 @@
 }
 
 .email {
-  padding-right: 30px;
+  margin-right: 34px;
+}
+
+.password {
+  margin-right: 3px;
 }
 
 #loginButton {
@@ -58,11 +63,17 @@
 }
 
 #signupButton {
-  width: auto;
+  width: 50%;
   font-size: 25px;
-  /*margin-left:71%;*/
+  margin-left:20%;
 }
 
 #guestButton {
   font-size: 25px;
+}
+
+#redirect {
+  width: 75%;
+  font-size: 25px;
+  margin-left: 10%;
 }

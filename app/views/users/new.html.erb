@@ -1,27 +1,32 @@
 <div class="loginPage">
   <div class="loginBox">
-    <div class="loginLogo">ballr</div>
+    <div class="loginLogo"><img src="/logo.png"/></div>
     <h1>Create an Account!</h1>
     <form  action="<%= users_url %>" method="post">
       <%= auth_token_input %>
-
-      <label class="email">Email
+      <%= flash[:errors].join("<br>").html_safe if flash[:errors] %><br/><br/>
+      <label class="email">
+        Email &nbsp;
       </label>
         <input type="text" name="user[email]" value="">
       <br/>
-      <label>
-        Password
-        <input type="password" name="user[password]" value="">
+      <label class="password">
+        Password &nbsp;
       </label>
+      <input type="password" name="user[password]" value="">
       <br/>
       <label >
-        Username
+        Username &nbsp;
       </label>
         <input type="text"  name="user[username]" value="">
 
-      <br/>
-
       <input type="submit"  value="Sign Up" id="signupButton">
+    </form>
+    <form action="<%= new_session_url %>" method="get">
+      <input type="submit"
+             name="name"
+             value="Have an account? or enter as guest",
+             id="redirect">
     </form>
   </div>
 </div>
