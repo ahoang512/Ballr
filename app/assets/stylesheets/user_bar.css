@@ -7,7 +7,14 @@
 }
 
 #userBar img {
-  width: 100%;
+  width: 200px;
+  height: 200px;
+}
+
+#userBar h1 {
+  font-size: x-large;
+  text-align: center;
+  background: seagreen;
 }
 
 /*username*/
@@ -22,7 +29,6 @@
 .userInfo > .userPhotoUpload {
   background-color: teal;
   font-size: large;
-  text-align: center;
   width: 100%;
   height: auto;
   border-width: thin;
@@ -35,6 +41,7 @@
 
 .userInfo {
   height: auto;
+  text-align: center;
 }
 
 .userInfo label {

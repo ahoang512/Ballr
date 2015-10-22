@@ -41,7 +41,7 @@ var LandingPage = React.createClass({
 var FeedOptions = React.createClass({
   _handleClick : function (e) {
     switch (e.target.textContent) {
-      case "personal":
+      case "my photos":
         if (typeof window.current_user !== 'undefined'){
           LandingUtil.fetchUserPhotos();
         } //else do nothing
@@ -53,11 +53,15 @@ var FeedOptions = React.createClass({
   },
 
   render : function() {
+    var loggedIn = typeof window.current_user !== 'undefined'
+
     return (
       <div className="feedOptions">
+        {loggedIn ? <div className="option" onClick={this._handleClick}>my photos</div>
+        : {}}
+        {loggedIn ? <div className="divider">|</div>
+        : {}}
         <div className="option" onClick={this._handleClick}>explore</div>
-        <div className="divider">|</div>
-        <div className="option" onClick={this._handleClick}>personal</div>
       </div>
     )
   }

@@ -2,7 +2,7 @@ var NavBar = React.createClass({
   mixins : [ReactRouter.History],
 
   _logo : function () {
-    this.history.pushState(null, '/', {});
+    this.history.replaceState(null, '/', {});
   },
   render : function () {
     var loggedIn = true;
@@ -58,7 +58,7 @@ var LoggedIn = React.createClass({
     return(
       <div>
         <div onClick={this._signOut}>signout</div>
-        <div onClick={this._library}>library</div>
+        <div onClick={this._library}>my library</div>
       </div>
     );
   }

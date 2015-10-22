@@ -16,6 +16,8 @@ var UserBar = React.createClass({
       <div id="userBar">
 
         {loggedIn ? <UserInfo user={this.props.user}/> : {}}
+        <br/>
+        <h1>&darr;  &nbsp; Featured Users &nbsp; &darr;</h1>
         {featured}
       </div>
     );
@@ -69,7 +71,7 @@ var UploadUserPhotoButton = React.createClass({
   render : function() {
     return (
       <div className= "userPhotoUpload" onClick={this._onClick}>
-        Upload
+        Upload Profile Picture
       </div>
     )
   }

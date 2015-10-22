@@ -1,8 +1,12 @@
 class UsersController < ApplicationController
   def index
     #get 2 featured users
-    id  = current_user.id
-    @users = User.where("id != #{id}");
+    if current_user != nil
+      id  = current_user.id
+      @users = User.where("id != #{id}")
+    else
+      @users = User.all;
+    end
     @users = @users.to_a
     @users.shuffle!
     @users = @users.take(2)

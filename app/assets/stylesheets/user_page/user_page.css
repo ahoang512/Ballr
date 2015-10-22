@@ -39,7 +39,7 @@
 .photo img {
   width: 100%;
   max-width: 100%;
-  max-height: 100%;
+  max-height: 95%;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
