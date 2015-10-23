@@ -10,6 +10,16 @@ window.UserUtil = {
     });
   },
 
+  getCurrentUser : function() {
+    $.ajax({
+      url: "/users/"+window.current_user,
+      type: "GET",
+      success : function (user){
+        UserActions.receiveCurrentUser(user.user);
+      }
+    });
+  },
+
   fetchRandomUsers : function () {
     $.ajax({
       url : "/users",

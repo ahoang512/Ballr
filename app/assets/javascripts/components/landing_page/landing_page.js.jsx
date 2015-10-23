@@ -1,14 +1,15 @@
 var LandingPage = React.createClass({
   getInitialState : function() {
-    return ({user : LandingStore.user(),
+    return ({user : UserStore.currentUser(),
              photos : LandingStore.all(),
              option : LandingStore.option(),
              featuredUsers : []});
   },
   componentDidMount : function() {
     if (typeof window.current_user !== 'undefined' ){
-      ApiUtil.getCurrentUser();
+      UserUtil.getCurrentUser();
     }
+    UserStore.addChangeListener(this._onChange);
     LandingStore.addChangeListener(this._onChange);
     PhotoUtil.fetchRandomPhotos();
     UserUtil.fetchRandomUsers();
@@ -17,7 +18,8 @@ var LandingPage = React.createClass({
     LandingStore.removeChangeListener(this._onChange);
   },
   _onChange : function () {
-    this.setState({user : LandingStore.user(),
+    debugger
+    this.setState({user : UserStore.currentUser(),
                    photos : LandingStore.all(),
                    option : LandingStore.option(),
                    featuredUsers : LandingStore.featuredUsers()});

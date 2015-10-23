@@ -26,9 +26,9 @@
     all : function () {
       return _photos.slice();
     },
-    user : function () {
-      return _user;
-    },
+    // user : function () {
+    //   return _user;
+    // },
     option : function() {
       return _option;
     },
@@ -48,10 +48,10 @@
           resetPhotos(action.photos);
           root.LandingStore.emit(CHANGE_EVENT);
           break;
-        case LandingConstants.USER_RECEIVED:
-          updateUser(action.user);
-          root.LandingStore.emit(CHANGE_EVENT);
-          break;
+        // case LandingConstants.USER_RECEIVED:
+        //   updateUser(action.user);
+        //   root.LandingStore.emit(CHANGE_EVENT);
+        //   break;
         case LandingConstants.FEATURED_USERS_RECEIVED:
           resetFeaturedUsers(action.users);
           root.LandingStore.emit(CHANGE_EVENT);

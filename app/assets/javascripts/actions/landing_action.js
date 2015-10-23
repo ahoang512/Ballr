@@ -6,12 +6,12 @@ LandingActions = {
     });
   },
 
-  receiveUser : function (user){
-    AppDispatcher.dispatch({
-      actionType : LandingConstants.USER_RECEIVED,
-      user : user
-    });
-  },
+  // receiveUser : function (user){
+  //   AppDispatcher.dispatch({
+  //     actionType : LandingConstants.USER_RECEIVED,
+  //     user : user
+  //   });
+  // },
 
   receiveFeaturedUsers : function (users) {
     AppDispatcher.dispatch({

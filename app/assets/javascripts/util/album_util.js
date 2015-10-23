@@ -28,8 +28,4 @@ window.AlbumUtil = {
     });
   },
 
-
-
-
-
 };
