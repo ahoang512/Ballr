@@ -22,7 +22,6 @@ var PhotoTileContainer = React.createClass({
   _handleSubmit : function (e) {
     var newName = e.target[0].value;
     var id = parseInt(e.target[0].id);
-    debugger
     PhotoUtil.editPhoto(id, newName);
   },
 

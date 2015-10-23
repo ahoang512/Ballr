@@ -60,7 +60,7 @@ var UploadUserPhotoButton = React.createClass({
         "photo_url" : url,
       }
     }
-    LandingUtil.updateUserPhoto(params);
+    UserUtil.updateUserPhoto(params);
   },
 
   _onClick : function () {

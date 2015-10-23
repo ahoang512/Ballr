@@ -34,10 +34,7 @@ class Api::PhotosController < ApplicationController
   end
 
   def random
-    @photos = Photo.includes(:album).all.to_a
-    @photos.shuffle!
-    @photos = @photos.take(8)
-
+    @photos = Photo.order('random()').limit(15).includes(:album)
     render :index
   end
 

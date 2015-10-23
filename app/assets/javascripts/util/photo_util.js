@@ -10,6 +10,16 @@ window.PhotoUtil = {
     });
   },
 
+  fetchRandomPhotos : function (){
+    $.ajax({
+      url: "api/photos/random",
+      type: "GET",
+      success : function (photos) {
+        LandingActions.receivePhotos(photos.photos);
+      }
+    });
+  },
+
   createPhoto : function (params){
     $.post('api/photos', params, function(photo){
       PhotoActions.receiveNewPhoto(photo);
@@ -38,6 +48,17 @@ window.PhotoUtil = {
         PhotoActions.updatePhotoName(photo);
       }
     });
+  },
 
-  }
+
+  fetchUserPhotos : function(){
+    $.ajax({
+      url: "api/photos/user_photos",
+      type: "GET",
+      success : function (photos) {
+        LandingActions.receivePhotos(photos.photos);
+      }
+
+    });
+  },
 };

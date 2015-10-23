@@ -10,8 +10,8 @@ var LandingPage = React.createClass({
       ApiUtil.getCurrentUser();
     }
     LandingStore.addChangeListener(this._onChange);
-    LandingUtil.fetchRandomPhotos();
-    LandingUtil.fetchRandomUsers();
+    PhotoUtil.fetchRandomPhotos();
+    UserUtil.fetchRandomUsers();
   },
   componentWillUnmount : function () {
     LandingStore.removeChangeListener(this._onChange);
@@ -43,11 +43,11 @@ var FeedOptions = React.createClass({
     switch (e.target.textContent) {
       case "my photos":
         if (typeof window.current_user !== 'undefined'){
-          LandingUtil.fetchUserPhotos();
+          PhotoUtil.fetchUserPhotos();
         } //else do nothing
         break;
       case "explore":
-        LandingUtil.fetchRandomPhotos();
+        PhotoUtil.fetchRandomPhotos();
         break;
     }
   },

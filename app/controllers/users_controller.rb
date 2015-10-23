@@ -3,13 +3,11 @@ class UsersController < ApplicationController
     #get 2 featured users
     if current_user != nil
       id  = current_user.id
-      @users = User.where("id != #{id}")
+      @users = User.where(
+        "id != #{id}").order('random()').limit(2).includes(:photos, :albums)
     else
-      @users = User.all;
+      @users = User.order('random()').limit(2).includes(:photos, :albums)
     end
-    @users = @users.to_a
-    @users.shuffle!
-    @users = @users.take(2)
     render :index
   end
 

@@ -57,7 +57,6 @@ var AlbumTileContainer = React.createClass({
   },
 
   render : function () {
-    debugger
     var form = (
       <form className="albumForm" onSubmit={this._handleSubmit}>
         <label> New Album Name
