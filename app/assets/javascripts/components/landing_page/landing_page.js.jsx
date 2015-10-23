@@ -7,7 +7,7 @@ var LandingPage = React.createClass({
   },
   componentDidMount : function() {
     if (typeof window.current_user !== 'undefined' ){
-      LandingUtil.getCurrentUser();
+      ApiUtil.getCurrentUser();
     }
     LandingStore.addChangeListener(this._onChange);
     LandingUtil.fetchRandomPhotos();

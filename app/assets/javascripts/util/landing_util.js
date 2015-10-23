@@ -9,15 +9,7 @@ window.LandingUtil = {
     });
   },
 
-  getCurrentUser : function() {
-    $.ajax({
-      url: "/users/"+window.current_user,
-      type: "GET",
-      success : function (user){
-        LandingActions.receiveUser(user.user);
-      }
-    });
-  },
+
 
   updateUserPhoto : function(params) {
     $.ajax({

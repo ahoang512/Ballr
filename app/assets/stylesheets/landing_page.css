@@ -9,7 +9,7 @@
 
 .landingContainer {
   height: 100%;
-  margin-left: 10%;
+  /*margin-left: 10%;*/
   margin-right: 0;
 }
 
@@ -18,11 +18,12 @@
   height: 100%;
   width: 65%;
   float: left;
-  margin-left: 5%;
+  /*margin-left: 5%;*/
 }
 
 .photoFeed ul {
   padding-right: 8%;
+  padding-left: 10%;
   width: 100%;
   overflow-y: auto;
   height: 90%;
@@ -90,7 +91,7 @@
   float: left;
   width: 64%;
   height: 5%;
-  margin-left: 5%;
+  margin-left: 6%;
   font-size: xx-large;
 }
 

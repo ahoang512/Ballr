@@ -1,6 +1,5 @@
 var EditAlbum = React.createClass({
 
-
   getInitialState : function () {
     return ({albumSelected : 0,
              photoSelected : PhotoStore.photoSelected()});

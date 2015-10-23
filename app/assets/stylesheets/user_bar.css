@@ -11,6 +11,11 @@
   height: 200px;
 }
 
+.userInfo:first-child {
+  margin-bottom: 1%;
+  outline-:5px solid black;
+}
+
 #userBar h1 {
   font-size: x-large;
   text-align: center;
