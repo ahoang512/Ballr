@@ -21,8 +21,10 @@ var AlbumTileContainer = React.createClass({
         this.setState({createNewAlbum: true});
         break;
       case "remove":
-        this.setState({albumSelected: 0});
-        AlbumUtil.deleteAlbum(this.state.albumSelected);
+        if (confirm("Are you sure you want to delete this album?")){
+          this.setState({albumSelected: 0});
+          AlbumUtil.deleteAlbum(this.state.albumSelected);
+        }
         break;
     }
 
@@ -87,8 +89,8 @@ var AlbumTileContainer = React.createClass({
     return (
       <div className="albumTileContainer">
         <div className="editLabels">Albums</div>
-          {content}
         <NewAlbumButtons click={this._buttonClick}/>
+          {content}
       </div>
     )
   }
@@ -98,13 +100,12 @@ var NewAlbumButtons = React.createClass({
   render : function () {
     return (
       <div className="buttons group">
-        {/*still have to implement remove onclick*/}
-        <div className= "albumButtons remove" onClick={this.props.click} >
+        <button className= "albumButtons remove" onClick={this.props.click} >
           -
-        </div>
-        <div className= "albumButtons add" onClick={this.props.click}>
+        </button>
+        <button className= "albumButtons add" onClick={this.props.click}>
           +
-        </div>
+        </button>
       </div>
     )
   }

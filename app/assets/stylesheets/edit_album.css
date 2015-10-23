@@ -56,7 +56,6 @@
 
 .albumList {
   height: 90%;
-  position: relative;
   list-style-type: none;
   overflow-y: auto;
   overflow-x: hidden;
@@ -82,7 +81,7 @@
 }
 
 .albumButtons {
-  width: 48%;
+  width: 50%;
   height: auto;
   text-align: center;
   font-size: 30px;
@@ -93,17 +92,18 @@
 .remove {
   float: left;
   background-color: silver;
+  border-width: 0;
 }
 
 .add {
-  float: left;
-  background-color: white;
+  float: right;
+  background-color: seagreen;
   border-left-width: 0px;
+  border-width: 0;
 }
 
 .buttons {
   height: auto;
-  position: absolute;
   buttom: 0;
   width: 100%;
 }

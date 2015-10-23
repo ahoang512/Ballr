@@ -10,7 +10,9 @@ var PhotoItem = React.createClass({
       album_id : albumId,
       photo_id : photo.photo_id
     };
-    
+    PhotoUtil.fetchAlbumPhotos(albumId,
+      photo.photo_id
+    );
     this.history.pushState({}, url, query);
   },
 

@@ -103,3 +103,7 @@ p27 = Photo.create(url:
 p28 = Photo.create(url:
 "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445550451/omgrod.0_mwevrs.gif", name:
 "what a pass!", album_id: a5.id)
+
+p29 = Photo.create(url:
+"http://res.cloudinary.com/dayd3nm4v/image/upload/v1445560137/KInkdX7nu8VO0_dfpq5g.gif", name:
+"The curl is crazy!", album_id: a4.id)

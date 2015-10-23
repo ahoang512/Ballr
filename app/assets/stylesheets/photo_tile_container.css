@@ -24,10 +24,7 @@
 }
 
 .photoList li.selected {
-  border-color: yellow;
-  border-width: 3px;
-  border-style: solid;
-
+  outline:2px solid yellow;
 }
 
 .photoTileContainer li {

@@ -1,7 +1,7 @@
 var PhotoStream = React.createClass({
   //this.props.photos
   //this.props.selected
-  //this.props.album_id
+  //this.props.album
   mixins: [ ReactRouter.State ],
   getInitialState : function() {
     return ({selected : parseInt(this.props.selected)});
@@ -57,8 +57,10 @@ var PhotoStream = React.createClass({
     var img;
     if (photos.length !== 0 && this.state.selected > 0){
       var idx = this._findIndex(this.state.selected);
-      var url = photos[idx].url;
-      img = (<img src={url}></img>);
+      if (typeof idx !== "undefined"){
+        var url = photos[idx].url;
+        img = (<img src={url}></img>);
+      }
     }
     return (
       <div className="photoStream">

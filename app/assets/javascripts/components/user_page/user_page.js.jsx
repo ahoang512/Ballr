@@ -8,7 +8,6 @@ var UserPage = React.createClass({
 
   },
   componentDidMount : function () {
-
     PhotoStore.addChangeListener(this._onChange);
   },
   componentWillUnmount: function(){
