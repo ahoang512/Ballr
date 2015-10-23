@@ -3,12 +3,16 @@
   width: 25%;
   height: 100%;
   background-color: rgba(173,216,230,0.5);
-  overflow-y: auto;
 }
 
 #userBar img {
   width: 200px;
   height: 200px;
+}
+
+#userBar ul {
+  overflow-y: auto;
+  height: 93%;
 }
 
 .userInfo:first-child {

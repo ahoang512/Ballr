@@ -8,17 +8,17 @@ var UserBar = React.createClass({
     }
     if (this.props.featured.length == 2 ){
       var featured = this.props.featured.map(function(user){
-        return (<UserInfo user={user}/>);
+        return (<li><UserInfo user={user}/></li>);
       });
     }
 
     return (
       <div id="userBar">
-
-        {loggedIn ? <UserInfo user={this.props.user}/> : {}}
-        <br/>
+        <ul>
+          <li>{loggedIn ? <UserInfo user={this.props.user}/> : {}}</li>
         <h1>&darr;  &nbsp; Featured Users &nbsp; &darr;</h1>
         {featured}
+        </ul>
       </div>
     );
   }
