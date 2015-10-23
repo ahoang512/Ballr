@@ -1,17 +1,18 @@
 var LandingPage = React.createClass({
   getInitialState : function() {
-    return ({user : UserStore.currentUser(),
-             photos : PhotoStore.all(),
+    return ({user : {},
+             photos : [],
              featuredUsers : []});
   },
   componentDidMount : function() {
     if (typeof window.current_user !== 'undefined' ){
       UserUtil.getCurrentUser();
     }
-    UserStore.addChangeListener(this._onChange);
-    PhotoStore.addChangeListener(this._onChange);
     PhotoUtil.fetchFeedPhotos();
     UserUtil.fetchFeaturedUsers();
+    UserStore.addChangeListener(this._onChange);
+    PhotoStore.addChangeListener(this._onChange);
+
   },
   componentWillUnmount : function () {
     PhotoStore.removeChangeListener(this._onChange);
@@ -42,9 +43,7 @@ var FeedOptions = React.createClass({
   _handleClick : function (e) {
     switch (e.target.textContent) {
       case "my photos":
-        if (typeof window.current_user !== 'undefined'){
-          PhotoUtil.fetchUserPhotos();
-        } //else do nothing
+        PhotoUtil.fetchUserPhotos();
         break;
       case "explore":
         PhotoUtil.fetchFeedPhotos();
