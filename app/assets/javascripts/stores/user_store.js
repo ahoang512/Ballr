@@ -34,7 +34,9 @@
           updateCurrentUser(action.user);
           root.UserStore.emit(CHANGE_EVENT);
           break;
-        case "":
+        case UserConstants.FEATURED_USERS_RECEIVED:
+          resetFeaturedUsers(action.users);
+          root.UserStore.emit(CHANGE_EVENT);
           break;
 
       }

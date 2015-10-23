@@ -2,9 +2,7 @@
   'use strict';
   var CHANGE_EVENT = "landing_changed";
   var _photos = [];
-  var _user = {};
   var _option = "personal";
-  var _featuredUsers = [];
 
   var resetPhotos = function (photos) {
     _photos = photos.slice();
@@ -26,16 +24,11 @@
     all : function () {
       return _photos.slice();
     },
-    // user : function () {
-    //   return _user;
-    // },
+
     option : function() {
       return _option;
     },
 
-    featuredUsers : function () {
-      return _featuredUsers.slice();
-    },
     addChangeListener : function (callback) {
       this.on(CHANGE_EVENT, callback);
     },
@@ -48,14 +41,10 @@
           resetPhotos(action.photos);
           root.LandingStore.emit(CHANGE_EVENT);
           break;
-        // case LandingConstants.USER_RECEIVED:
-        //   updateUser(action.user);
+        // case LandingConstants.FEATURED_USERS_RECEIVED:
+        //   resetFeaturedUsers(action.users);
         //   root.LandingStore.emit(CHANGE_EVENT);
         //   break;
-        case LandingConstants.FEATURED_USERS_RECEIVED:
-          resetFeaturedUsers(action.users);
-          root.LandingStore.emit(CHANGE_EVENT);
-          break;
       }
     })
   });

@@ -5,4 +5,11 @@ UserActions = {
       user : user
     });
   },
+
+  receiveFeaturedUsers : function (users) {
+    AppDispatcher.dispatch({
+      actionType : UserConstants.FEATURED_USERS_RECEIVED,
+      users : users
+    });
+  }
 };

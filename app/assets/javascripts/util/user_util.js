@@ -5,7 +5,7 @@ window.UserUtil = {
       type: "PATCH",
       data: params,
       success : function (user){
-        LandingActions.receiveUser(user);
+        UserActions.receiveUser(user);
       }
     });
   },
@@ -20,12 +20,12 @@ window.UserUtil = {
     });
   },
 
-  fetchRandomUsers : function () {
+  fetchFeaturedUsers : function () {
     $.ajax({
       url : "/users",
       type: "GET",
       success : function(users){
-        LandingActions.receiveFeaturedUsers(users.users);
+        UserActions.receiveFeaturedUsers(users.users);
       }
     });
   }

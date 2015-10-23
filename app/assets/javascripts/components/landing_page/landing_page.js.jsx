@@ -12,7 +12,7 @@ var LandingPage = React.createClass({
     UserStore.addChangeListener(this._onChange);
     LandingStore.addChangeListener(this._onChange);
     PhotoUtil.fetchRandomPhotos();
-    UserUtil.fetchRandomUsers();
+    UserUtil.fetchFeaturedUsers();
   },
   componentWillUnmount : function () {
     LandingStore.removeChangeListener(this._onChange);
@@ -22,7 +22,7 @@ var LandingPage = React.createClass({
     this.setState({user : UserStore.currentUser(),
                    photos : LandingStore.all(),
                    option : LandingStore.option(),
-                   featuredUsers : LandingStore.featuredUsers()});
+                   featuredUsers : UserStore.featuredUsers()});
   },
 
   render : function () {
