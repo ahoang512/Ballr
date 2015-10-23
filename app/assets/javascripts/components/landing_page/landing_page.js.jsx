@@ -2,7 +2,6 @@ var LandingPage = React.createClass({
   getInitialState : function() {
     return ({user : UserStore.currentUser(),
              photos : PhotoStore.all(),
-             option : LandingStore.option(),
              featuredUsers : []});
   },
   componentDidMount : function() {
@@ -10,7 +9,6 @@ var LandingPage = React.createClass({
       UserUtil.getCurrentUser();
     }
     UserStore.addChangeListener(this._onChange);
-    LandingStore.addChangeListener(this._onChange);
     PhotoStore.addChangeListener(this._onChange);
     PhotoUtil.fetchFeedPhotos();
     UserUtil.fetchFeaturedUsers();
@@ -18,12 +16,10 @@ var LandingPage = React.createClass({
   componentWillUnmount : function () {
     PhotoStore.removeChangeListener(this._onChange);
     UserStore.removeChangeListener(this._onChange);
-    LandingStore.removeChangeListener(this._onChange);
   },
   _onChange : function () {
     this.setState({user : UserStore.currentUser(),
                    photos : PhotoStore.all(),
-                   option : LandingStore.option(),
                    featuredUsers : UserStore.featuredUsers()});
   },
 
@@ -51,7 +47,6 @@ var FeedOptions = React.createClass({
         } //else do nothing
         break;
       case "explore":
-      debugger
         PhotoUtil.fetchFeedPhotos();
         break;
     }

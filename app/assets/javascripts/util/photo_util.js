@@ -56,7 +56,7 @@ window.PhotoUtil = {
       url: "api/photos/user_photos",
       type: "GET",
       success : function (photos) {
-        LandingActions.receivePhotos(photos.photos);
+        PhotoActions.receivePhotos(photos.photos);
       }
 
     });
