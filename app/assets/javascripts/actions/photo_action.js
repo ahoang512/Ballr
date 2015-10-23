@@ -1,5 +1,5 @@
 PhotoActions = {
-  receiveAlbumPhotos : function (photos, selected_id) {
+  receivePhotos : function (photos, selected_id) {
     var args = {
       photos : photos,
       selected : selected_id

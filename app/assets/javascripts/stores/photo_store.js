@@ -7,10 +7,12 @@
   var _photoSelected = 0;
   var _editSelected = 0;
   var _showSelected = 0;
+  var _photoFeed = [];
 
   var resetPhotos = function (photos) {
     _photos = photos.slice();
   };
+
 
   var addNewPhoto = function(photo) {
     _photos.push(photo);
@@ -78,6 +80,8 @@
     showSelected : function () {
       return _showSelected;
     },
+
+
     addChangeListener : function (callback) {
       this.on(CHANGE_EVENT, callback);
     },

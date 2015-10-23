@@ -5,17 +5,17 @@ window.PhotoUtil = {
       type: "GET",
       data: {photo : {albumId : albumId}},
       success : function (photos) {
-        PhotoActions.receiveAlbumPhotos(photos.photos, selectedId);
+        PhotoActions.receivePhotos(photos.photos, selectedId);
       }
     });
   },
 
-  fetchRandomPhotos : function (){
+  fetchFeedPhotos : function (){
     $.ajax({
       url: "api/photos/random",
       type: "GET",
       success : function (photos) {
-        LandingActions.receivePhotos(photos.photos);
+        PhotoActions.receivePhotos(photos.photos);
       }
     });
   },

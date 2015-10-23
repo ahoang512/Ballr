@@ -7,5 +7,6 @@ PhotoConstants = {
   PHOTO_EDITED : "photo_edited",
   PHOTO_CLICKED : "photo_clicked",
   ITERATE_CLICKED : "iterate_clicked",
-  TILE_CLICKED : "photo_tile_clicked"
+  TILE_CLICKED : "photo_tile_clicked",
+  PHOTO_FEED_RECEIVED : "photo_feed_received"
 };

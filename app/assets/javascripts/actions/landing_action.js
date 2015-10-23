@@ -7,13 +7,6 @@ LandingActions = {
   },
 
 
-  // 
-  // receiveFeaturedUsers : function (users) {
-  //   AppDispatcher.dispatch({
-  //     actionType : LandingConstants.FEATURED_USERS_RECEIVED,
-  //     users : users
-  //   });
-  // }
 
 
 };

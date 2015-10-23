@@ -41,10 +41,6 @@
           resetPhotos(action.photos);
           root.LandingStore.emit(CHANGE_EVENT);
           break;
-        // case LandingConstants.FEATURED_USERS_RECEIVED:
-        //   resetFeaturedUsers(action.users);
-        //   root.LandingStore.emit(CHANGE_EVENT);
-        //   break;
       }
     })
   });
