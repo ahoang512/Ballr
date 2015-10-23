@@ -61,6 +61,13 @@
   overflow-x: hidden;
 }
 
+.albumTileContainer input {
+  width: 100%;
+  height: 20px;
+  border: 0px;
+  padding: 0;
+}
+
 .albumList li {
   font-size: 20px;
   height: 40px;
