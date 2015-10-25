@@ -31,7 +31,7 @@ u5 = User.create(email: "e@e.com",
 
 
 a1 = Album.create(owner_id: u1.id, name: "Hockey")
-a2 = Album.create(owner_id: u2.id, name: "World Series")
+a2 = Album.create(owner_id: u2.id, name: "Baseball")
 a3 = Album.create(owner_id: u3.id, name: "Roaracle")
 a4 = Album.create(owner_id: u4.id, name: "futbol!")
 a5 = Album.create(owner_id: u5.id, name: "FOOTBALL")
@@ -107,3 +107,7 @@ p28 = Photo.create(url:
 p29 = Photo.create(url:
 "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445560137/KInkdX7nu8VO0_dfpq5g.gif", name:
 "The curl is crazy!", album_id: a4.id)
+
+p30 = Photo.create(url:
+"http://res.cloudinary.com/dayd3nm4v/image/upload/v1445641036/kLGIKizJIX9bG_it770e.gif", name:
+"bam!", album_id: a2.id)
