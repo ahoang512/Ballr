@@ -73,7 +73,7 @@ p19 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v14454
 
 p20 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445467600/tumblr_luinciVz3m1r5oj22o4_250_kmwbkk.gif", name: "goaaalll!", album_id: a6.id)
 
-p21 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445473966/OeOYYGTsPO8ZW_kgju3y.gif", name: "oops", album_id: a5.id)
+p21 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/c_scale,h_309,w_466/v1445473966/OeOYYGTsPO8ZW_kgju3y.gif", name: "oops", album_id: a5.id)
 
 p22 = Photo.create(url:
 "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445548822/3rgXBKBlcvBmnhbf7W_burqf1.gif", name:
@@ -111,3 +111,7 @@ p29 = Photo.create(url:
 p30 = Photo.create(url:
 "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445641036/kLGIKizJIX9bG_it770e.gif", name:
 "bam!", album_id: a2.id)
+
+p31 = Photo.create(url:
+"http://res.cloudinary.com/dayd3nm4v/image/upload/v1445874866/CalvinJohnson2_jolpra.gif", name:
+"Triple Coverage!", album_id: a5.id)
