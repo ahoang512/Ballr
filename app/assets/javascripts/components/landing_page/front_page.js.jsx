@@ -1,4 +1,4 @@
-var LandingPage = React.createClass({
+var FrontPage = React.createClass({
   getInitialState : function() {
     return ({user : {},
              photos : [],
@@ -26,8 +26,8 @@ var LandingPage = React.createClass({
 
   render : function () {
     return (
-      <div className="landingPage">
-        <div className="landingContainer group">
+      <div className="frontPage">
+        <div className="frontContainer group">
           <UserBar user={this.state.user}
                    featured={this.state.featuredUsers}
           />

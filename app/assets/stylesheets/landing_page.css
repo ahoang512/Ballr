@@ -1,4 +1,4 @@
-.landingPage {
+.frontPage {
   background: url('uefa.jpg');
   background-position:center;
   background-repeat: no-repeat;
@@ -7,9 +7,8 @@
   width: 100%;
 }
 
-.landingContainer {
+.frontContainer {
   height: 100%;
-  /*margin-left: 10%;*/
   margin-right: 0;
 }
 
@@ -18,7 +17,6 @@
   height: 100%;
   width: 65%;
   float: left;
-  /*margin-left: 5%;*/
 }
 
 .photoFeed ul {
