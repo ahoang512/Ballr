@@ -5,7 +5,7 @@ http://ballrapp.herokuapp.com
 
 ## Minimum Viable Product
 
-Ballr is a web application implemented in Ruby on Rails and React.js that is designed to let users share their sports related photos. Ballr allows users to:
+Ballr is a web application implemented in Ruby on Rails and React.js that is designed to let users share their sports related photos and gifs. Ballr allows users to:
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
