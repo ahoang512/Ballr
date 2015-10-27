@@ -1,4 +1,4 @@
-var startReact = function () {
+
   $(function(){
     var Router = ReactRouter.Router;
     var Route = ReactRouter.Route;
@@ -25,4 +25,3 @@ var startReact = function () {
       </Router>
     ), root);
   });
-}
