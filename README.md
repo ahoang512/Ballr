@@ -1,12 +1,11 @@
 # Ballr
 
-[Heroku link][heroku]
 
-[heroku]: http://ballrapp.herokuapp.com
+http://ballrapp.herokuapp.com
 
 ## Minimum Viable Product
 
-Ballr is a web application implemented in Ruby on Rails and React.js that is designed to let users share their sports related photos. Ballr allows users to:
+Ballr is a web application implemented in Ruby on Rails and React.js that is designed to let users share their sports related photos and gifs. Ballr allows users to:
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
@@ -14,7 +13,7 @@ Ballr is a web application implemented in Ruby on Rails and React.js that is des
 - [x] Log in / Log out
 - [x] Create, edit, view, delete photo albums
 - [x] Upload, Delete Photos
-- [ ] Edit Photo Names and add Tags
+- [x] Edit Photo Names and add Tags
 - [ ] Tag pictures with location of where it was taken
 - [ ] Manage a public album that others can upload to
 - [ ] make captions for their photos
