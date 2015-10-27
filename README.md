@@ -1,6 +1,5 @@
 # Ballr
 
-[Website Link]
 
 http://ballrapp.herokuapp.com
 
