@@ -11,6 +11,7 @@
 }
 
 #userBar ul {
+  direction: rtl;
   overflow-y: auto;
   height: 93%;
 }
