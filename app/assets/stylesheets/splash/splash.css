@@ -4,7 +4,8 @@
 }
 
 #splash1 {
-  background: url('curry_trophy.jpg');
+  /*background: url('curry_trophy.jpg');*/
+  cursor: pointer;
   background-position:center;
   background-repeat: no-repeat;
   height: 75%;
@@ -12,7 +13,6 @@
 }
 
 .hook {
-  cursor: pointer;
   text-align: center;
   font-size: large;
   background-color: transparent;
