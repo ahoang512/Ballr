@@ -28,10 +28,11 @@ var FrontPage = React.createClass({
     return (
       <div className="frontPage">
         <div className="frontContainer group">
+          <FilterBar/>
           <UserBar user={this.state.user}
                    featured={this.state.featuredUsers}
           />
-          <FeedOptions/>
+        {/*<FeedOptions/>*/}
           <PhotoFeed photos={this.state.photos}/>
         </div>
       </div>
