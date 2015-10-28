@@ -1,7 +1,7 @@
 #userBar {
   float: left;
   width: 20%;
-  height: 100%;
+  height: 87%;
   background-color: rgba(173,216,230,0.5);
 }
 
@@ -13,7 +13,7 @@
 #userBar ul {
   direction: rtl;
   overflow-y: auto;
-  height: 93%;
+  height: 100%;
 }
 
 .userInfo:first-child {

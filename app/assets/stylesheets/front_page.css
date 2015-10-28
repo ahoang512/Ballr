@@ -16,14 +16,14 @@
 .photoFeed {
   padding-bottom: 3%;
   height: 100%;
-  width: 65%;
+  width: 75%;
   float: left;
 }
 
 .photoFeed ul {
-  padding-right: 17%;
-  padding-left: 10%;
-  width: 100%;
+  padding-right: 4%;
+  padding-left: 11%;
+  width: 95%;
   overflow-y: auto;
   height: 90%;
 }
