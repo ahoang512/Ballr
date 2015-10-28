@@ -33,13 +33,13 @@ var SplashBar = React.createClass({
     return (
       <div className="splashBar">
         <div>
-          div1
+          <h3>Upload Photos</h3>
         </div>
         <div>
-          div2
+          <h3>View Gameday Highlights</h3>
         </div>
         <div>
-          div3
+          <h3>Share Gifs</h3>
         </div>
       </div>
     )
