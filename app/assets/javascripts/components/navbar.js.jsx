@@ -2,7 +2,10 @@ var NavBar = React.createClass({
   mixins : [ReactRouter.History],
 
   _logo : function () {
-    this.history.replaceState(null, '/', {});
+    this.history.pushState(null, '/', {});
+  },
+  _browse: function () {
+    this.history.pushState(null, "front", {});
   },
   render : function () {
     var loggedIn = true;
@@ -13,10 +16,13 @@ var NavBar = React.createClass({
 
     return (
       <div className="navbar">
-        <span className="logo" onClick={this._logo}><img src="/logo2.png"/></span>
-          <div className="navButtons">
-            {loggedIn ? <LoggedIn/> : <NotLogged/> }
-          </div>
+        <div className="logo" onClick={this._logo}>
+          <div><img src="/logo2.png"/></div>
+        </div>
+        <div className="browseButton" onClick={this._browse}>browse</div>
+        <div className="navButtons">
+          {loggedIn ? <LoggedIn/> : <NotLogged/> }
+        </div>
       </div>
     );
   }

@@ -2,7 +2,7 @@
   height: 100%;
   width: 100%;
   cursor: pointer;
-  
+
 }
 
 #splash1 {
@@ -49,7 +49,7 @@
 }
 .splashBar div:nth-child(2) ul {
   overflow-y: auto;
-  height: 95%;
+  height: 92%;
 }
 
 .splashBar div:nth-child(2) ul img {
