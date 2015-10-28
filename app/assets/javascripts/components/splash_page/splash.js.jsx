@@ -1,7 +1,11 @@
 var Splash = React.createClass({
+  mixins : [ReactRouter.History],
+  _onClick : function () {
+    this.history.pushState({}, "front");
+  },
   render : function () {
     return (
-      <div className="splash">
+      <div className="splash" onClick={this._onClick}>
         <Splash1/>
         <SplashBar/>
       </div>
@@ -11,13 +15,10 @@ var Splash = React.createClass({
 
 
 var Splash1 = React.createClass({
-  mixins : [ReactRouter.History],
-  _onClick : function () {
-    this.history.pushState({}, "front");
-  },
+
   render : function () {
     return (
-      <div id="splash1" onClick={this._onClick}>
+      <div id="splash1" >
         <div className="hook">
           <h1>The hub for all your game day photos and highlights</h1>
           <h2>View, Upload, and Share Now!</h2>

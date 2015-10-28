@@ -1,11 +1,12 @@
 .splash {
   height: 100%;
   width: 100%;
+  cursor: pointer;
+  
 }
 
 #splash1 {
   background: url('curry_trophy.jpg');
-  cursor: pointer;
   background-position:center;
   background-repeat: no-repeat;
   height: 75%;
