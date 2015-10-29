@@ -8,6 +8,7 @@
 #  album_id   :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  sport      :string           default("none"), not null
 #
 
 class Photo < ActiveRecord::Base

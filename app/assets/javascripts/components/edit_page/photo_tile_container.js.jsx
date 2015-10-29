@@ -52,6 +52,16 @@ var PhotoTileContainer = React.createClass({
                       className="selected">
                     <img src={photo.url}  className="photoTiles"/>
                     {photoTileInfo}
+                    <select>
+                      <option value="nfl">NFL</option>
+                      <option value="nba">NBA</option>
+                      <option value="tennis">TENNIS</option>
+                      <option value="mlb">MLB</option>
+                      <option value="nhl">NHL</option>
+                      <option value="mls">MLS</option>
+                      <option value="worldsoccer">World Soccer</option>
+                      <option value="tennis">Tennis</option>
+                    </select>
                   </li>);
         }else {
           return (<li key={photo.photo_id} id={photo.photo_id} onClick={this._handleClick}>
