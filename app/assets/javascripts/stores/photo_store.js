@@ -10,10 +10,12 @@
   var _showSelected = 0;
   var _photoFeed = [];
   var _photo;
+  var _status = "unselected";
 
   var resetPhotos = function (photos) {
     _photos = photos.slice();
   };
+
 
 
   var addNewPhoto = function(photo) {
@@ -55,7 +57,6 @@
   };
 
   var updateShowSelected = function (dir, idx) {
-    debugger
     var next = dir + idx;
     if (next >= _photos.length) {
       next = 0;
@@ -70,10 +71,16 @@
   };
 
   var resetPhotoSelected = function(id){
+    if (id === _photoSelected.photo_id){
+      _photoSelected = {};
+      _status = "unselected";
+      return;
+    }
     for (var i = 0; i < _photos.length; i++) {
       if(_photos[i].photo_id === id){
         _photoSelected = _photos[i];
       }
+      _status = "selected";
     }
   };
 
@@ -94,15 +101,9 @@
     photoSelected : function () {
       return _photoSelected;
     },
-    // getPhoto : function (id) {
-    //   var photo=  _photos.find(function(photo){
-    //     if (id === photo.photo_id){
-    //       return photo;
-    //     }
-    //   }.bind(this));
-    //   return photo;
-    // },
-
+    status : function () {
+      return _status;
+    },
     addChangeListener : function (callback) {
       this.on(CHANGE_EVENT, callback);
     },

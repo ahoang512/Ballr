@@ -15,18 +15,13 @@ var PhotoTileContainer = React.createClass({
   },
 
   _onChange : function () {
-    var select = "selected";
-    if (PhotoStore.editSelected() === 0){
-      select = "unselected";
-    }
     this.setState({editSelected : PhotoStore.editSelected(),
-                   mode : select});
+                          mode  : PhotoStore.status()});
   },
   _handleClick : function (e) {
     PhotoActions.photoClicked(parseInt(e.currentTarget.id));
     // PhotoActions.updateSelected(parseInt(e.currentTarget.id));
-    // this.setState({mode: "selected"});
-
+    // this.setState({mode: PhotoStore.status()});
   },
   _handleSubmit : function (e) {
     var newName = e.target[0].value;
@@ -54,9 +49,7 @@ var PhotoTileContainer = React.createClass({
               </div>
             );
           }
-          debugger
           if (this.props.photoSelected.photo_id === photo.photo_id){
-            debugger
             return (<li key={photo.photo_id}
                         id={photo.photo_id}
                         onClick={this._handleClick}
@@ -73,6 +66,7 @@ var PhotoTileContainer = React.createClass({
           }
         }.bind(this));
     }
+
     return (
       <div className="photoTileContainer">
         <div className="group"><label className="photoLabel">Photos</label>
@@ -86,7 +80,7 @@ var PhotoTileContainer = React.createClass({
           {tiles}
         </ul>
         {this.state.mode === 'selected' ?
-          <EditPhotoDetails selected={this.props.photoSelectedId}/>
+          <EditPhotoDetails photo={this.props.photoSelected}/>
           :
           {}}
       </div>
@@ -97,9 +91,10 @@ var PhotoTileContainer = React.createClass({
 
 
 var EditPhotoDetails = React.createClass({
+  //this.props.photoSelected
   render : function () {
 
-    var photo = PhotoStore.getPhoto();
+    var photo = this.props.photo;
     return (
       <div className="editPhotoDetails">
         <form>
