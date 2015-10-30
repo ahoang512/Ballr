@@ -1,9 +1,10 @@
 var PhotoTileContainer = React.createClass({
-  //this.props.photoSelected
+  //this.props.photoSelectedId
   //this.props.albumSelected
+  //this.props.photoSelected
+  //this.props.photos
   getInitialState : function () {
-    return ({photos : PhotoStore.all(),
-             editSelected : PhotoStore.editSelected(),
+    return ({editSelected : PhotoStore.editSelected(),
              mode: "unselected"});
   },
   componentDidMount : function () {
@@ -14,12 +15,17 @@ var PhotoTileContainer = React.createClass({
   },
 
   _onChange : function () {
-    this.setState({photos : PhotoStore.all(),
-                   editSelected : PhotoStore.editSelected()});
+    var select = "selected";
+    if (PhotoStore.editSelected() === 0){
+      select = "unselected";
+    }
+    this.setState({editSelected : PhotoStore.editSelected(),
+                   mode : select});
   },
   _handleClick : function (e) {
-    PhotoActions.updateSelected(parseInt(e.currentTarget.id));
-    this.setState({mode: "selected"});
+    PhotoActions.photoClicked(parseInt(e.currentTarget.id));
+    // PhotoActions.updateSelected(parseInt(e.currentTarget.id));
+    // this.setState({mode: "selected"});
 
   },
   _handleSubmit : function (e) {
@@ -30,45 +36,48 @@ var PhotoTileContainer = React.createClass({
 
   render : function (){
     var photoTileInfo;
-    var tiles =
-      this.state.photos.map(function(photo){
-        if (photo.photo_id !== this.state.editSelected){
-          photoTileInfo = ( <div className="group photoTileInfo">
-              <h2>{photo.name}</h2>
-              <EditNameButton photo={photo}/>
-            </div>
-          );
-        }else {
-          photoTileInfo = ( <div className="group photoTileInfo">
-            <form onSubmit={this._handleSubmit}>
-              <input type="text" className="editName" defaultValue={photo.name} id={photo.photo_id}/>
-              <input type="submit" />
-            </form>
-            </div>
-          );
-        }
+    if(typeof this.props.photos !== 'undefined'){
+      var tiles =
+        this.props.photos.map(function(photo){
+          if (photo.photo_id !== this.state.editSelected){
+            photoTileInfo = ( <div className="group photoTileInfo">
+                <h2>{photo.name}</h2>
+                <EditNameButton photo={photo}/>
+              </div>
+            );
+          }else {
+            photoTileInfo = ( <div className="group photoTileInfo">
+              <form onSubmit={this._handleSubmit}>
+                <input type="text" className="editName" defaultValue={photo.name} id={photo.photo_id}/>
+                <input type="submit" />
+              </form>
+              </div>
+            );
+          }
+          debugger
+          if (this.props.photoSelected.photo_id === photo.photo_id){
+            debugger
+            return (<li key={photo.photo_id}
+                        id={photo.photo_id}
+                        onClick={this._handleClick}
+                        className="selected">
+                      <img src={photo.url}  className="photoTiles"/>
+                      {photoTileInfo}
 
-        if (this.props.photoSelected === photo.photo_id){
-          return (<li key={photo.photo_id}
-                      id={photo.photo_id}
-                      onClick={this._handleClick}
-                      className="selected">
-                    <img src={photo.url}  className="photoTiles"/>
-                    {photoTileInfo}
-
-                  </li>);
-        }else {
-          return (<li key={photo.photo_id} id={photo.photo_id} onClick={this._handleClick}>
-                    <img src={photo.url}  className="photoTiles"/>
-                    {photoTileInfo}
-                  </li>);
-        }
-      }.bind(this));
+                    </li>);
+          }else {
+            return (<li key={photo.photo_id} id={photo.photo_id} onClick={this._handleClick}>
+                      <img src={photo.url}  className="photoTiles"/>
+                      {photoTileInfo}
+                    </li>);
+          }
+        }.bind(this));
+    }
     return (
       <div className="photoTileContainer">
         <div className="group"><label className="photoLabel">Photos</label>
           <div className="photoButtons group">
-            <DeleteButton photoSelected= {this.props.photoSelected}
+            <DeleteButton photoSelectedId= {this.props.photoSelectedId}
                           albumSelected= {this.props.albumSelected}/>
             <UploadButton albumSelected= {this.props.albumSelected}/>
           </div>
@@ -77,7 +86,7 @@ var PhotoTileContainer = React.createClass({
           {tiles}
         </ul>
         {this.state.mode === 'selected' ?
-          <EditPhotoDetails selected={this.props.photoSelected}/>
+          <EditPhotoDetails selected={this.props.photoSelectedId}/>
           :
           {}}
       </div>
@@ -89,8 +98,8 @@ var PhotoTileContainer = React.createClass({
 
 var EditPhotoDetails = React.createClass({
   render : function () {
-    debugger
-    var photo = PhotoStore.photo();
+
+    var photo = PhotoStore.getPhoto();
     return (
       <div className="editPhotoDetails">
         <form>
@@ -150,7 +159,7 @@ var UploadButton = React.createClass({
 
 
 var DeleteButton = React.createClass({
-  //this.props.photoSelected
+  //this.props.photoSelectedId
   //this.props.albumSelected
   _handleUpload : function (error,result) {
     var url = result[0].url;
@@ -166,7 +175,7 @@ var DeleteButton = React.createClass({
 
   },
   _onClick : function (e) {
-    PhotoUtil.deletePhoto(this.props.photoSelected);
+    PhotoUtil.deletePhoto(this.props.photoSelectedId);
   },
   render : function() {
     return (

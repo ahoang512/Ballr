@@ -4,10 +4,12 @@
   var CHANGE_EVENT = "photos_changed";
 
   var _photos = [];
-  var _photoSelected = 0;
+  var _photoSelectedId = 0;
+  var _photoSelected = {};
   var _editSelected = 0;
   var _showSelected = 0;
   var _photoFeed = [];
+  var _photo;
 
   var resetPhotos = function (photos) {
     _photos = photos.slice();
@@ -45,7 +47,7 @@
   };
 
   var updateSelected = function(photoId) {
-    _photoSelected = photoId;
+    _photoSelectedId = photoId;
   };
 
   var updateEditSelected = function(id) {
@@ -53,6 +55,7 @@
   };
 
   var updateShowSelected = function (dir, idx) {
+    debugger
     var next = dir + idx;
     if (next >= _photos.length) {
       next = 0;
@@ -66,13 +69,21 @@
     _showSelected = selected;
   };
 
+  var resetPhotoSelected = function(id){
+    for (var i = 0; i < _photos.length; i++) {
+      if(_photos[i].photo_id === id){
+        _photoSelected = _photos[i];
+      }
+    }
+  };
+
 
   root.PhotoStore = $.extend({}, EventEmitter.prototype, {
     all : function () {
       return _photos.slice();
     },
-    photoSelected : function () {
-      return _photoSelected;
+    photoSelectedId : function () {
+      return _photoSelectedId;
     },
     editSelected : function () {
       return _editSelected;
@@ -80,14 +91,17 @@
     showSelected : function () {
       return _showSelected;
     },
-    photo : function () {
-      var photo=  _photos.find(function(photo){
-        if (_photoSelected === photo.photo_id){
-          return photo;
-        }
-      }.bind(this));
-      return photo;
+    photoSelected : function () {
+      return _photoSelected;
     },
+    // getPhoto : function (id) {
+    //   var photo=  _photos.find(function(photo){
+    //     if (id === photo.photo_id){
+    //       return photo;
+    //     }
+    //   }.bind(this));
+    //   return photo;
+    // },
 
     addChangeListener : function (callback) {
       this.on(CHANGE_EVENT, callback);
@@ -129,6 +143,10 @@
           break;
         case PhotoConstants.TILE_CLICKED:
           setShowSelected(action.id);
+          root.PhotoStore.emit(CHANGE_EVENT);
+          break;
+        case PhotoConstants.PHOTO_CLICKED:
+          resetPhotoSelected(action.id);
           root.PhotoStore.emit(CHANGE_EVENT);
           break;
       }

@@ -3,7 +3,7 @@ var UserPage = React.createClass({
   //this.props.location.query.album_id
   //this.props.location.query.photo_id
   getInitialState : function() {
-    return ({photoSelected : this.props.location.query.photo_id,
+    return ({photoSelectedId : this.props.location.query.photo_id,
              photos : PhotoStore.all()});
 
   },

@@ -1,6 +1,6 @@
 var FullPhotoInfo = React.createClass({
   getInitialState : function () {
-    return ({photoSelected : 0,
+    return ({photoSelectedId : 0,
              photos : [],
              albums : []
            });
@@ -15,21 +15,21 @@ var FullPhotoInfo = React.createClass({
 
   _onChange : function () {
     this.setState({
-      photoSelected : parseInt(PhotoStore.showSelected()),
+      photoSelectedId : parseInt(PhotoStore.showSelected()),
       photos : PhotoStore.all()
     });
   },
 
   _findPhoto : function () {
     return this.state.photos.find(function(photo){
-      if (photo.photo_id === this.state.photoSelected){
+      if (photo.photo_id === this.state.photoSelectedId){
         return photo;
       }
     }.bind(this));
   },
 
   render : function () {
-    var selected = this.state.photoSelected;
+    var selected = this.state.photoSelectedId;
     var photos = this.state.photos;
     if (selected > 0 && photos.length>0){
       var photo = this._findPhoto();
