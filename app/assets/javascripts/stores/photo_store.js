@@ -80,7 +80,14 @@
     showSelected : function () {
       return _showSelected;
     },
-
+    photo : function () {
+      var photo=  _photos.find(function(photo){
+        if (_photoSelected === photo.photo_id){
+          return photo;
+        }
+      }.bind(this));
+      return photo;
+    },
 
     addChangeListener : function (callback) {
       this.on(CHANGE_EVENT, callback);

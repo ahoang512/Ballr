@@ -3,7 +3,8 @@ var PhotoTileContainer = React.createClass({
   //this.props.albumSelected
   getInitialState : function () {
     return ({photos : PhotoStore.all(),
-             editSelected : PhotoStore.editSelected()});
+             editSelected : PhotoStore.editSelected(),
+             mode: "unselected"});
   },
   componentDidMount : function () {
     PhotoStore.addChangeListener(this._onChange);
@@ -18,6 +19,8 @@ var PhotoTileContainer = React.createClass({
   },
   _handleClick : function (e) {
     PhotoActions.updateSelected(parseInt(e.currentTarget.id));
+    this.setState({mode: "selected"});
+
   },
   _handleSubmit : function (e) {
     var newName = e.target[0].value;
@@ -52,16 +55,7 @@ var PhotoTileContainer = React.createClass({
                       className="selected">
                     <img src={photo.url}  className="photoTiles"/>
                     {photoTileInfo}
-                    <select>
-                      <option value="nfl">NFL</option>
-                      <option value="nba">NBA</option>
-                      <option value="tennis">TENNIS</option>
-                      <option value="mlb">MLB</option>
-                      <option value="nhl">NHL</option>
-                      <option value="mls">MLS</option>
-                      <option value="worldsoccer">World Soccer</option>
-                      <option value="tennis">Tennis</option>
-                    </select>
+
                   </li>);
         }else {
           return (<li key={photo.photo_id} id={photo.photo_id} onClick={this._handleClick}>
@@ -82,11 +76,47 @@ var PhotoTileContainer = React.createClass({
         <ul className="group photoList">
           {tiles}
         </ul>
+        {this.state.mode === 'selected' ?
+          <EditPhotoDetails selected={this.props.photoSelected}/>
+          :
+          {}}
       </div>
     );
   }
 });
 
+
+
+var EditPhotoDetails = React.createClass({
+  render : function () {
+    debugger
+    var photo = PhotoStore.photo();
+    return (
+      <div className="editPhotoDetails">
+        <form>
+          <label>
+            Name
+            <input type="text" defaultValue={photo.name}/>
+          </label>
+          <label>Category
+            <select>
+              <option value="none">none</option>
+              <option value="nfl">NFL</option>
+              <option value="nba">NBA</option>
+              <option value="tennis">TENNIS</option>
+              <option value="mlb">MLB</option>
+              <option value="nhl">NHL</option>
+              <option value="mls">MLS</option>
+              <option value="worldsoccer">World Soccer</option>
+              <option value="tennis">Tennis</option>
+            </select>
+          </label>
+          <input type="submit" value="Update"/>
+        </form>
+      </div>
+    )
+  }
+});
 
 var UploadButton = React.createClass({
   _handleUpload : function (error,result) {
