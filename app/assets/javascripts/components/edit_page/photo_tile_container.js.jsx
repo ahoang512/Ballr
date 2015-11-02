@@ -1,6 +1,5 @@
 var PhotoTileContainer = React.createClass({
   //this.props.albumSelected
-  //this.props.photos
   getInitialState : function () {
     return ({editSelected : PhotoStore.editSelected(),
              mode: "unselected",
@@ -29,26 +28,22 @@ var PhotoTileContainer = React.createClass({
     if(typeof this.state.photos !== 'undefined'){
       var tiles =
         this.state.photos.map(function(photo){
-          var photoTileInfo = (
-            <div className="group photoTileInfo">
-                <h2>{photo.name}</h2>
-            </div>
-          );
           if (this.state.photoSelected.id === photo.id){
-            return (<li key={photo.id}
-                        id={photo.id}
-                        onClick={this._handleClick}
-                        className="selected">
-                      <img src={photo.url}  className="photoTiles"/>
-                      {photoTileInfo}
-
-                    </li>);
-          }else {
-            return (<li key={photo.id} id={photo.id} onClick={this._handleClick}>
-                      <img src={photo.url}  className="photoTiles"/>
-                      {photoTileInfo}
-                    </li>);
+            var selected = "selected"
+          }else{
+            var selected = "";
           }
+          return (<li key={photo.id}
+                      id={photo.id}
+                      onClick={this._handleClick}
+                      className={selected}>
+
+                    <img src={photo.url}  className="photoTiles"/>
+                    <div className="group photoTileInfo">
+                        <h2>{photo.name}</h2>
+                    </div>
+
+                  </li>);
         }.bind(this));
     }
 
@@ -76,9 +71,6 @@ var PhotoTileContainer = React.createClass({
 
 
 var EditPhotoDetails = React.createClass({
-  getInitialState : function () {
-    return ({photo : PhotoStore.photoSelected()});
-  },
   _handleSubmit : function (e) {
     var newName = e.target[0].value;
     var newSport = e.target[1].value;
@@ -92,17 +84,18 @@ var EditPhotoDetails = React.createClass({
     PhotoUtil.updatePhoto(photo)
 
   },
+
   render : function () {
-    var photo = this.state.photo;
     return (
       <div className="editPhotoDetails">
         <form onSubmit = {this._handleSubmit}>
+          <div>Edit Photo Information</div>
           <label>
             Name
-            <input type="text" defaultValue={photo.name}/>
+            <input type="text" value={this.props.photo.name}/>
           </label>
           <label>Sport
-            <select defaultValue={photo.sport}>
+            <select defaultValue={this.props.photo.sport}>
               <option value="none">none</option>
               <option value="nfl">NFL</option>
               <option value="nba">NBA</option>
