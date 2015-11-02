@@ -25,7 +25,7 @@
   var removePhoto = function (oldPhoto){
     var idx;
     _photos.find(function(photo,index){
-      if (photo.photo_id === oldPhoto.photo_id){
+      if (photo.photo_id === oldPhoto.id){
         idx = index;
         return photo;
       }

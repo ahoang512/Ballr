@@ -3,14 +3,13 @@ var FilterBar = React.createClass({
     return (
       <div className="filterBar">
         <ul className="filterList">
-          <li>Tennis</li>
-          <li>World Soccer</li>
-          <li>MLS</li>
-          <li>NHL</li>
-          <li>MLB</li>
-          <li>Tennis</li>
-          <li>NBA</li>
-          <li>NFL</li>
+          <li key="tennis">Tennis</li>
+          <li key="world">World Soccer</li>
+          <li key="mls">MLS</li>
+          <li key="nhl">NHL</li>
+          <li key="mlb">MLB</li>
+          <li key="nba">NBA</li>
+          <li key="nfl">NFL</li>
         </ul>
       </div>
     )

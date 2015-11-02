@@ -1,11 +1,10 @@
 var PhotoTileContainer = React.createClass({
-  //this.props.photoSelectedId
   //this.props.albumSelected
-  //this.props.photoSelected
   //this.props.photos
   getInitialState : function () {
     return ({editSelected : PhotoStore.editSelected(),
-             mode: "unselected"});
+             mode: "unselected",
+            photoSelected : {}});
   },
   componentDidMount : function () {
     PhotoStore.addChangeListener(this._onChange);
@@ -16,7 +15,8 @@ var PhotoTileContainer = React.createClass({
 
   _onChange : function () {
     this.setState({editSelected : PhotoStore.editSelected(),
-                          mode  : PhotoStore.status()});
+                          mode  : PhotoStore.status(),
+                  photoSelected : PhotoStore.photoSelected()});
   },
   _handleClick : function (e) {
     PhotoActions.photoClicked(parseInt(e.currentTarget.id));
@@ -49,7 +49,7 @@ var PhotoTileContainer = React.createClass({
               </div>
             );
           }
-          if (this.props.photoSelected.photo_id === photo.photo_id){
+          if (this.state.photoSelected.photo_id === photo.photo_id){
             return (<li key={photo.photo_id}
                         id={photo.photo_id}
                         onClick={this._handleClick}
@@ -71,7 +71,7 @@ var PhotoTileContainer = React.createClass({
       <div className="photoTileContainer">
         <div className="group"><label className="photoLabel">Photos</label>
           <div className="photoButtons group">
-            <DeleteButton photoSelectedId= {this.props.photoSelectedId}
+            <DeleteButton photoSelected= {this.state.photoSelected}
                           albumSelected= {this.props.albumSelected}/>
             <UploadButton albumSelected= {this.props.albumSelected}/>
           </div>
@@ -80,7 +80,7 @@ var PhotoTileContainer = React.createClass({
           {tiles}
         </ul>
         {this.state.mode === 'selected' ?
-          <EditPhotoDetails photo={this.props.photoSelected}/>
+          <EditPhotoDetails photo={this.state.photoSelected}/>
           :
           {}}
       </div>
@@ -91,10 +91,11 @@ var PhotoTileContainer = React.createClass({
 
 
 var EditPhotoDetails = React.createClass({
-  //this.props.photoSelected
+  getInitialState : function () {
+    return ({photo : PhotoStore.photoSelected()});
+  },
   render : function () {
-
-    var photo = this.props.photo;
+    var photo = this.state.photo;
     return (
       <div className="editPhotoDetails">
         <form>
@@ -154,23 +155,9 @@ var UploadButton = React.createClass({
 
 
 var DeleteButton = React.createClass({
-  //this.props.photoSelectedId
   //this.props.albumSelected
-  _handleUpload : function (error,result) {
-    var url = result[0].url;
-    var filename = result[0].original_filename;
-    var params = {
-      photo : {
-        "url" : url,
-        "name" : filename,
-        "album_id" : this.props.albumSelected
-      }
-    }
-    PhotoUtil.createPhoto(params);
-
-  },
   _onClick : function (e) {
-    PhotoUtil.deletePhoto(this.props.photoSelectedId);
+    PhotoUtil.deletePhoto(this.props.photoSelected.photo_id);
   },
   render : function() {
     return (

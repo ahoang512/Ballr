@@ -1,5 +1,6 @@
 var PhotoItem = React.createClass({
   mixins : [ReactRouter.History],
+
   _onClick : function () {
     var photo = this.props.photo;
     var url = "photos/" + photo.owner;
@@ -10,6 +11,7 @@ var PhotoItem = React.createClass({
       album_id : albumId,
       photo_id : photo.photo_id
     };
+
     PhotoUtil.fetchAlbumPhotos(albumId,
       photo.photo_id
     );

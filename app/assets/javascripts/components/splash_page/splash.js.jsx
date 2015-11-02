@@ -39,10 +39,10 @@ var SplashBar = React.createClass({
         <div>
           <h3>View Gameday Highlights</h3>
           <ul>
-            <li>
+            <li key="highlight1">
               <img src="http://res.cloudinary.com/dayd3nm4v/image/upload/v1446063725/b4C6HrTar7Ec0_cowzc1.gif"/>
             </li>
-            <li>
+            <li key="highlight2">
               <img src="http://res.cloudinary.com/dayd3nm4v/image/upload/v1446064444/uKxY1ArU0A0Xm_yyze6b.gif"/>
             </li>
           </ul>

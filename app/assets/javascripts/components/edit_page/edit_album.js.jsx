@@ -3,7 +3,6 @@ var EditAlbum = React.createClass({
   getInitialState : function () {
     return ({albumSelected : 0,
              photoSelectedId : PhotoStore.photoSelectedId(),
-             photoSelected : PhotoStore.photoSelected(),
              photos : []});
   },
 
@@ -21,8 +20,7 @@ var EditAlbum = React.createClass({
   },
 
   _onChange : function () {
-    this.setState({photoSelectedId : PhotoStore.photoSelectedId(),
-                  photoSelected : PhotoStore.photoSelected(),
+    this.setState({photoSelected : PhotoStore.photoSelected(),
                   photos : PhotoStore.all()});
   },
 
@@ -33,9 +31,7 @@ var EditAlbum = React.createClass({
       <div className="editAlbum">
         <div className="editContainer group">
           <AlbumTileContainer updateSelected={this._updateAlbumSelected}/>
-          <PhotoTileContainer photoSelectedId={this.state.photoSelectedId}
-                              albumSelected={this.state.albumSelected}
-                              photoSelected={this.state.photoSelected}
+          <PhotoTileContainer albumSelected={this.state.albumSelected}
                               photos={this.state.photos}/>
         </div>
 

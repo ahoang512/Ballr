@@ -12,7 +12,6 @@ var FrontPage = React.createClass({
     UserUtil.fetchFeaturedUsers();
     UserStore.addChangeListener(this._onChange);
     PhotoStore.addChangeListener(this._onChange);
-
   },
   componentWillUnmount : function () {
     PhotoStore.removeChangeListener(this._onChange);
@@ -33,7 +32,9 @@ var FrontPage = React.createClass({
                    featured={this.state.featuredUsers}
           />
         {/*<FeedOptions/>*/}
-          <PhotoFeed photos={this.state.photos}/>
+          <div className="photoFeed">
+            <PhotoList photos={this.state.photos}/>
+          </div>
         </div>
       </div>
     )
