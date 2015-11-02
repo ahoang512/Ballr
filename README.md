@@ -1,7 +1,7 @@
 # Ballr
 
 
-http://ballrapp.herokuapp.com
+http://ballr.club
 
 ## Minimum Viable Product
 
