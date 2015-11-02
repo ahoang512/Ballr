@@ -34,7 +34,7 @@ public      | boolean   | not null, default: true
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-photo_id    | integer   | not null,
+id    | integer   | not null,
 user_id     | string    | not null, foreign key (references users), indexed
 date        | datetime  | not null
 content     | string    | not null
@@ -49,5 +49,5 @@ name        | string    | not null
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-photo_id    | integer   | not null, foreign key (references photos), indexed
+id    | integer   | not null, foreign key (references photos), indexed
 tag_id      | integer   | not null, foreign key (references tags), indexed

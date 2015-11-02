@@ -22,7 +22,7 @@ var FullPhotoInfo = React.createClass({
 
   _findPhoto : function () {
     return this.state.photos.find(function(photo){
-      if (photo.photo_id === this.state.photoSelectedId){
+      if (photo.id === this.state.photoSelectedId){
         return photo;
       }
     }.bind(this));

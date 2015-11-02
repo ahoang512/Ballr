@@ -1,9 +1,9 @@
 var UserPage = React.createClass({
   //this.props.location.query.user_id
   //this.props.location.query.album_id
-  //this.props.location.query.photo_id
+  //this.props.location.query.id
   getInitialState : function() {
-    return ({photoSelectedId : this.props.location.query.photo_id,
+    return ({photoSelectedId : this.props.location.query.id,
              photos : PhotoStore.all()});
 
   },
@@ -22,7 +22,7 @@ var UserPage = React.createClass({
     return (
       <div className = "userPage">
         <PhotoStream photos={this.state.photos}
-           selected={this.props.location.query.photo_id}
+           selected={this.props.location.query.id}
            album={this.props.location.query.album_id}/>
         <FullPhotoInfo/>
       </div>);

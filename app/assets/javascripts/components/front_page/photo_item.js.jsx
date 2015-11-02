@@ -9,11 +9,11 @@ var PhotoItem = React.createClass({
     var query = {
       user_id : userId,
       album_id : albumId,
-      photo_id : photo.photo_id
+      id : photo.id
     };
 
     PhotoUtil.fetchAlbumPhotos(albumId,
-      photo.photo_id
+      photo.id
     );
     this.history.pushState({}, url, query);
   },

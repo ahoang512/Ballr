@@ -30,14 +30,7 @@ PhotoActions = {
     });
   },
 
-  editPhotoPressed: function(id){
-    AppDispatcher.dispatch({
-      actionType: PhotoConstants.EDIT_PHOTO_PRESSED,
-      id: id
-    });
-  },
-
-  updatePhotoName : function (photo) {
+  updatePhoto : function (photo) {
     AppDispatcher.dispatch({
       actionType: PhotoConstants.PHOTO_EDITED,
       photo: photo

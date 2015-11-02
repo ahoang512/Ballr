@@ -28,7 +28,7 @@ var PhotoStream = React.createClass({
   _findIndex : function (id) {
     var idx;
     this.props.photos.find(function(photo,index){
-      if (photo.photo_id === id){
+      if (photo.id === id){
         idx = index;
       }
     });
@@ -74,10 +74,10 @@ var PhotoStream = React.createClass({
         <div className="albumPhotos">
           {
             this.props.photos.map(function(photo){
-              if (photo.photo_id === this.state.selected){
-                return <img src={photo.url} onClick={this._imgClick} id={photo.photo_id} className="tileSelected"/>;
+              if (photo.id === this.state.selected){
+                return <img src={photo.url} onClick={this._imgClick} id={photo.id} className="tileSelected"/>;
               }else {
-                return <img src={photo.url} onClick={this._imgClick} id={photo.photo_id}/>
+                return <img src={photo.url} onClick={this._imgClick} id={photo.id}/>
               }
             }.bind(this))
           }

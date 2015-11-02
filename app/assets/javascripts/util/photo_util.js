@@ -36,16 +36,17 @@ window.PhotoUtil = {
     });
   },
 
-  editPhoto : function (photoId, newName){
+  updatePhoto : function (photo){
     var params = {
-      photoName : newName
-    };
+      id : photo.id,
+      photo: photo
+    }
     $.ajax({
-      url: "/api/photos/"+photoId,
+      url: "/api/photos/"+photo.id,
       type: "PATCH",
-      data: params,
+      data: photo,
       success : function(photo){
-        PhotoActions.updatePhotoName(photo);
+        PhotoActions.updatePhoto(photo);
       }
     });
   },

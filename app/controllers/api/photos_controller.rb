@@ -26,10 +26,9 @@ class Api::PhotosController < ApplicationController
   end
 
   def update
-    newName = params[:photoName];
-    id = params[:id];
+    id = params[:id].to_i;
     @photo = Photo.find(id)
-    @photo.update(name: newName)
+    @photo.update(photo_params)
     render json: @photo
   end
 
@@ -41,6 +40,11 @@ class Api::PhotosController < ApplicationController
   def user_photos
     @photos = current_user.photos
     render :index
+  end
+
+  private
+  def photo_params
+    params.require(:photo).permit(:name,:sport)
   end
 
 end

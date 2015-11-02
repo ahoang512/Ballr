@@ -1,6 +1,7 @@
 json.photos @photos do |photo|
   json.name photo.name
-  json.photo_id photo.id
+  json.id photo.id
+  json.sport photo.sport
   json.url  photo.url
   json.album photo.album.name
   json.album_id photo.album.id
