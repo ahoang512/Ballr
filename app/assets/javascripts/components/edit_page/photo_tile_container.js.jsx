@@ -117,7 +117,6 @@ var EditPhotoDetails = React.createClass({
               <option value="NHL">NHL</option>
               <option value="MLS">MLS</option>
               <option value="World Soccer">World Soccer</option>
-              <option value="Tennis">Tennis</option>
             </select>
           </label>
           <input type="submit" value="Update"/>
@@ -161,7 +160,9 @@ var UploadButton = React.createClass({
 var DeleteButton = React.createClass({
   //this.props.albumSelected
   _onClick : function (e) {
-    PhotoUtil.deletePhoto(this.props.photoSelected.id);
+    if (confirm("Are you sure you want to delete this photo?")){
+      PhotoUtil.deletePhoto(this.props.photoSelected.id);
+    }
   },
   render : function() {
     return (
