@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :albums, only: [:create, :destroy, :index]
     resources :photos, only: [:index, :create, :destroy, :update] do
       collection do
-        get 'random'
+        get 'feed'
         get 'user_photos'
       end
     end

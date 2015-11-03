@@ -8,7 +8,7 @@ var FrontPage = React.createClass({
     if (typeof window.current_user !== 'undefined' ){
       UserUtil.getCurrentUser();
     }
-    PhotoUtil.fetchFeedPhotos();
+    PhotoUtil.fetchFeedPhotos("none");
     UserUtil.fetchFeaturedUsers();
     UserStore.addChangeListener(this._onChange);
     PhotoStore.addChangeListener(this._onChange);

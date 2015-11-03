@@ -10,10 +10,11 @@ window.PhotoUtil = {
     });
   },
 
-  fetchFeedPhotos : function (){
+  fetchFeedPhotos : function (sport){
     $.ajax({
-      url: "api/photos/random",
+      url: "api/photos/feed",
       type: "GET",
+      data : {sport : sport},
       success : function (photos) {
         PhotoActions.receivePhotos(photos.photos);
       }
@@ -51,7 +52,6 @@ window.PhotoUtil = {
     });
   },
 
-
   fetchUserPhotos : function(){
     $.ajax({
       url: "api/photos/user_photos",
@@ -62,4 +62,5 @@ window.PhotoUtil = {
 
     });
   },
+
 };

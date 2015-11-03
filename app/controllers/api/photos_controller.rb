@@ -32,8 +32,13 @@ class Api::PhotosController < ApplicationController
     render json: @photo
   end
 
-  def random
-    @photos = Photo.order('random()').limit(15).includes(:album)
+  def feed
+    if params[:sport] == "none"
+      @photos = Photo.order('random()').limit('10')
+    else
+      @photos = Photo.order('random()').where("sport = ?", params[:sport]).limit('10')
+    end
+
     render :index
   end
 

@@ -1,8 +1,12 @@
 var FilterBar = React.createClass({
+  _onClick : function (e) {
+    PhotoUtil.fetchFeedPhotos(e.target.textContent);
+  },
+
   render : function () {
     return (
       <div className="filterBar">
-        <ul className="filterList">
+        <ul className="filterList" onClick={this._onClick}>
           <li key="tennis">Tennis</li>
           <li key="world">World Soccer</li>
           <li key="mls">MLS</li>

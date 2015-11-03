@@ -71,6 +71,11 @@ var PhotoTileContainer = React.createClass({
 
 
 var EditPhotoDetails = React.createClass({
+  getInitialState : function () {
+    return ({
+      sport : this.props.photo.sport
+    })
+  },
   _handleSubmit : function (e) {
     var newName = e.target[0].value;
     var newSport = e.target[1].value;
@@ -82,7 +87,16 @@ var EditPhotoDetails = React.createClass({
       }
     }
     PhotoUtil.updatePhoto(photo)
+  },
 
+  componentWillReceiveProps : function (nextProps) {
+    this.setState({
+      sport : nextProps.photo.sport
+    });
+  },
+
+  _onChange : function (e) {
+    this.setState({sport : e.target.value});
   },
 
   render : function () {
@@ -95,16 +109,15 @@ var EditPhotoDetails = React.createClass({
             <input type="text" value={this.props.photo.name}/>
           </label>
           <label>Sport
-            <select defaultValue={this.props.photo.sport}>
+            <select value={this.state.sport} onChange={this._onChange}>
               <option value="none">none</option>
-              <option value="nfl">NFL</option>
-              <option value="nba">NBA</option>
-              <option value="tennis">TENNIS</option>
-              <option value="mlb">MLB</option>
-              <option value="nhl">NHL</option>
-              <option value="mls">MLS</option>
-              <option value="worldsoccer">World Soccer</option>
-              <option value="tennis">Tennis</option>
+              <option value="NFL">NFL</option>
+              <option value="NBA">NBA</option>
+              <option value="MLB">MLB</option>
+              <option value="NHL">NHL</option>
+              <option value="MLS">MLS</option>
+              <option value="World Soccer">World Soccer</option>
+              <option value="Tennis">Tennis</option>
             </select>
           </label>
           <input type="submit" value="Update"/>
