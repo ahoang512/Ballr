@@ -5,7 +5,7 @@ window.UserUtil = {
       type: "PATCH",
       data: params,
       success : function (user){
-        UserActions.receiveUser(user);
+        UserActions.receiveCurrentUser(user);
       }
     });
   },

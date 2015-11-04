@@ -29,6 +29,11 @@ u5 = User.create(email: "e@e.com",
     photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445291015/xotuhzacsf4j8zzi7wua.jpg"
 )
 
+u6 = User.create(email: "f@f.com",
+                 username: "Chris Wondolowski",
+                 password: "password",
+  photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1446596480/h2oijjcnkentymqbclbz.png")
+
 
 a1 = Album.create(owner_id: u1.id, name: "Hockey")
 a2 = Album.create(owner_id: u2.id, name: "Baseball")
@@ -36,6 +41,7 @@ a3 = Album.create(owner_id: u3.id, name: "Roaracle")
 a4 = Album.create(owner_id: u4.id, name: "futbol!")
 a5 = Album.create(owner_id: u5.id, name: "FOOTBALL")
 a6 = Album.create(owner_id: u1.id, name: "Shark Tank!")
+a7 = Album.create(owner_id: u6.id, name: "Major League Soccer!")
 
 p1 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444867036/xz0tgtuck8jrqvl0xvgy.jpg", name: "Whats good?", album_id: a6.id, sport: "NHL")
 
@@ -115,3 +121,15 @@ p30 = Photo.create(url:
 p31 = Photo.create(url:
 "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445874866/CalvinJohnson2_jolpra.gif", name:
 "Triple Coverage!", album_id: a5.id, sport: "NFL")
+
+p32 = Photo.create(url:
+"http://res.cloudinary.com/dayd3nm4v/image/upload/v1446663834/iCQxvzIhuvxG8_zmkhcg.gif", name:
+"What a setup!", album_id: a7.id, sport: "MLS")
+
+p33 = Photo.create(url:
+"http://res.cloudinary.com/dayd3nm4v/image/upload/v1446664231/xbPeCtr47bGXS_ojfzax.gif", name:
+"Bend it like Beckham!", album_id: a7.id, sport: "MLS")
+
+p34 = Photo.create(url:
+"http://res.cloudinary.com/dayd3nm4v/image/upload/v1446664395/WUa2lET6If7Uc_e40xeo.gif", name:
+"Was that planned?!", album_id: a7.id, sport: "MLS")

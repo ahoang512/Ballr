@@ -9,8 +9,7 @@
   var _showSelected = 0;
   var _photoFeed = [];
   var _photo;
-  var _status = "unselected";
-
+  var _status = "unselected"
   var resetPhotos = function (photos) {
     _photos = photos.slice();
   };
