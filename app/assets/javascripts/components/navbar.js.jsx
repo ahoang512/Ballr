@@ -29,8 +29,10 @@ var NavBar = React.createClass({
 });
 
 var NotLogged = React.createClass({
+  mixins : [ReactRouter.History],
   _login : function (e) {
-    window.location="/session/new";
+    this.history.pushState(null, 'login');
+    // window.location="/session/new";
   },
   _signUp : function (e) {
     window.location="/users/new";
@@ -58,6 +60,7 @@ var LoggedIn = React.createClass({
     ApiUtil.destroySession();
   },
   _library : function () {
+
     this.history.pushState(null, '/user/'+window.current_user+'/edit', {});
   },
   render : function () {

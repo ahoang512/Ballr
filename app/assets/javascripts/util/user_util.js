@@ -1,4 +1,15 @@
 window.UserUtil = {
+  loginUser : function (params) {
+    $.ajax({
+      url: "session",
+      type: "POST",
+      data: params,
+      success : function (user){
+        debugger
+        UserActions.receiveUser(user);
+      }
+    });
+  },
   updateUserPhoto : function(params) {
     $.ajax({
       url: "users/" + window.current_user,
