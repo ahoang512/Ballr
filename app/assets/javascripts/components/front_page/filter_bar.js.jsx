@@ -16,7 +16,7 @@ var FilterBar = React.createClass({
       <div className="filterBar">
         <h1>Filter By</h1>
         <ul className="filterList" onClick={this._onClick}>
-          <li key="all">ALL</li>
+          <li key="all">All</li>
           <li key="mls">Soccer
             <img className="filterIcons" src={soccer}/>
           </li>

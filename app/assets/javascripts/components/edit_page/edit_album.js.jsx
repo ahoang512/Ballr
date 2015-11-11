@@ -28,7 +28,7 @@ var EditAlbum = React.createClass({
     var username = window.current_username + "'s";
     return (
       <div className="editAlbum">
-        <div className="editContainer group">
+        <div className="editContainer">
           <AlbumTileContainer updateSelected={this._updateAlbumSelected}/>
           <PhotoTileContainer albumSelected={this.state.albumSelected}/>
         </div>

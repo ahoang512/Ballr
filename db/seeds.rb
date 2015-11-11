@@ -124,12 +124,20 @@ p31 = Photo.create(url:
 
 p32 = Photo.create(url:
 "http://res.cloudinary.com/dayd3nm4v/image/upload/v1446663834/iCQxvzIhuvxG8_zmkhcg.gif", name:
-"What a setup!", album_id: a7.id, sport: "MLS")
+"What a setup!", album_id: a4.id, sport: "Soccer")
 
 p33 = Photo.create(url:
 "http://res.cloudinary.com/dayd3nm4v/image/upload/v1446664231/xbPeCtr47bGXS_ojfzax.gif", name:
-"Bend it like Beckham!", album_id: a7.id, sport: "MLS")
+"Bend it like Beckham!", album_id: a4.id, sport: "Soccer")
 
 p34 = Photo.create(url:
 "http://res.cloudinary.com/dayd3nm4v/image/upload/v1446664395/WUa2lET6If7Uc_e40xeo.gif", name:
-"Was that planned?!", album_id: a7.id, sport: "MLS")
+"Was that planned?!", album_id: a4.id, sport: "Soccer")
+
+p35 = Photo.create(url:
+"http://res.cloudinary.com/dayd3nm4v/image/upload/v1447281998/Nz3KFlCyJCshi_c9w5fi.gif", name:
+"Perfect landing!", album_id: a5.id, sport: "Football")
+
+p36 = Photo.create(url:
+"http://res.cloudinary.com/dayd3nm4v/image/upload/v1447282364/21b2QuGkUpjNu_dxvxnf.gif", name:
+"What just happened?", album_id: a5.id, sport: "Football")
