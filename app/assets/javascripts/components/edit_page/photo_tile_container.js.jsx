@@ -112,11 +112,11 @@ var EditPhotoDetails = React.createClass({
             <select value={this.state.sport} onChange={this._onChange}>
               <option value="none">none</option>
               <option value="NFL">NFL</option>
-              <option value="NBA">NBA</option>
+              <option value="Basketball">Basketball</option>
               <option value="MLB">MLB</option>
               <option value="NHL">NHL</option>
               <option value="MLS">MLS</option>
-              <option value="World Soccer">World Soccer</option>
+              <option value="Soccer">Soccer</option>
             </select>
           </label>
           <input type="submit" value="Update"/>

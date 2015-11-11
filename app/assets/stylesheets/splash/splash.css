@@ -9,7 +9,8 @@
   background: url('curry_trophy.jpg');
   background-position:center;
   background-repeat: no-repeat;
-  height: 75%;
+  margin-top: -35px;
+  height: 100%;
   background-size: 100% 100%;
 }
 
@@ -26,6 +27,7 @@
 .splashBar {
   width: 100%;
   height: 50%;
+  margin-top: -150px;
 }
 
 .splashBar > div {

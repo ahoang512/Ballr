@@ -28,41 +28,10 @@ var FrontPage = React.createClass({
       <div className="frontPage">
         <div className="frontContainer group">
           <FilterBar/>
-          <UserBar user={this.state.user}
-                   featured={this.state.featuredUsers}
-          />
-        {/*<FeedOptions/>*/}
           <div className="photoFeed">
             <PhotoList photos={this.state.photos}/>
           </div>
         </div>
-      </div>
-    )
-  }
-});
-
-var FeedOptions = React.createClass({
-  _handleClick : function (e) {
-    switch (e.target.textContent) {
-      case "my photos":
-        PhotoUtil.fetchUserPhotos();
-        break;
-      case "explore":
-        PhotoUtil.fetchFeedPhotos();
-        break;
-    }
-  },
-
-  render : function() {
-    var loggedIn = typeof window.current_user !== 'undefined'
-
-    return (
-      <div className="feedOptions">
-        {loggedIn ? <div className="option" onClick={this._handleClick}>my photos</div>
-        : {}}
-        {loggedIn ? <div className="divider">|</div>
-        : {}}
-        <div className="option" onClick={this._handleClick}>explore</div>
       </div>
     )
   }

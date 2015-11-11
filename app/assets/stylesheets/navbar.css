@@ -1,8 +1,9 @@
 .navbar {
   background-color: rgba(11,11,59,1);
   color: white;
-  display: inline-block;
   width: 100%;
+  position: fixed;
+  z-index: 1;
 }
 
 

@@ -17,5 +17,6 @@
 //= require react
 //= require react_ujs
 //= require reactrouter.min.js
+//= require bootstrap.min.js
 //= require components
 //= require_tree .
