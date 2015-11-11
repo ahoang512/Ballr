@@ -1,5 +1,6 @@
 var FilterBar = React.createClass({
   _onClick : function (e) {
+    debugger
     if (e.target.className != "filterList"){
       PhotoUtil.fetchFeedPhotos(e.target.textContent);
     }
