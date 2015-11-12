@@ -8,9 +8,8 @@
 #splash1 {
   background: url('curry_trophy.jpg');
   background-position:center;
-  background-repeat: no-repeat;
-  height: 100%;
-  background-size: 100% 100%;
+  height: 700px;
+  padding-top: 40px;
 }
 
 .hook {
@@ -78,7 +77,7 @@
 }
 
 .hook h1 {
-  padding-top: 15%;
+  padding-top: 9%;
   font-size: 40px;
 }
 

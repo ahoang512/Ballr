@@ -141,3 +141,7 @@ p35 = Photo.create(url:
 p36 = Photo.create(url:
 "http://res.cloudinary.com/dayd3nm4v/image/upload/v1447282364/21b2QuGkUpjNu_dxvxnf.gif", name:
 "What just happened?", album_id: a5.id, sport: "Football")
+
+p37 = Photo.create(url:
+"http://res.cloudinary.com/dayd3nm4v/image/upload/v1447357111/nhl_rangers_senators_nhl_20130221_25993927_vwmtfs.jpg", name:
+"Deke and goal!", album_id: a1.id, sport: "Hockey")

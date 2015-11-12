@@ -5,7 +5,7 @@ var PhotoInfo = React.createClass({
     var owner = photo.owner;
     var album = photo.album;
     var owner_url = photo.owner_url;
-
+    var album_icon = "http://res.cloudinary.com/dayd3nm4v/image/upload/v1447356028/black_album_icon_mxfp9t.png"
     return (
 
       <div className="photoInfo">
@@ -13,7 +13,9 @@ var PhotoInfo = React.createClass({
         <div className="name photoLink">{owner}</div>
         <div>
           <div className="photoName photoLink">{name}</div>
-          <div className="photoAlbum photoLink">{album}</div>
+          <div className="photoAlbum photoLink">
+            <img src={album_icon}/>
+            {album}</div>
         </div>
       </div>
     )

@@ -22,6 +22,7 @@
 }
 
 .filterIcons {
+  padding-top: 6px;
   width: 15%;
   float: right;
 }
@@ -29,7 +30,7 @@
 .filterList li {
   float: left;
   width: 100%;
-  height: 10%;
+  height: 60px;
   color: white;
   margin-top: 10px;
 }

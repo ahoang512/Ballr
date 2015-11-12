@@ -48,44 +48,46 @@
 
 
 
-.photoInfo .name {
-  text-size:  40px;
-}
-
-
-
 .photoLink:hover{
-  color: turquoise;
+  color: blue;
 
 }
 
 /*user photo and name*/
 .photoInfo > *:nth-child(-n+2) {
   float: left;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 /* album and photoname*/
 .photoInfo > *:nth-last-child(-n+1) {
   float: right;
-  padding: 5px;
+  padding-right: 5px;
   font-size: 20px;
 }
-
-.photoAlbum {
-  font-size: smaller;
-  text-align: right;
-}
-
-.photoName {
-  font-size: x-large;
-  text-decoration: underline;
-}
-
 
 .photoInfo img {
   height: 100%;
 }
+
+.photoAlbum {
+  font-size: 20px;
+  text-align: right;
+}
+
+.photoAlbum img{
+  float: right;
+  height: 25px;
+  width: 25px;
+}
+
+.photoName {
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+
+
 
 
 
