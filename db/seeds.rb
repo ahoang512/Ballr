@@ -56,8 +56,9 @@ p5 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v144486
 p6 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444883662/zaaccw4ylptrdmqc1vpp.jpg", name: "photo6", album_id: a4.id, sport: "Soccer")
 p7 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444883634/ilybzwzwuaaj0ei1ymnj.jpg", name: "cross the line!", album_id: a6.id, sport: "Hockey")
 
-p8 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444883610/mojbd77g3lyb4v4fwgz6.jpg", name: "photo8", album_id: a4.id, sport: "Soccer")
-p9 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444883597/ejqoeistkvvpzffuqy5s.jpg", name: "photo9", album_id: a5.id, sport: "Football")
+p8 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444883610/mojbd77g3lyb4v4fwgz6.jpg", name: "Flying High!", album_id: a4.id, sport: "Soccer")
+p9 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444883597/ejqoeistkvvpzffuqy5s.jpg", name: "move!", album_id: a5.id, sport: "Football")
+
 p10 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445292040/USATSI_8527928_p2psaj.jpg", name: "photo10", album_id: a2.id, sport: "Baseball")
 p11 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445292135/b1c37161ef041de60b750a7fb2df02b3.1000x545x1_ywirzu.jpg", name: "photo11", album_id: a4.id, sport: "Soccer")
 

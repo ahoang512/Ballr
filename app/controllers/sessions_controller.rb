@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     )
     if @user
       login(@user)
-      redirect_to root_url
+      redirect_to "/#/front"
     else
       flash.now[:errors] = ["Invalid email or password"]
       render :new

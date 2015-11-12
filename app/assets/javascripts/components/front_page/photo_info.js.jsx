@@ -14,8 +14,9 @@ var PhotoInfo = React.createClass({
         <div>
           <div className="photoName photoLink">{name}</div>
           <div className="photoAlbum photoLink">
+            {album}
             <img src={album_icon}/>
-            {album}</div>
+          </div>
         </div>
       </div>
     )

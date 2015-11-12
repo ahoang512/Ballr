@@ -15,7 +15,7 @@ var NavBar = React.createClass({
 
 
     return (
-      <div className="navbar">
+      <nav className="navbar">
         <div className="logo" onClick={this._logo}>
           <div><img src="/logo2.png"/></div>
         </div>
@@ -23,7 +23,7 @@ var NavBar = React.createClass({
         <div className="navButtons">
           {loggedIn ? <LoggedIn/> : <NotLogged/> }
         </div>
-      </div>
+      </nav>
     );
   }
 });

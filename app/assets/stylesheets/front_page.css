@@ -70,9 +70,16 @@
   height: 100%;
 }
 
+.photoInfo .name {
+  margin-top: 15px;
+}
+
 .photoAlbum {
   font-size: 20px;
-  text-align: right;
+}
+
+.photoAlbum span {
+  float:right;
 }
 
 .photoAlbum img{
