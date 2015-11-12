@@ -1,8 +1,9 @@
 var FilterBar = React.createClass({
   _onClick : function (e) {
-    debugger
-    if (e.target.className != "filterList"){
+    if (e.target.className != "filterList" && e.target.textContent !== ""){
       PhotoUtil.fetchFeedPhotos(e.target.textContent);
+    }else{
+      PhotoUtil.fetchFeedPhotos(e.currentTarget.textContent);
     }
   },
 
@@ -16,22 +17,22 @@ var FilterBar = React.createClass({
     return (
       <div className="filterBar">
         <h1>Filter By</h1>
-        <ul className="filterList" onClick={this._onClick}>
-          <li key="all">All</li>
-          <li key="mls">Soccer
+        <ul className="filterList">
+          <li key="all" onClick={this._onClick}>All</li>
+          <li key="mls" onClick={this._onClick}>Soccer
             <img className="filterIcons" src={soccer}/>
           </li>
-          <li key="nhl">Hockey
+          <li key="nhl" onClick={this._onClick}>Hockey
             <img className="filterIcons" src={hockey}/>
           </li>
-          <li key="mlb">Baseball
+          <li key="mlb" onClick={this._onClick}>Baseball
             <img className="filterIcons" src={baseball}/>
           </li>
-          <li key="Basketball">Basketball
+          <li key="Basketball" onClick={this._onClick}>Basketball
             <img className="filterIcons" src={basketball}/>
           </li>
-          <li key="nfl">Football
-            <img className="filterIcons" src={football}/>
+          <li key="nfl" onClick={this._onClick}>Football
+            <img className="filterIcons" src={football} onClick={this._onClick}/>
           </li>
 
         </ul>

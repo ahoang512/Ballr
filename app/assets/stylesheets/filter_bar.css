@@ -18,7 +18,7 @@
   width: 90%;
   margin-left: 5%;
   font-size: 30px;
-  
+
 }
 
 .filterIcons {
@@ -35,7 +35,7 @@
 }
 
 .filterList li:hover {
-  background-color: blue;
+  color: blue;
 }
 /*
 .filterList li:first-child {
