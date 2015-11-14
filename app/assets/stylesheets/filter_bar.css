@@ -37,6 +37,7 @@
 
 .filterList li:hover {
   color: blue;
+  cursor: pointer;
 }
 /*
 .filterList li:first-child {
