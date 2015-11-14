@@ -11,6 +11,7 @@ var PhotoInfo = React.createClass({
       <div className="photoInfo">
         <img src={owner_url}></img>
         <div className="name photoLink">{owner}</div>
+        
         <div>
           <div className="photoName photoLink">{name}</div>
           <div className="photoAlbum photoLink">
