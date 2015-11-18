@@ -18,5 +18,12 @@ AlbumActions = {
       actionType: AlbumConstants.ALBUM_DELETED,
       album: album
     });
+  },
+
+  albumClicked : function(album_id){
+    AppDispatcher.dispatch({
+      actionType : AlbumConstants.ALBUM_CLICKED,
+      album_id : album_id
+    })
   }
 };

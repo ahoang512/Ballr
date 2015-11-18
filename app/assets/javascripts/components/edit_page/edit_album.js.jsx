@@ -5,12 +5,6 @@ var EditAlbum = React.createClass({
              photos : []});
   },
 
-  _updateAlbumSelected : function(albumId) {
-    //not flux way of doing it
-    //come back and make an action that triggers
-    this.setState({albumSelected : albumId});
-  },
-
   componentDidMount  : function (){
     PhotoStore.addChangeListener(this._onChange);
   },
@@ -29,7 +23,7 @@ var EditAlbum = React.createClass({
     return (
       <div className="editAlbum">
         <div className="editContainer">
-          <AlbumTileContainer updateSelected={this._updateAlbumSelected}/>
+          <AlbumTileContainer/>
           <PhotoTileContainer albumSelected={this.state.albumSelected}/>
         </div>
 

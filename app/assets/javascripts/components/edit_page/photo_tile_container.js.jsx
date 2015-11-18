@@ -1,8 +1,7 @@
 var PhotoTileContainer = React.createClass({
   //this.props.albumSelected
   getInitialState : function () {
-    return ({editSelected : PhotoStore.editSelected(),
-             mode: "unselected",
+    return ({mode: "unselected",
             photoSelected : {},
             photos : []});
   },
@@ -14,8 +13,7 @@ var PhotoTileContainer = React.createClass({
   },
 
   _onChange : function () {
-    this.setState({editSelected : PhotoStore.editSelected(),
-                          mode  : PhotoStore.status(),
+    this.setState({mode  : PhotoStore.status(),
                   photoSelected : PhotoStore.photoSelected(),
                          photos : PhotoStore.all()});
   },
@@ -73,7 +71,8 @@ var PhotoTileContainer = React.createClass({
 var EditPhotoDetails = React.createClass({
   getInitialState : function () {
     return ({
-      sport : this.props.photo.sport
+      sport : this.props.photo.sport,
+      name : this.props.photo.name
     })
   },
   _handleSubmit : function (e) {
@@ -91,12 +90,20 @@ var EditPhotoDetails = React.createClass({
 
   componentWillReceiveProps : function (nextProps) {
     this.setState({
-      sport : nextProps.photo.sport
+      sport : nextProps.photo.sport,
+      name : nextProps.photo.name,
     });
   },
 
-  _onChange : function (e) {
-    this.setState({sport : e.target.value});
+  _sportChange : function (e) {
+    this.setState({
+      sport : e.target.value,
+    });
+  },
+  _nameChange : function (e) {
+    this.setState({
+      name : e.target.value,
+    });
   },
 
   render : function () {
@@ -106,10 +113,10 @@ var EditPhotoDetails = React.createClass({
           <div>Edit Photo Information</div>
           <label>
             Name
-            <input type="text" value={this.props.photo.name}/>
+            <input type="text" value={this.state.name} onChange={this._nameChange}/>
           </label>
           <label>Sport
-            <select value={this.state.sport} onChange={this._onChange}>
+            <select value={this.state.sport} onChange={this._sportChange}>
               <option value="none">none</option>
               <option value="Football">Football</option>
               <option value="Basketball">Basketball</option>

@@ -4,9 +4,14 @@
   var CHANGE_EVENT = "album_changed";
 
   var _albums = [];
+  var _albumSelected = 0;
 
   var resetAlbums = function (albums) {
     _albums = albums.slice();
+  };
+
+  var resetSelected = function (album_id){
+    _albumSelected = album_id;
   };
 
   var addNewAlbum = function (album) {
@@ -30,6 +35,9 @@
     all: function() {
       return _albums.slice();
     },
+    selected : function() {
+      return _albumSelected;
+    },
 
     addChangeListener : function (callback) {
       this.on(CHANGE_EVENT, callback);
@@ -49,6 +57,10 @@
           break;
         case AlbumConstants.ALBUM_DELETED:
           removeAlbum(action.album);
+          root.AlbumStore.emit(CHANGE_EVENT);
+          break;
+        case AlbumConstants.ALBUM_CLICKED:
+          resetSelected(action.album_id);
           root.AlbumStore.emit(CHANGE_EVENT);
           break;
       }

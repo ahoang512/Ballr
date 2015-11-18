@@ -5,7 +5,6 @@
 
   var _photos = [];
   var _photoSelected = {};
-  var _editSelected = 0;
   var _showSelected = 0;
   var _photoFeed = [];
   var _photo;
@@ -46,9 +45,6 @@
 
 
 
-  var updateEditSelected = function(id) {
-    _editSelected  = id;
-  };
 
   var updateShowSelected = function (dir, idx) {
     var next = dir + idx;
@@ -84,9 +80,6 @@
       return _photos.slice();
     },
 
-    editSelected : function () {
-      return _editSelected;
-    },
     showSelected : function () {
       return _showSelected;
     },
@@ -123,7 +116,6 @@
           break;
         case PhotoConstants.PHOTO_EDITED:
           updatePhoto(action.photo);
-          updateEditSelected(0);
           resetPhotoSelected(action.photo.id);
           root.PhotoStore.emit(CHANGE_EVENT);
           break;
