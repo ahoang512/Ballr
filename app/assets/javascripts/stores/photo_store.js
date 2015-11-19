@@ -106,10 +106,6 @@
           addNewPhoto(action.photo);
           root.PhotoStore.emit(CHANGE_EVENT);
           break;
-        case PhotoConstants.PHOTO_SELECTED:
-          updateSelected(action.photoId);
-          root.PhotoStore.emit(CHANGE_EVENT);
-          break;
         case PhotoConstants.PHOTO_DELETED:
           removePhoto(action.photo);
           root.PhotoStore.emit(CHANGE_EVENT);

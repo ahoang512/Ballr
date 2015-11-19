@@ -22,8 +22,9 @@ var PhotoTileContainer = React.createClass({
   },
 
   render : function (){
-    var photoTileInfo;
-    if(typeof this.state.photos !== 'undefined'){
+    var state = this.state.mode === 'selected';
+
+    if(this.state.photos.length !== 0){
       var tiles =
         this.state.photos.map(function(photo){
           if (this.state.photoSelected.id === photo.id){
@@ -49,18 +50,14 @@ var PhotoTileContainer = React.createClass({
       <div className="photoTileContainer">
         <div className="group"><label className="photoLabel">Photos</label>
           <div className="photoButtons group">
-            <DeleteButton photoSelected= {this.state.photoSelected}
-                          albumSelected= {this.props.albumSelected}/>
+            <DeleteButton photoSelected= {this.state.photoSelected}/>
             <UploadButton albumSelected= {this.props.albumSelected}/>
           </div>
         </div>
         <ul className="group photoList">
           {tiles}
         </ul>
-        {this.state.mode === 'selected' ?
-          <EditPhotoDetails photo={this.state.photoSelected}/>
-          :
-          {}}
+        {state ? <EditPhotoDetails photo={this.state.photoSelected}/> : {}}
       </div>
     );
   }
@@ -164,8 +161,8 @@ var UploadButton = React.createClass({
 
 
 var DeleteButton = React.createClass({
-  //this.props.albumSelected
   _onClick : function (e) {
+    debugger
     if (confirm("Are you sure you want to delete this photo?")){
       PhotoUtil.deletePhoto(this.props.photoSelected.id);
     }
