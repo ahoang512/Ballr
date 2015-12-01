@@ -13,10 +13,9 @@ Ballr is a web application implemented in Ruby on Rails and React.js that is des
 - [x] Log in / Log out
 - [x] Create, edit, view, delete photo albums
 - [x] Upload, Delete Photos
-- [x] Edit Photo Names and add Tags
-- [ ] Tag pictures with location of where it was taken
+- [x] Edit Photo Names 
 - [ ] Manage a public album that others can upload to
-- [ ] make captions for their photos
+- [ ] Make captions for their photos
 - [ ] comment on photos or favorite them.
 
 ## Design Docs
