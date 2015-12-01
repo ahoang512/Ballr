@@ -42,10 +42,13 @@ The Splash page is broken into two sections. The main splash image and the splas
 ![alt text][front]
 
 ## Edit Page
+![alt text][edit]
 
 ## User Page
+![alt text][user]
 
 
 [splash]: http://res.cloudinary.com/dayd3nm4v/image/upload/v1448995757/Screen_Shot_2015-12-01_at_10.48.19_AM_v5et6a.png
 [front]: http://res.cloudinary.com/dayd3nm4v/image/upload/v1448995973/Screen_Shot_2015-12-01_at_10.52.29_AM_qgiwcl.png
 [edit]: http://res.cloudinary.com/dayd3nm4v/image/upload/v1448996015/Screen_Shot_2015-12-01_at_10.53.07_AM_tub39y.png
+[user]: http://res.cloudinary.com/dayd3nm4v/image/upload/v1448996142/Screen_Shot_2015-12-01_at_10.55.12_AM_hlompe.png
