@@ -27,6 +27,10 @@ Ballr is a web application implemented in Ruby on Rails and React.js that is des
 
 # Views
 
+## Navbar
+The Navbar has the website logo, browse button, and some user account options depending on if there is a user logged in. 
+If there is no current user, it allows you to sign in or sign up. If there is a current user it allows him to view his album library or sign out instead.
+
 ## Splash Page
 
 ## Front Page
@@ -37,4 +41,3 @@ Ballr is a web application implemented in Ruby on Rails and React.js that is des
 
 
 
-S
