@@ -34,6 +34,7 @@ If there is no current user, it allows you to sign in or sign up. If there is a 
 ## Splash Page
 The Splash page is broken into two sections. The main splash image and the splash bar that contains three images. This page is meant to advertise the different functions that this web app can be used for and is the first one that users will see when going to the url.
 
+[logo]: http://res.cloudinary.com/dayd3nm4v/image/upload/v1448995757/Screen_Shot_2015-12-01_at_10.48.19_AM_v5et6a.png
 
 ## Front Page
 
