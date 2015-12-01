@@ -36,9 +36,12 @@ The Splash page is broken into two sections. The main splash image and the splas
 
 ![alt text][splash]
 
-
 ## Front Page
-
+  The front page component is split into two main children components:
+  
+  ### Filter Bar
+  
+  ### PhotoFeed
 ![alt text][front]
 
 ## Edit Page
