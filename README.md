@@ -32,8 +32,12 @@ The Navbar has the website logo, browse button, and some user account options de
 If there is no current user, it allows you to sign in or sign up. If there is a current user it allows him to view his album library or sign out instead.
 
 ## Splash Page
+The Splash page is broken into two sections. The main splash image and the splash bar that contains three images. This page is meant to advertise the different functions that this web app can be used for and is the first one that users will see when going to the url.
+
 
 ## Front Page
+
+
 
 ## Edit Page
 
