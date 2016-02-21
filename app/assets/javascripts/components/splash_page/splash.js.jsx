@@ -7,7 +7,7 @@ var Splash = React.createClass({
     return (
       <div className="splash" onClick={this._onClick}>
         <Splash1/>
-        <SplashBar/>
+        <Splash2/>
       </div>
     );
   }
@@ -20,8 +20,8 @@ var Splash1 = React.createClass({
     return (
       <div id="splash1" >
         <div className="hook">
-          <h1>The hub for all your game day photos and highlights</h1>
-          <h2>View, Upload, and Share Now!</h2>
+          <h1>WELCOME BACK</h1>
+          <h2>View, Upload, and Share your Gameday Highlights Now!</h2>
 
         </div>
       </div>
@@ -32,25 +32,30 @@ var Splash1 = React.createClass({
 var SplashBar = React.createClass({
   render : function () {
     return (
-      <div className="splashBar">
+      <div className="splashBar group">
         <div>
-          <h3>Upload Photos</h3>
+          <div className="tileLabel">Upload Photos</div>
         </div>
         <div>
-          <h3>View Gameday Highlights</h3>
-          <ul>
-            <li key="highlight1">
-              <img src="http://res.cloudinary.com/dayd3nm4v/image/upload/v1446063725/b4C6HrTar7Ec0_cowzc1.gif"/>
-            </li>
-            <li key="highlight2">
-              <img src="http://res.cloudinary.com/dayd3nm4v/image/upload/v1446064444/uKxY1ArU0A0Xm_yyze6b.gif"/>
-            </li>
-          </ul>
+          <div className="tileLabel">View Gameday Highlights</div>
+        </div>
+        <div>
+          <div className="tileLabel">Share Gifs</div>
+        </div>
+      </div>
+    )
+  }
+});
 
+var Splash2 = React.createClass ( {
+  render : function () {
+    return (
+      <div id="splash2">
+         <div className = "prompt">
+          <h1> Get Started! </h1>
+          <h2> What would you like to do?</h2>
         </div>
-        <div>
-          <h3>Share Gifs</h3>
-        </div>
+        <SplashBar/>
       </div>
     )
   }

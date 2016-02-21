@@ -1,8 +1,8 @@
 .navbar {
-  background-color: rgba(11,11,59,1);
+  background-color: rgba(255,255,255,0);
   color: white;
   width: 100%;
-  position: fixed;
+  /*position: fixed;*/
   z-index: 1;
 }
 
@@ -10,7 +10,7 @@
 .logo img {
   cursor: pointer;
   float: left;
-  margin-left: 15%;
+  margin-left: 5%;
   width: 120px;
 }
 

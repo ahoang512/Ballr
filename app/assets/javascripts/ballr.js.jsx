@@ -8,7 +8,7 @@
       render: function(){
         return (
             <div className="app">
-              <NavBar/>
+              <NavBar/>
               {this.props.children}
             </div>
         );
