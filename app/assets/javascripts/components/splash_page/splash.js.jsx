@@ -15,14 +15,14 @@ var Splash = React.createClass({
 var Splash1 = React.createClass({
   mixins : [ReactRouter.History],
   _onClick : function () {
-    this.history.pushState({}, "front");
+    this.history.pushState({sport: "none"}, "front");
   },
   render : function () {
     return (
       <div id="splash1" onClick={this._onClick} >
         <div className="hook">
-          <div>WELCOME BACK</div>
-          <div>View, Upload, and Share your Gameday Highlights Now!</div>
+          <div>YOUR GAME DAY GALLERY</div>
+          <div>Share photos and gifs on ballr</div>
 
         </div>
       </div>
@@ -31,17 +31,27 @@ var Splash1 = React.createClass({
 });
 
 var SplashBar = React.createClass({
+  mixins : [ReactRouter.History],
+  _soccer : function () {
+    this.history.pushState({sport: "Soccer"}, "front");
+  },
+  _football : function () {
+    this.history.pushState({sport: "Football"}, "front");
+  },
+  _basketball : function () {
+    this.history.pushState({sport: "Basketball"}, "front");
+  },
   render : function () {
     return (
       <div className="splashBar group">
-        <div>
-          <div className="tileLabel">Upload Photos</div>
+        <div onClick={this._soccer}>
+          <div className="tileLabel">Soccer</div>
         </div>
-        <div>
-          <div className="tileLabel">View Gameday Highlights</div>
+        <div onClick={this._football}>
+          <div className="tileLabel">Football</div>
         </div>
-        <div>
-          <div className="tileLabel">Share Gifs</div>
+        <div onClick={this._basketball}>
+          <div className="tileLabel">Basketball</div>
         </div>
       </div>
     )
@@ -54,7 +64,7 @@ var Splash2 = React.createClass ( {
       <div id="splash2">
          <div className = "prompt">
           <h1> Get Started! </h1>
-          <h2> What would you like to do?</h2>
+          <h2> What sport do you follow?</h2>
         </div>
         <SplashBar/>
       </div>

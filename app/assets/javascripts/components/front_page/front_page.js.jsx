@@ -5,10 +5,11 @@ var FrontPage = React.createClass({
              featuredUsers : []});
   },
   componentDidMount : function() {
+    var fetch = this.props.location.state.sport;
     if (typeof window.current_user !== 'undefined' ){
       UserUtil.getCurrentUser();
     }
-    PhotoUtil.fetchFeedPhotos("none");
+    PhotoUtil.fetchFeedPhotos(fetch);
     UserUtil.fetchFeaturedUsers();
     UserStore.addChangeListener(this._onChange);
     PhotoStore.addChangeListener(this._onChange);
