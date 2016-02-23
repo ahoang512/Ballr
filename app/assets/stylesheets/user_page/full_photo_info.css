@@ -1,13 +1,11 @@
 .fullPhotoInfoContainer {
   height: 20%;
-  background: rgb(220,220,220);
 }
 
 .fullPhotoInfo {
   font-size:  large;
-  width: 70%;
+  width: 800px;
   height: 100%;
-  background-color: lightslategrey;
   margin: auto;
 }
 .fullPhotoInfo div {
