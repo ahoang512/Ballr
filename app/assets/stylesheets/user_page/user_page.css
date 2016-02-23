@@ -56,8 +56,8 @@
 }
 
 .albumPhotos img {
-  max-height: 95%;
-  cursor: pointer;
+  max-height: 75%;
+  margin: 5px;
 }
 
 .albumPhotos img.tileSelected {
