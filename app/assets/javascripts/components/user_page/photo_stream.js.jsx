@@ -38,10 +38,10 @@ var PhotoStream = React.createClass({
   _onClick : function (e) {
     var idx = this._findIndex(this.state.selected);
     switch (e.target.textContent){
-      case "<":
+      case "←":
         PhotoActions.iterateClicked(-1, idx);
         break;
-      case ">":
+      case "→":
         PhotoActions.iterateClicked(1, idx);
         break;
     }
@@ -65,11 +65,11 @@ var PhotoStream = React.createClass({
     return (
       <div className="photoStream">
         <div className="stream group">
-          <div className="change" onClick={this._onClick}>&lt;</div>
+          <div className="change" onClick={this._onClick}>&#8592;</div>
           <div className="photo">
               {img}
           </div>
-          <div className="change" onClick={this._onClick}>&gt;</div>
+          <div className="change" onClick={this._onClick}>&#8594;</div>
         </div>
         <div className="albumPhotos">
           {

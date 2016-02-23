@@ -84,8 +84,8 @@ var Footer = React.createClass ({
     return (
       <div id="footer">
         <div className="footerContent">
-          <div onClick={this._github}><img src="/github_logo_white.png"/></div>
-          <div onClick={this._linkedIn}><img src="/linked.png"/></div>
+          <div onClick={this._github}><img src="http://res.cloudinary.com/dayd3nm4v/image/upload/v1456158708/github_logo_white_ubxfu3.png"/></div>
+          <div onClick={this._linkedIn}><img src="http://res.cloudinary.com/dayd3nm4v/image/upload/v1456158707/linked_rqferk.png"/></div>
         </div>
       </div>
     )

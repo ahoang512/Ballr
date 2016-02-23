@@ -15,7 +15,7 @@ var NavBar = React.createClass({
 
 
     return (
-      <nav className="navbar">
+      <nav className="navbar group">
         <div className="logo" onClick={this._logo}>
           <div><img src="/logo2.png"/></div>
         </div>

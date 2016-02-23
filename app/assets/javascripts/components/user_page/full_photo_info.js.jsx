@@ -40,7 +40,7 @@ var FullPhotoInfo = React.createClass({
     }
     return (
       <div className="fullPhotoInfoContainer">
-        <div className="fullPhotoInfo">
+        <div className="fullPhotoInfo group">
           <div className="userData">
             {img}
             {username}

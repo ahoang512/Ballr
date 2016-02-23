@@ -1,9 +1,10 @@
 .navbar {
-  background-color: rgba(255,255,255,0);
+  /*background-color: rgba(255,255,255,0.1);*/
+  background-color: black;
   color: white;
   width: 100%;
-  /*position: fixed;*/
-  z-index: 1;
+  z-index: 1000;
+  position: static;
 }
 
 
@@ -17,7 +18,7 @@
 .browseButton{
   float: left;
   padding: 10px;
-  font-size: x-large;
+  font-size: large;
   width: auto;
 }
 .browseButton:hover {
@@ -34,7 +35,7 @@
 .navbar .navButtons > div > * {
   float: right;
   padding: 10px;
-  font-size:  x-large;
+  font-size:  large;
 }
 .navbar .navButtons > div > *:hover {
   color: turquoise;

@@ -80,11 +80,13 @@
   margin-right: 12.5px;
   height: 344px;
   cursor: pointer;
+  box-shadow: #2b2d2e 0 4px 4px;
+
 }
 
 .splashBar > div:nth-child(1) {
   margin-left: 3%;
-  background: url('messi.jpg');
+  background: url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1456158502/messi0_n2gtnf.jpg');
   background-position:center;
   background-size: 100% 100%;
 
@@ -98,7 +100,7 @@
 
 
 .splashBar div:nth-child(3) {
-  background: url('nadal.jpg');
+  background: url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1456158570/curry_jsfroy.jpg');
   background-position:center;
   background-size: 100% 100%;
 

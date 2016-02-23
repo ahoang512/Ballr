@@ -1,5 +1,6 @@
 .frontPage {
-  background: url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1447510224/uefa_jfkcfi.jpg');
+  /*background-color: #2b2d2e;*/
+  background-color: rgb(220,220,220)
   background-position:center;
   background-repeat: no-repeat;
   position: fixed;
@@ -12,21 +13,24 @@
 .frontContainer {
   width: 1000px;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 10px;
+
 }
 
 .photoFeed {
   margin-left: 275px;
-  margin-top: 40px;
-  padding-bottom: 3%;
-  height: 100%;
+  margin-top: 10px;
+  padding-bottom: 5%;
   width: 75%;
+  height: 100%;
   float: left;
+
 }
 
 .photoFeed ul {
   width: 95%;
-  /*height: 90%;*/
+  height: 90%;
+
 }
 .feedPhotos {
   width: 100%;
@@ -44,6 +48,7 @@
   height: 60px;
   background-color: rgba(255,255,255, 0.8);
   font-size: large;
+  box-shadow: #e9ebec 0 4px 4px;
 }
 
 
