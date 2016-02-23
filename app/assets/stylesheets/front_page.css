@@ -1,5 +1,4 @@
 .frontPage {
-  /*background-color: #2b2d2e;*/
   background-color: rgb(220,220,220)
   background-position:center;
   background-repeat: no-repeat;
@@ -48,7 +47,7 @@
   height: 60px;
   background-color: rgba(255,255,255, 0.8);
   font-size: large;
-  box-shadow: #e9ebec 0 4px 4px;
+  box-shadow: #2b2d2e 0 4px 4px;
 }
 
 

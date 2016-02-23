@@ -6,6 +6,7 @@
   margin-bottom: 1%;
   float: left;
   position: fixed;
+  box-shadow: #2b2d2e 0 4px 4px
 }
 
 .filterBar h1 {

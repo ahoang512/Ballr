@@ -5,7 +5,12 @@ var FrontPage = React.createClass({
              featuredUsers : []});
   },
   componentDidMount : function() {
-    var fetch = this.props.location.state.sport;
+    var fetch="";
+    if (this.props.location.state === null){
+      fetch = "none";
+    }else{
+      fetch = this.props.location.state.sport;
+    }
     if (typeof window.current_user !== 'undefined' ){
       UserUtil.getCurrentUser();
     }

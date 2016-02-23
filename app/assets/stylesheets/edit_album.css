@@ -1,5 +1,5 @@
 .editAlbum {
-  background: url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1447510224/uefa_jfkcfi.jpg');
+  background-color: rgb(220,220,220)
   background-position: center;
   height: 100%;
 
@@ -38,8 +38,8 @@
 .editContainer {
   margin: auto;
   width: 90%;
-  height: 90%;
-  padding-top: 50px;
+  height: 600px;
+  margin-top: 25px;
   background: rgba(49,79,79,0.8);
 }
 
