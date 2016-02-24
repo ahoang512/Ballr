@@ -39,6 +39,12 @@
 }
 
 
+.comment  div:nth-child(2){
+  /* username */
+  color: blue;
+}
+
+
 
 .comment div{
   font-size: 20px;

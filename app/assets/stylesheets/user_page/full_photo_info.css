@@ -1,5 +1,6 @@
 .fullPhotoInfoContainer {
   height: 20%;
+  margin-bottom: 10px;
 }
 
 .fullPhotoInfo {
@@ -8,7 +9,7 @@
   height: 100%;
   margin: auto;
 }
-.fullPhotoInfo div {
+.fullPhotoInfo > div {
   float: left;
 }
 
@@ -30,4 +31,8 @@
 
 .userData {
   width: 15%;
+}
+
+.userData div {
+  text-align: center;
 }

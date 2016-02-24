@@ -19,6 +19,7 @@ var UserPage = React.createClass({
   },
 
   render : function() {
+    console.log(PhotoStore.showSelected());
     return (
       <div className = "userPage">
         <PhotoStream photos={this.state.photos}

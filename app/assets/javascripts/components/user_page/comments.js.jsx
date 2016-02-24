@@ -1,5 +1,5 @@
 var Comments = React.createClass({
-
+  //this.props.photo_id
   getInitialState : function () {
     return ({
       comments : []
@@ -43,12 +43,16 @@ var NewComment = React.createClass({
 
   _handleSubmit : function(e) {
     e.preventDefault();
-    var params = {
-      user_id : window.current_user,
-      photo_id : this.props.photo_id,
-      text : this.state.text
+    if(typeof window.current_user !== "undefined"){
+      var params = {
+        user_id : window.current_user,
+        photo_id : this.props.photo_id,
+        text : this.state.text
+      }
+      CommentUtil.createComment(params);
+    }else{
+      alert("Please Log In");
     }
-    CommentUtil.createComment(params);
   },
 
   _onChange : function(e) {
