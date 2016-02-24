@@ -9,6 +9,7 @@ Rails.application.routes.draw do
         get 'user_photos'
       end
     end
+    resources :comments, only: [:create, :index]
   end
   resources :users , only: [:new, :show, :create, :update, :index] do
 

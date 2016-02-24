@@ -48,6 +48,7 @@ var PhotoStream = React.createClass({
   },
 
   _imgClick : function(e) {
+    CommentUtil.fetchComments(e.target.id);
     PhotoActions.photoTileClicked(parseInt(e.target.id));
   },
 

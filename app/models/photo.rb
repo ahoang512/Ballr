@@ -21,6 +21,11 @@ class Photo < ActiveRecord::Base
     through: :album,
     source: :owner
 
+  has_many :comments,
+    class_name: "Comment",
+    foreign_key: :photo_id,
+    primary_key: :id
+
 
   def self.getRandom(start, count)
     last = start + count;

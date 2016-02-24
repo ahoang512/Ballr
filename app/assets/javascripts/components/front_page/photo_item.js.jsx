@@ -9,12 +9,13 @@ var PhotoItem = React.createClass({
     var query = {
       user_id : userId,
       album_id : albumId,
-      id : photo.id
+      photo_id : photo.id
     };
 
     PhotoUtil.fetchAlbumPhotos(albumId,
       photo.id
     );
+    CommentUtil.fetchComments(this.props.photo.id);
     this.history.pushState({}, url, query);
   },
 

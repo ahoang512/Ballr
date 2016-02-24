@@ -38,6 +38,13 @@ class User < ActiveRecord::Base
     through: :albums,
     source: :photos
 
+  has_many :comments,
+    class_name: "Comment",
+    foreign_key: :user_id,
+    primary_key: :id
+
+
+
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
     return nil unless user && user.valid_password?(password)
