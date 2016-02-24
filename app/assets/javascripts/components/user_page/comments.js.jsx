@@ -2,15 +2,32 @@ var Comments = React.createClass({
 
   getInitialState : function () {
     return ({
+      comments : []
     });
   },
 
 
+  componentDidMount : function () {
+    CommentStore.addChangeListener(this._onChange);
+  },
+
+  componentWillUnmount : function () {
+    CommentStore.removeChangeListener(this._onChange);
+  },
+
+  _onChange : function () {
+    this.setState({
+      comments : CommentStore.all()
+    });
+  },
 
   render : function () {
+    var comments = this.state.comments.map(function(comment){
+      return (<Comment comment={comment} />);
+    });
     return (
       <div className="commentsContainer">
-        <Comment/>
+        {comments}
         <NewComment photo_id={this.props.photo_id}/>
       </div>
     );
@@ -56,9 +73,14 @@ var NewComment = React.createClass({
 
 
 var Comment = React.createClass({
+  // this.props.comment
   render : function () {
+    var comment = this.props.comment;
     return (
       <div className="comment">
+        <img src={comment.user_photo}/>
+        <div>{comment.user_name}</div>
+        <div>{comment.text}</div>
       </div>
     )
   }

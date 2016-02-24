@@ -30,6 +30,16 @@
   border-radius: 7px;
 }
 
+.comment {
+  height: 80px;
+}
 .comment img {
   height: 60px;
+  float: left;
+}
+
+
+
+.comment div{
+  font-size: 20px;
 }

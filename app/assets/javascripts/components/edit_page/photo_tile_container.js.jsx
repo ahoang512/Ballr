@@ -28,7 +28,7 @@ var PhotoTileContainer = React.createClass({
       var tiles =
         this.state.photos.map(function(photo){
           if (this.state.photoSelected.id === photo.id){
-            var selected = "selected"
+            var selected = "selected";
           }else{
             var selected = "";
           }
