@@ -25,6 +25,7 @@ var UserPage = React.createClass({
            selected={this.props.location.query.id}
            album={this.props.location.query.album_id}/>
         <FullPhotoInfo/>
+        <Comments/>
       </div>);
   }
 });

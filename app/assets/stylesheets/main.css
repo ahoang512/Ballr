@@ -28,6 +28,7 @@ width: 100%;
 
 #container {
  height: 100%;
+ background-color: rgb(220,220,220);
 }
 
 .app {
