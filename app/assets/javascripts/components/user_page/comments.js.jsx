@@ -50,9 +50,13 @@ var NewComment = React.createClass({
         text : this.state.text
       }
       CommentUtil.createComment(params);
+
     }else{
       alert("Please Log In");
     }
+    this.setState({
+      text : ""
+    });
   },
 
   _onChange : function(e) {
@@ -66,7 +70,7 @@ var NewComment = React.createClass({
     return (
       <div className="newCommentContainer group">
         <form onSubmit={this._handleSubmit}>
-          <textarea placeholder="Add Comment" onChange={this._onChange}/>
+          <textarea placeholder="Add Comment" onChange={this._onChange} value={this.state.text}/>
           <button className="commentButton">Comment</button>
         </form>
       </div>

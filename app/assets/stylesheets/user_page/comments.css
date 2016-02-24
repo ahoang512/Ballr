@@ -36,16 +36,18 @@
 .comment img {
   height: 60px;
   float: left;
+  border-radius: 50%;
 }
 
 
 .comment  div:nth-child(2){
   /* username */
-  color: blue;
+  color: #006dac;
+  font-size: 18px;
 }
 
 
 
-.comment div{
-  font-size: 20px;
+.comment div:nth-child(3){
+  font-size: 14px;
 }
