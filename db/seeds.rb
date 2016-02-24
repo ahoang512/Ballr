@@ -1,148 +1,108 @@
-u1 = User.create(email: "a@a.com",
-                 username: "JoePavelski",
-                 password: "password",
-    photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445213333/3985_kkdd8i.png"
-)
-
-
-u2 = User.create(email: "b@b.com",
-                 username: "BusterPosey",
-                 password: "password",
-    photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445216296/rw30hit29yf3mk2rohft.png"
-)
-
-u3 = User.create(email: "c@c.com",
-                 username: "StephenCurry",
-                 password: "password",
-    photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445290252/feukwg6w97c7vk1lcixu.png"
-)
-
-u4 = User.create(email: "d@d.com",
-                 username: "MarcoReus",
-                 password: "password",
-    photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445290471/phiwkmpse3wuytrp8pjd.jpg"
-)
-
-u5 = User.create(email: "e@e.com",
-                 username: "JerryRice",
-                 password: "password",
-    photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445291015/xotuhzacsf4j8zzi7wua.jpg"
-)
-
-u6 = User.create(email: "f@f.com",
-                 username: "Chris Wondolowski",
-                 password: "password",
-  photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1446596480/h2oijjcnkentymqbclbz.png")
-
-
-a1 = Album.create(owner_id: u1.id, name: "Hockey")
-a2 = Album.create(owner_id: u2.id, name: "Baseball")
-a3 = Album.create(owner_id: u3.id, name: "Roaracle")
-a4 = Album.create(owner_id: u4.id, name: "futbol!")
-a5 = Album.create(owner_id: u5.id, name: "FOOTBALL")
-a6 = Album.create(owner_id: u1.id, name: "Shark Tank!")
-a7 = Album.create(owner_id: u6.id, name: "Major League Soccer!")
-
-p1 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444867036/xz0tgtuck8jrqvl0xvgy.jpg", name: "Whats good?", album_id: a6.id, sport: "Hockey")
-
-p2 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445291961/mlb_a_giantswinwar_668x376_dzayke.jpg", name: "photo2", album_id: a2.id, sport: "Baseball")
-
-
-
-p3 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444866977/kqmv6t5p3quxrj6qwqo3.jpg", name: "Where'd it go? - goalie", album_id: a6.id, sport: "Hockey")
-p4 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444866499/rwct6tkg5jwskhthmdwv.jpg", name: "photo4", album_id: a5.id, sport: "Football")
-p5 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444866327/qbe95hjswzf9hiei5njy.jpg", name: "photo5", album_id: a5.id, sport: "Football")
-
-p6 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444883662/zaaccw4ylptrdmqc1vpp.jpg", name: "photo6", album_id: a4.id, sport: "Soccer")
-p7 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444883634/ilybzwzwuaaj0ei1ymnj.jpg", name: "cross the line!", album_id: a6.id, sport: "Hockey")
-
-p8 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444883610/mojbd77g3lyb4v4fwgz6.jpg", name: "Flying High!", album_id: a4.id, sport: "Soccer")
-p9 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444883597/ejqoeistkvvpzffuqy5s.jpg", name: "move!", album_id: a5.id, sport: "Football")
-
-p10 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445292040/USATSI_8527928_p2psaj.jpg", name: "photo10", album_id: a2.id, sport: "Baseball")
-p11 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445292135/b1c37161ef041de60b750a7fb2df02b3.1000x545x1_ywirzu.jpg", name: "photo11", album_id: a4.id, sport: "Soccer")
-
-p12 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445387275/ycvaswy44pacwrd5cqgs.gif", name: "OBJ", album_id: a5.id, sport: "Football")
-
-p13 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445387618/DJ9oIIW2UiJcQ_tp4m4t.gif", name: "WHAT A GOAL!", album_id: a6.id, sport: "Hockey")
-
-p14 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445388055/1sNDIB0SPHhBK_yvuzcc.gif", name: "boooya", album_id: a6.id, sport: "Hockey")
-
-p15 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445400057/GwiTbyyoAT2c8_wkskml.gif", name: "megatron", album_id: a5.id, sport: "Football")
-
-p16 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445444620/JCtMFY_dkflrk.gif", name: "Messi Magician", album_id: a4.id, sport: "Soccer")
-
-p17 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445445648/u7fdfm9w0inh1o0mmt9k.gif", name: "Pavel Datsyuk Solo", album_id: a1.id, sport: "Hockey")
-
-p18 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445453255/giphy_t9gxfz.gif", name: "So unlucky", album_id: a1.id, sport: "Hockey")
-
-p19 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445453474/Untitled-main_rzvsfs.jpg", name: "Because its the cup", album_id: a1.id, sport: "Hockey")
-
-p20 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445467600/tumblr_luinciVz3m1r5oj22o4_250_kmwbkk.gif", name: "goaaalll!", album_id: a6.id, sport: "Hockey")
-
-p21 = Photo.create(url: "http://res.cloudinary.com/dayd3nm4v/image/upload/c_scale,h_309,w_466/v1445473966/OeOYYGTsPO8ZW_kgju3y.gif", name: "oops", album_id: a5.id, sport: "Football")
-
-p22 = Photo.create(url:
-"http://res.cloudinary.com/dayd3nm4v/image/upload/v1445548822/3rgXBKBlcvBmnhbf7W_burqf1.gif", name:
-"Curry with the dime", album_id: a3.id, sport: "Basketball")
-
-p23 = Photo.create(url:
-"http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549205/Nax6whtH6xd4s_tmzebf.gif", name:
-"Trey", album_id: a3.id, sport: "Basketball")
-
-p24 = Photo.create(url:
-"http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549344/2015-06-17t043537z_1154834890_nocid_rtrmadp_3_nba-playoffs-golden-state-warriors-at-cleveland-cavaliers_0_bsnwbr.jpg", name:
-"Championship", album_id: a3.id, sport: "Basketball")
-
-
-p25 = Photo.create(url:
-"http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549532/yoJC2RdW6zCIcCOZvW_tar6vy.gif", name:
-"Handles", album_id: a3.id, sport: "Basketball")
-
-p26 = Photo.create(url:
-"http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549700/andre-iguodala-stephen-curry-harrison-barnes-klay-thompson-nba-golden-state-warriors-memphis-grizzlies-850x560_q5brzn.jpg", name:
-"Squad", album_id: a3.id, sport: "Basketball")
-
-p27 = Photo.create(url:
-"http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549946/StQsmNZXcx3sk_t4yrne.gif", name:
-"Klay with the monster slam!", album_id: a3.id, sport: "Basketball")
-
-p28 = Photo.create(url:
-"http://res.cloudinary.com/dayd3nm4v/image/upload/v1445550451/omgrod.0_mwevrs.gif", name:
-"what a pass!", album_id: a5.id, sport: "Football")
-
-p29 = Photo.create(url:
-"http://res.cloudinary.com/dayd3nm4v/image/upload/v1445560137/KInkdX7nu8VO0_dfpq5g.gif", name:
-"The curl is crazy!", album_id: a4.id, sport: "Soccer")
-
-p30 = Photo.create(url:
-"http://res.cloudinary.com/dayd3nm4v/image/upload/v1445641036/kLGIKizJIX9bG_it770e.gif", name:
-"bam!", album_id: a2.id, sport: "Baseball")
-
-p31 = Photo.create(url:
-"http://res.cloudinary.com/dayd3nm4v/image/upload/v1445874866/CalvinJohnson2_jolpra.gif", name:
-"Triple Coverage!", album_id: a5.id, sport: "Football")
-
-p32 = Photo.create(url:
-"http://res.cloudinary.com/dayd3nm4v/image/upload/v1446663834/iCQxvzIhuvxG8_zmkhcg.gif", name:
-"What a setup!", album_id: a4.id, sport: "Soccer")
-
-p33 = Photo.create(url:
-"http://res.cloudinary.com/dayd3nm4v/image/upload/v1446664231/xbPeCtr47bGXS_ojfzax.gif", name:
-"Bend it like Beckham!", album_id: a4.id, sport: "Soccer")
-
-p34 = Photo.create(url:
-"http://res.cloudinary.com/dayd3nm4v/image/upload/v1446664395/WUa2lET6If7Uc_e40xeo.gif", name:
-"Was that planned?!", album_id: a4.id, sport: "Soccer")
-
-p35 = Photo.create(url:
-"http://res.cloudinary.com/dayd3nm4v/image/upload/v1447281998/Nz3KFlCyJCshi_c9w5fi.gif", name:
-"Perfect landing!", album_id: a5.id, sport: "Football")
-
-p36 = Photo.create(url:
-"http://res.cloudinary.com/dayd3nm4v/image/upload/v1447282364/21b2QuGkUpjNu_dxvxnf.gif", name:
-"What just happened?", album_id: a5.id, sport: "Football")
-
-p37 = Photo.create(url:
-"http://res.cloudinary.com/dayd3nm4v/image/upload/v1447357111/nhl_rangers_senators_nhl_20130221_25993927_vwmtfs.jpg", name:
-"Deke and goal!", album_id: a1.id, sport: "Hockey")
+Album.create!([
+  {owner_id: 1, name: "Hockey"},
+  {owner_id: 2, name: "Baseball"},
+  {owner_id: 3, name: "Roaracle"},
+  {owner_id: 4, name: "futbol!"},
+  {owner_id: 5, name: "FOOTBALL"},
+  {owner_id: 1, name: "Shark Tank!"},
+  {owner_id: 6, name: "Major League Soccer!"}
+])
+Comment.create!([
+  {photo_id: 10, user_id: 1, text: "nice ring"},
+  {photo_id: 2, user_id: 1, text: "victory!"},
+  {photo_id: 10, user_id: 1, text: "mvp!"},
+  {photo_id: 30, user_id: 1, text: "hit it!"},
+  {photo_id: 30, user_id: 1, text: "wow!"},
+  {photo_id: 2, user_id: 1, text: "wooo!"},
+  {photo_id: 30, user_id: 1, text: "its outta here!"},
+  {photo_id: 33, user_id: 1, text: "nice strike!"},
+  {photo_id: 8, user_id: 1, text: "auby!"},
+  {photo_id: 8, user_id: 1, text: "wow"},
+  {photo_id: 37, user_id: 1, text: "that deke!"},
+  {photo_id: 34, user_id: 1, text: "Lucky break!"},
+  {photo_id: 23, user_id: 2, text: "Look at those handles!\n"},
+  {photo_id: 24, user_id: 2, text: "bay area champions!"},
+  {photo_id: 27, user_id: 2, text: "Great Slam!"},
+  {photo_id: 22, user_id: 2, text: "holy moly!"},
+  {photo_id: 13, user_id: 3, text: "between the legs?!"},
+  {photo_id: 20, user_id: 3, text: "nice snipe!"},
+  {photo_id: 14, user_id: 3, text: "boooogie!"},
+  {photo_id: 6, user_id: 3, text: "awesome!"},
+  {photo_id: 16, user_id: 3, text: "ankle breaker!"},
+  {photo_id: 34, user_id: 3, text: "what happened to the wall?"},
+  {photo_id: 11, user_id: 3, text: "digging the uniform"},
+  {photo_id: 32, user_id: 3, text: "what a pass!"},
+  {photo_id: 33, user_id: 3, text: "what range!"},
+  {photo_id: 31, user_id: 3, text: "HOW?"},
+  {photo_id: 9, user_id: 3, text: "what happened..?\n"},
+  {photo_id: 35, user_id: 3, text: "perfect 10!"},
+  {photo_id: 12, user_id: 3, text: "how did he catch that?"},
+  {photo_id: 36, user_id: 3, text: "I guess that was planned?\n"},
+  {photo_id: 4, user_id: 3, text: "wooo #12!!!"},
+  {photo_id: 35, user_id: 4, text: "^^ completely agree"},
+  {photo_id: 31, user_id: 4, text: "nice defense"},
+  {photo_id: 21, user_id: 4, text: "HAHA"},
+  {photo_id: 5, user_id: 4, text: "one of the greatest of all time!\n"},
+  {photo_id: 23, user_id: 4, text: "get played!"},
+  {photo_id: 25, user_id: 4, text: "behind the back was so clean!"},
+  {photo_id: 26, user_id: 4, text: "squad!"},
+  {photo_id: 24, user_id: 4, text: "congrats warriors!"},
+  {photo_id: 27, user_id: 4, text: "wheres the defense?"},
+  {photo_id: 1, user_id: 4, text: "hes under 20 years old!?"},
+  {photo_id: 3, user_id: 4, text: "goalie: \"i wonder where it went\"\n"},
+  {photo_id: 14, user_id: 4, text: "i know that feeling!\n"},
+  {photo_id: 7, user_id: 4, text: "full effort!"},
+  {photo_id: 13, user_id: 4, text: "hockey version of the nutmeg!"},
+  {photo_id: 20, user_id: 4, text: "to hot to handle!"},
+  {photo_id: 10, user_id: 4, text: "woooo congrats!"},
+  {photo_id: 30, user_id: 4, text: "that form is on point!"},
+  {photo_id: 2, user_id: 4, text: "let the celebrations begin!"},
+  {photo_id: 1, user_id: 4, text: "they called him the teenage mutant ninja hertl when he entered!"}
+])
+Photo.create!([
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444867036/xz0tgtuck8jrqvl0xvgy.jpg", name: "Whats good?", album_id: 6, sport: "Hockey"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445291961/mlb_a_giantswinwar_668x376_dzayke.jpg", name: "photo2", album_id: 2, sport: "Baseball"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444866977/kqmv6t5p3quxrj6qwqo3.jpg", name: "Where'd it go? - goalie", album_id: 6, sport: "Hockey"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444866499/rwct6tkg5jwskhthmdwv.jpg", name: "photo4", album_id: 5, sport: "Football"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444866327/qbe95hjswzf9hiei5njy.jpg", name: "photo5", album_id: 5, sport: "Football"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444883662/zaaccw4ylptrdmqc1vpp.jpg", name: "photo6", album_id: 4, sport: "Soccer"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444883634/ilybzwzwuaaj0ei1ymnj.jpg", name: "cross the line!", album_id: 6, sport: "Hockey"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444883610/mojbd77g3lyb4v4fwgz6.jpg", name: "Flying High!", album_id: 4, sport: "Soccer"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444883597/ejqoeistkvvpzffuqy5s.jpg", name: "move!", album_id: 5, sport: "Football"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445292040/USATSI_8527928_p2psaj.jpg", name: "photo10", album_id: 2, sport: "Baseball"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445292135/b1c37161ef041de60b750a7fb2df02b3.1000x545x1_ywirzu.jpg", name: "photo11", album_id: 4, sport: "Soccer"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445387275/ycvaswy44pacwrd5cqgs.gif", name: "OBJ", album_id: 5, sport: "Football"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445387618/DJ9oIIW2UiJcQ_tp4m4t.gif", name: "WHAT A GOAL!", album_id: 6, sport: "Hockey"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445388055/1sNDIB0SPHhBK_yvuzcc.gif", name: "boooya", album_id: 6, sport: "Hockey"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445400057/GwiTbyyoAT2c8_wkskml.gif", name: "megatron", album_id: 5, sport: "Football"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445444620/JCtMFY_dkflrk.gif", name: "Messi Magician", album_id: 4, sport: "Soccer"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445445648/u7fdfm9w0inh1o0mmt9k.gif", name: "Pavel Datsyuk Solo", album_id: 1, sport: "Hockey"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445453255/giphy_t9gxfz.gif", name: "So unlucky", album_id: 1, sport: "Hockey"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445453474/Untitled-main_rzvsfs.jpg", name: "Because its the cup", album_id: 1, sport: "Hockey"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445467600/tumblr_luinciVz3m1r5oj22o4_250_kmwbkk.gif", name: "goaaalll!", album_id: 6, sport: "Hockey"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/c_scale,h_309,w_466/v1445473966/OeOYYGTsPO8ZW_kgju3y.gif", name: "oops", album_id: 5, sport: "Football"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445548822/3rgXBKBlcvBmnhbf7W_burqf1.gif", name: "Curry with the dime", album_id: 3, sport: "Basketball"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549205/Nax6whtH6xd4s_tmzebf.gif", name: "Trey", album_id: 3, sport: "Basketball"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549344/2015-06-17t043537z_1154834890_nocid_rtrmadp_3_nba-playoffs-golden-state-warriors-at-cleveland-cavaliers_0_bsnwbr.jpg", name: "Championship", album_id: 3, sport: "Basketball"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549532/yoJC2RdW6zCIcCOZvW_tar6vy.gif", name: "Handles", album_id: 3, sport: "Basketball"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549700/andre-iguodala-stephen-curry-harrison-barnes-klay-thompson-nba-golden-state-warriors-memphis-grizzlies-850x560_q5brzn.jpg", name: "Squad", album_id: 3, sport: "Basketball"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549946/StQsmNZXcx3sk_t4yrne.gif", name: "Klay with the monster slam!", album_id: 3, sport: "Basketball"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445550451/omgrod.0_mwevrs.gif", name: "what a pass!", album_id: 5, sport: "Football"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445560137/KInkdX7nu8VO0_dfpq5g.gif", name: "The curl is crazy!", album_id: 4, sport: "Soccer"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445641036/kLGIKizJIX9bG_it770e.gif", name: "bam!", album_id: 2, sport: "Baseball"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445874866/CalvinJohnson2_jolpra.gif", name: "Triple Coverage!", album_id: 5, sport: "Football"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1446663834/iCQxvzIhuvxG8_zmkhcg.gif", name: "What a setup!", album_id: 4, sport: "Soccer"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1446664231/xbPeCtr47bGXS_ojfzax.gif", name: "Bend it like Beckham!", album_id: 4, sport: "Soccer"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1446664395/WUa2lET6If7Uc_e40xeo.gif", name: "Was that planned?!", album_id: 4, sport: "Soccer"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1447281998/Nz3KFlCyJCshi_c9w5fi.gif", name: "Perfect landing!", album_id: 5, sport: "Football"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1447282364/21b2QuGkUpjNu_dxvxnf.gif", name: "What just happened?", album_id: 5, sport: "Football"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1447357111/nhl_rangers_senators_nhl_20130221_25993927_vwmtfs.jpg", name: "Deke and goal!", album_id: 1, sport: "Hockey"}
+])
+User.create!([
+  {email: "e@e.com", password_digest: "$2a$10$EjQ0hMUyedDFBQaLLjCyuOmESB3xTD2ZcPoT3LgRvSiMUcOJCCHx2", username: "JerryRice", session_token: "FyMaKJ-T7rreqnq4Lflqdg", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445291015/xotuhzacsf4j8zzi7wua.jpg"},
+  {email: "f@f.com", password_digest: "$2a$10$h8/3y2ulGI/Rk8ZQKeY4cOUJGWcpVN4rHcnP2OWCWKIKjJutXHeFa", username: "Chris Wondolowski", session_token: "N71CNVTxQWPDgJWeMKWQwA", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1446596480/h2oijjcnkentymqbclbz.png"},
+  {email: "a@a.com", password_digest: "$2a$10$Dpv562Iy06Tvya4.RV7c1.hdkDxAlA9XUluvV4RWRPBsNHyGQhOyK", username: "JoePavelski", session_token: "C2taVgG6KwVTRgyBR-DGgQ", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445213333/3985_kkdd8i.png"},
+  {email: "b@b.com", password_digest: "$2a$10$pxEp5OvErCZeEk.5CsQY4ecHJPzJq1XOKehIohak1/BYiG36jYgI6", username: "BusterPosey", session_token: "Kx3InPw716-vIw0VBU0nKg", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445216296/rw30hit29yf3mk2rohft.png"},
+  {email: "c@c.com", password_digest: "$2a$10$mY74kcEQyi4OzKNhG7Ytz.mCQ6acl3jVkZKGbsiDh9tRIA2u0CWNy", username: "StephenCurry", session_token: "_MKlHUVjQeAe-Bp1yJUSbQ", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445290252/feukwg6w97c7vk1lcixu.png"},
+  {email: "d@d.com", password_digest: "$2a$10$fFOs6iOoh99clgQNcr21lOKDIyEbDSIVjwIkXGuzhi13fXqAc6RRO", username: "MarcoReus", session_token: "qcj96flvLwJekFMjCDjE9w", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445290471/phiwkmpse3wuytrp8pjd.jpg"}
+])
