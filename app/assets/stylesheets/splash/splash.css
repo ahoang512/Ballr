@@ -82,24 +82,42 @@
 
 .splashBar > div:nth-child(1) {
   margin-left: 3%;
+  background:  linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1456158502/messi0_n2gtnf.jpg');
+  background-position:center;
+  background-size: 100% 100%;
+}
+
+.splashBar > div:nth-child(1):hover {
   background: url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1456158502/messi0_n2gtnf.jpg');
   background-position:center;
   background-size: 100% 100%;
-
 }
 
 .splashBar div:nth-child(2) {
-  background: url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1446063725/b4C6HrTar7Ec0_cowzc1.gif');
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1456684830/calvin_stiff_k3jydv.jpg');
   background-position:center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.splashBar div:nth-child(2):hover {
+  background: url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1456684830/calvin_stiff_k3jydv.jpg');
+  background-position:center;
+  background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
 
 .splashBar div:nth-child(3) {
-  background: url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1456158570/curry_jsfroy.jpg');
+  background:  linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1456158570/curry_jsfroy.jpg');
   background-position:center;
   background-size: 100% 100%;
+}
 
+.splashBar div:nth-child(3):hover {
+  background:  url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1456158570/curry_jsfroy.jpg');
+  background-position:center;
+  background-size: 100% 100%;
 }
 
 .splashBar .tileLabel {
