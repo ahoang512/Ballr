@@ -4,7 +4,7 @@
 }
 
 #splash1 {
-  background: url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1447510131/curry_trophy_mootww.png');
+  background: url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1456684458/steph_3_hfph5e.jpg');
   background-position:center;
   height: 600px;
   width: 100%;
@@ -19,10 +19,8 @@
   height: 50%;
   width: 80%;
   color: white;
-  transform: translateY(50%);
+  transform: translateY(30%);
 }
-
-
 
 
 .hook div:nth-child(1) {

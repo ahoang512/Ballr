@@ -44,13 +44,14 @@ var NewComment = React.createClass({
   _handleSubmit : function(e) {
     e.preventDefault();
     if(typeof window.current_user !== "undefined"){
-      var params = {
-        user_id : window.current_user,
-        photo_id : this.props.photo_id,
-        text : this.state.text
+      if(this.state.text !== ""){
+        var params = {
+          user_id : window.current_user,
+          photo_id : this.props.photo_id,
+          text : this.state.text
+        }
+        CommentUtil.createComment(params);
       }
-      CommentUtil.createComment(params);
-
     }else{
       alert("Please Log In");
     }
