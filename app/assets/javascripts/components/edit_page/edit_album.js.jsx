@@ -7,19 +7,23 @@ var EditAlbum = React.createClass({
 
   componentDidMount  : function (){
     PhotoStore.addChangeListener(this._onChange);
+    AlbumStore.addChangeListener(this._onChange);
   },
   componentWillUnmount: function(){
     PhotoStore.removeChangeListener(this._onChange);
+    AlbumStore.removeChangeListener(this._onChange);
   },
 
   _onChange : function () {
     this.setState({photoSelected : PhotoStore.photoSelected(),
-                  photos : PhotoStore.all()});
+                  photos : PhotoStore.all(),
+                  albumSelected : AlbumStore.selected()
+                });
   },
 
   render : function () {
 
-    var username = window.current_username + "'s";
+
     return (
       <div className="editAlbum">
         <div className="editContainer group">

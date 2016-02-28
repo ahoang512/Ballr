@@ -36,6 +36,17 @@
   height: auto;
 }
 
+.feedPhotos:hover {
+  height: 100%;
+  -webkit-transform:scale(1.01); /* Safari and Chrome */
+  -moz-transform:scale(1.01); /* Firefox */
+  -ms-transform:scale(1.01); /* IE 9 */
+  -o-transform:scale(1.01); /* Opera */
+   transform:scale(1.01);
+   opacity: 0.9;
+}
+
+
 .photoItems {
   width: 700px;
   margin-bottom: 15px;

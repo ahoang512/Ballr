@@ -8,6 +8,11 @@
 
   var resetAlbums = function (albums) {
     _albums = albums.slice();
+    if (_albumSelected === 0){
+      if (_albums.length > 0){
+        _albumSelected = _albums[0].id;
+      }
+    }
   };
 
   var resetSelected = function (album_id){
@@ -60,7 +65,7 @@
           root.AlbumStore.emit(CHANGE_EVENT);
           break;
         case AlbumConstants.ALBUM_CLICKED:
-          resetSelected(action.album_id);
+          resetSelected(parseInt(action.album_id));
           root.AlbumStore.emit(CHANGE_EVENT);
           break;
       }

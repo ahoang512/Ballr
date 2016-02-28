@@ -7,9 +7,12 @@ var PhotoTileContainer = React.createClass({
   },
   componentDidMount : function () {
     PhotoStore.addChangeListener(this._onChange);
+    AlbumStore.addChangeListener(this._onChange);
+
   },
   componentWillUnmount: function(){
     PhotoStore.removeChangeListener(this._onChange);
+    AlbumStore.removeChangeListener(this._onChange);
   },
 
   _onChange : function () {
@@ -151,6 +154,7 @@ var UploadButton = React.createClass({
     );
   },
   render : function() {
+
     return (
       <div className="uploadButton" id="uploadButton" onClick={this._onClick}>
         Upload

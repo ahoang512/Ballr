@@ -7,7 +7,7 @@ var FrontPage = React.createClass({
   componentDidMount : function() {
     var fetch="";
     if (this.props.location.state === null){
-      fetch = "none";
+      fetch = "All";
     }else{
       fetch = this.props.location.state.sport;
     }

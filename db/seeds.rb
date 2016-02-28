@@ -86,7 +86,7 @@ Photo.create!([
   {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549344/2015-06-17t043537z_1154834890_nocid_rtrmadp_3_nba-playoffs-golden-state-warriors-at-cleveland-cavaliers_0_bsnwbr.jpg", name: "Championship", album_id: 3, sport: "Basketball"},
   {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549532/yoJC2RdW6zCIcCOZvW_tar6vy.gif", name: "Handles", album_id: 3, sport: "Basketball"},
   {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549700/andre-iguodala-stephen-curry-harrison-barnes-klay-thompson-nba-golden-state-warriors-memphis-grizzlies-850x560_q5brzn.jpg", name: "Squad", album_id: 3, sport: "Basketball"},
-  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549946/StQsmNZXcx3sk_t4yrne.gif", name: "Klay with the monster slam!", album_id: 3, sport: "Basketball"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1456686626/tumblr_mxopu5ml291s7p676o1_400_ejnxo6.gif", name: "Winner Winner!", album_id: 3, sport: "Basketball"},
   {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445550451/omgrod.0_mwevrs.gif", name: "what a pass!", album_id: 5, sport: "Football"},
   {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445560137/KInkdX7nu8VO0_dfpq5g.gif", name: "The curl is crazy!", album_id: 4, sport: "Soccer"},
   {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445641036/kLGIKizJIX9bG_it770e.gif", name: "bam!", album_id: 2, sport: "Baseball"},
@@ -96,13 +96,15 @@ Photo.create!([
   {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1446664395/WUa2lET6If7Uc_e40xeo.gif", name: "Was that planned?!", album_id: 4, sport: "Soccer"},
   {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1447281998/Nz3KFlCyJCshi_c9w5fi.gif", name: "Perfect landing!", album_id: 5, sport: "Football"},
   {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1447282364/21b2QuGkUpjNu_dxvxnf.gif", name: "What just happened?", album_id: 5, sport: "Football"},
-  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1447357111/nhl_rangers_senators_nhl_20130221_25993927_vwmtfs.jpg", name: "Deke and goal!", album_id: 1, sport: "Hockey"}
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1447357111/nhl_rangers_senators_nhl_20130221_25993927_vwmtfs.jpg", name: "Deke and goal!", album_id: 1, sport: "Hockey"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1456694853/w0o560litr1nidm3yflg.jpg", name: "Kobe!", album_id: 3, sport: "Basketball"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1456695059/cpemo9h4tud2wigc4lmi.jpg", name: "the hops!", album_id: 3, sport: "Basketball"}
 ])
 User.create!([
   {email: "e@e.com", password_digest: "$2a$10$EjQ0hMUyedDFBQaLLjCyuOmESB3xTD2ZcPoT3LgRvSiMUcOJCCHx2", username: "JerryRice", session_token: "FyMaKJ-T7rreqnq4Lflqdg", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445291015/xotuhzacsf4j8zzi7wua.jpg"},
   {email: "f@f.com", password_digest: "$2a$10$h8/3y2ulGI/Rk8ZQKeY4cOUJGWcpVN4rHcnP2OWCWKIKjJutXHeFa", username: "Chris Wondolowski", session_token: "N71CNVTxQWPDgJWeMKWQwA", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1446596480/h2oijjcnkentymqbclbz.png"},
-  {email: "a@a.com", password_digest: "$2a$10$Dpv562Iy06Tvya4.RV7c1.hdkDxAlA9XUluvV4RWRPBsNHyGQhOyK", username: "JoePavelski", session_token: "C2taVgG6KwVTRgyBR-DGgQ", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445213333/3985_kkdd8i.png"},
   {email: "b@b.com", password_digest: "$2a$10$pxEp5OvErCZeEk.5CsQY4ecHJPzJq1XOKehIohak1/BYiG36jYgI6", username: "BusterPosey", session_token: "Kx3InPw716-vIw0VBU0nKg", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445216296/rw30hit29yf3mk2rohft.png"},
   {email: "c@c.com", password_digest: "$2a$10$mY74kcEQyi4OzKNhG7Ytz.mCQ6acl3jVkZKGbsiDh9tRIA2u0CWNy", username: "StephenCurry", session_token: "_MKlHUVjQeAe-Bp1yJUSbQ", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445290252/feukwg6w97c7vk1lcixu.png"},
-  {email: "d@d.com", password_digest: "$2a$10$fFOs6iOoh99clgQNcr21lOKDIyEbDSIVjwIkXGuzhi13fXqAc6RRO", username: "MarcoReus", session_token: "qcj96flvLwJekFMjCDjE9w", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445290471/phiwkmpse3wuytrp8pjd.jpg"}
+  {email: "d@d.com", password_digest: "$2a$10$fFOs6iOoh99clgQNcr21lOKDIyEbDSIVjwIkXGuzhi13fXqAc6RRO", username: "MarcoReus", session_token: "qcj96flvLwJekFMjCDjE9w", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445290471/phiwkmpse3wuytrp8pjd.jpg"},
+  {email: "a@a.com", password_digest: "$2a$10$Dpv562Iy06Tvya4.RV7c1.hdkDxAlA9XUluvV4RWRPBsNHyGQhOyK", username: "JoePavelski", session_token: "QklArPJgwyAhDynJlJ5orw", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445213333/3985_kkdd8i.png"}
 ])

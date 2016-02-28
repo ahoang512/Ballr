@@ -33,7 +33,7 @@ class Api::PhotosController < ApplicationController
   end
 
   def feed
-    if params[:sport] == "none" || params["sport"] == "All"
+    if params["sport"] == "All"
       @photos = Photo.order('random()').limit('10')
     else
       @photos = Photo.order('random()').where("sport = ?", params[:sport]).limit('10')

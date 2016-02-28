@@ -15,7 +15,7 @@ var Splash = React.createClass({
 var Splash1 = React.createClass({
   mixins : [ReactRouter.History],
   _onClick : function () {
-    this.history.pushState({sport: "none"}, "front");
+    this.history.pushState({sport: "All"}, "front");
   },
   render : function () {
     return (

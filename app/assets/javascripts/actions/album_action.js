@@ -24,6 +24,6 @@ AlbumActions = {
     AppDispatcher.dispatch({
       actionType : AlbumConstants.ALBUM_CLICKED,
       album_id : album_id
-    })
+    });
   }
 };

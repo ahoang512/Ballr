@@ -35,18 +35,18 @@ var AlbumTileContainer = React.createClass({
 
   _albumClick : function (e) {
     var selectedId = e.target.id;
-    AlbumActions.albumClicked()
+    AlbumActions.albumClicked(e.target.id);
     PhotoUtil.fetchAlbumPhotos(e.target.id);
   },
 
   _onChange : function () {
     var selected = AlbumStore.selected();
-    if (selected === 0){
-      if (AlbumStore.all().length > 0){
-        selected = AlbumStore.all()[0].id;
-        //fetch all the photos for album also
+    if (selected !== 0){
+      // if (AlbumStore.all().length > 0){
+      //   selected = AlbumStore.all()[0].id;
+      //   //fetch all the photos for album also
         PhotoUtil.fetchAlbumPhotos(selected);
-      }
+      // }
     }
     this.setState(
       {albums: AlbumStore.all(),
