@@ -1,6 +1,6 @@
 
 <div class="loginPage">
-  <div class="loginBox">
+  <div class="loginBox group">
     <div class="loginLogo"><img src="/logo2.png"/></div>
     <h1>Welcome back!</h1>
 
@@ -19,7 +19,11 @@
       <input type="submit"  id="loginButton" value="Login">
     </form>
 
-    <form action="<%= session_url %>" method="post">
+    <form action="/users/new" method="get" class="loginExtras" id="new_user">
+      <input type="submit" value="New User?"
+         name="Submit"  />
+    </form>
+    <form action="<%= session_url %>" method="post" class="loginExtras" id="guest">
       <%= auth_token_input %>
       <input type="hidden" name="user[email]" value="a@a.com">
       <input type="hidden" name="user[password]" value="password">

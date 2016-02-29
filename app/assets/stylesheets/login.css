@@ -57,9 +57,26 @@
   margin-right: 3px;
 }
 
+.loginExtras {
+  width: 200px;
+  float: left;
+  text-align: center;
+}
+
+#new_user {
+  margin-left: 0px;
+
+}
+
+#guest {
+  margin-left: 0px;
+
+}
 #loginButton {
-  margin-left: 30%;
-  width: 50%;
+  /*margin-left: 30%;*/
+  /*width: 50%;*/
+  float: right;
+  margin-right: 52px;
   font-size: 25px;
 }
 
@@ -72,7 +89,7 @@
 #guestButton {
   font-size: 25px;
   width: 50%;
-  margin-left: 30%;
+  /*margin-left: 30%;*/
 }
 
 #redirect {

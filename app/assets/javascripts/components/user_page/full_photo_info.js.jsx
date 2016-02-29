@@ -34,7 +34,7 @@ var FullPhotoInfo = React.createClass({
     if (selected > 0 && photos.length>0){
       var photo = this._findPhoto();
       var img = (<img src={photo.owner_url} className="photoOwner"/>);
-      var username = <div>{photo.owner}</div>
+      var username = (<div className="ownerName">posted by: &nbsp;{photo.owner}</div>);
       var name = photo.name;
       var albumName = photo.album;
     }
@@ -43,11 +43,12 @@ var FullPhotoInfo = React.createClass({
         <div className="fullPhotoInfo group">
           <div className="userData">
             {img}
-            {username}
+
           </div>
           <div className="photoData">
             <h2>{name}</h2>
             <h3>{albumName}</h3>
+             {username}
           </div>
         </div>
       </div>

@@ -45,7 +45,9 @@
   max-height: 400px;
 }
 
-
+.ownerName {
+  font-size: 15px;
+}
 
 .albumPhotosContainer {
   overflow: auto;
