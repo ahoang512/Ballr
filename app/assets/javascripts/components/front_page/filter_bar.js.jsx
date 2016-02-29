@@ -16,26 +16,27 @@ var FilterBar = React.createClass({
     var baseball="http://res.cloudinary.com/dayd3nm4v/image/upload/v1446676262/baseball_icon_yoxto2.png";
     return (
       <div className="filterBar">
-        <h1>Filter By</h1>
-        <ul className="filterList">
-          <li key="all" onClick={this._onClick}>All</li>
-          <li key="mls" onClick={this._onClick}>Soccer
-            <img className="filterIcons" src={soccer}/>
-          </li>
-          <li key="nhl" onClick={this._onClick}>Hockey
-            <img className="filterIcons" src={hockey}/>
-          </li>
-          <li key="mlb" onClick={this._onClick}>Baseball
-            <img className="filterIcons" src={baseball}/>
-          </li>
-          <li key="Basketball" onClick={this._onClick}>Basketball
-            <img className="filterIcons" src={basketball}/>
-          </li>
-          <li key="nfl" onClick={this._onClick}>Football
-            <img className="filterIcons" src={football} onClick={this._onClick}/>
-          </li>
-
-        </ul>
+        <div className="group">
+          <h1>Filter by</h1>
+          <ul className="filterList">
+            <li key="all" onClick={this._onClick}>All</li>
+            <li key="mls" onClick={this._onClick}>Soccer
+              <img className="filterIcons" src={soccer}/>
+            </li>
+            <li key="nhl" onClick={this._onClick}>Hockey
+              <img className="filterIcons" src={hockey}/>
+            </li>
+            <li key="mlb" onClick={this._onClick}>Baseball
+              <img className="filterIcons" src={baseball}/>
+            </li>
+            <li key="Basketball" onClick={this._onClick}>Basketball
+              <img className="filterIcons" src={basketball}/>
+            </li>
+            <li key="nfl" onClick={this._onClick}>Football
+              <img className="filterIcons" src={football} onClick={this._onClick}/>
+            </li>
+          </ul>
+        </div>
       </div>
     )
   }

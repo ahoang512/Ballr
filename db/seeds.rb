@@ -102,7 +102,7 @@ Photo.create!([
 ])
 User.create!([
   {email: "e@e.com", password_digest: "$2a$10$EjQ0hMUyedDFBQaLLjCyuOmESB3xTD2ZcPoT3LgRvSiMUcOJCCHx2", username: "JerryRice", session_token: "FyMaKJ-T7rreqnq4Lflqdg", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445291015/xotuhzacsf4j8zzi7wua.jpg"},
-  {email: "f@f.com", password_digest: "$2a$10$h8/3y2ulGI/Rk8ZQKeY4cOUJGWcpVN4rHcnP2OWCWKIKjJutXHeFa", username: "Chris Wondolowski", session_token: "N71CNVTxQWPDgJWeMKWQwA", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1446596480/h2oijjcnkentymqbclbz.png"},
+  {email: "f@f.com", password_digest: "$2a$10$h8/3y2ulGI/Rk8ZQKeY4cOUJGWcpVN4rHcnP2OWCWKIKjJutXHeFa", username: "Wondolowski", session_token: "N71CNVTxQWPDgJWeMKWQwA", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1446596480/h2oijjcnkentymqbclbz.png"},
   {email: "b@b.com", password_digest: "$2a$10$pxEp5OvErCZeEk.5CsQY4ecHJPzJq1XOKehIohak1/BYiG36jYgI6", username: "BusterPosey", session_token: "Kx3InPw716-vIw0VBU0nKg", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445216296/rw30hit29yf3mk2rohft.png"},
   {email: "c@c.com", password_digest: "$2a$10$mY74kcEQyi4OzKNhG7Ytz.mCQ6acl3jVkZKGbsiDh9tRIA2u0CWNy", username: "StephenCurry", session_token: "_MKlHUVjQeAe-Bp1yJUSbQ", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445290252/feukwg6w97c7vk1lcixu.png"},
   {email: "d@d.com", password_digest: "$2a$10$fFOs6iOoh99clgQNcr21lOKDIyEbDSIVjwIkXGuzhi13fXqAc6RRO", username: "MarcoReus", session_token: "qcj96flvLwJekFMjCDjE9w", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445290471/phiwkmpse3wuytrp8pjd.jpg"},

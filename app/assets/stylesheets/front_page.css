@@ -12,7 +12,6 @@
 .frontContainer {
   width: 1000px;
   margin: auto;
-  margin-top: 10px;
 
 }
 
@@ -61,40 +60,32 @@
   box-shadow: #2b2d2e 0 4px 4px;
 }
 
-
-
-.photoLink:hover{
-  color: blue;
-
-}
-
-/*user photo and name*/
-.photoInfo > *:nth-child(-n+2) {
+.photoInfo > div {
+  width: 30%;
   float: left;
-  font-size: 20px;
-}
-
-/* album and photoname*/
-.photoInfo > *:nth-last-child(-n+1) {
-  float: right;
-  padding-right: 5px;
-  font-size: 20px;
-}
-
-.photoInfo img {
   height: 100%;
 }
 
+
+.photoInfo img {
+  height: 100%;
+  float: left;
+}
+
 .photoInfo .name {
+  float: left;
   margin-top: 15px;
 }
 
 .photoAlbum {
+  padding-top: 15px;
   font-size: 20px;
+  text-align: right;
 }
 
 .photoAlbum span {
   float:right;
+  font-size: 16px;
 }
 
 .photoAlbum img{
@@ -104,8 +95,11 @@
 }
 
 .photoName {
-  font-size: 25px;
-  text-decoration: underline;
+  padding-top: 15px;
+  font-size: 20px;
+  font-weight: bolder;
+  float: left;
+  text-align: center;
 }
 
 
