@@ -45,14 +45,7 @@
   max-height: 400px;
 }
 
-/*.albumPhotos {
-  height: 150px;
-  width: 100%;
-  background-color: #212124;
-  text-align: center;
-  overflow-x: auto;
-  margin-top: 15px;
-}*/
+
 
 .albumPhotosContainer {
   overflow: auto;

@@ -53,7 +53,7 @@ var NewComment = React.createClass({
         CommentUtil.createComment(params);
       }
     }else{
-      alert("Please Log In");
+      window.location="/session/new";
     }
     this.setState({
       text : ""
