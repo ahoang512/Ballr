@@ -28,5 +28,23 @@ window.UserUtil = {
         UserActions.receiveFeaturedUsers(users.users);
       }
     });
+  },
+
+  demoLogin : function () {
+    var params = {
+      user: {
+        email : "a@a.com",
+        password: "password"
+      }
+    };
+    $.ajax({
+      url : "/session",
+      type: "POST",
+      data: params,
+      success : function(user){
+        window.current_user = user.id;
+        UserActions.receiveCurrentUser(user);
+      }
+    });
   }
 };

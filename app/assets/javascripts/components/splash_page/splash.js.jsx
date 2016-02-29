@@ -17,13 +17,19 @@ var Splash1 = React.createClass({
   _onClick : function () {
     this.history.pushState({sport: "All"}, "front");
   },
+
+  _demoLogin : function () {
+    UserUtil.demoLogin();
+  },
   render : function () {
     return (
       <div id="splash1" onClick={this._onClick} >
         <div className="hook">
           <div>YOUR GAME DAY GALLERY</div>
           <div>Share photos and gifs on ballr</div>
-
+          <div className="demo" onClick={this._demoLogin}>
+            Demo
+          </div>
         </div>
       </div>
     )

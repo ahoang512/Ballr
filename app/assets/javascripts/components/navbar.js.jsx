@@ -1,11 +1,27 @@
 var NavBar = React.createClass({
   mixins : [ReactRouter.History],
-
+  getInitialState : function () {
+    return ({
+      loggedIn : false
+    });
+  },
   _logo : function () {
     this.history.pushState(null, '/', {});
   },
   _browse: function () {
     this.history.pushState(null, "front", {});
+  },
+
+  componentDidMount : function () {
+    UserStore.addChangeListener(this._onChange);
+  },
+  componentWillUnmount : function () {
+    UserStore.removeChangeListener(this._onChange);
+  },
+  _onChange : function () {
+    this.setState({
+      loggedIn : true
+    });
   },
   render : function () {
     var loggedIn = true;

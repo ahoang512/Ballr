@@ -166,7 +166,6 @@ var UploadButton = React.createClass({
 
 var DeleteButton = React.createClass({
   _onClick : function (e) {
-    debugger
     if (confirm("Are you sure you want to delete this photo?")){
       PhotoUtil.deletePhoto(this.props.photoSelected.id);
     }
