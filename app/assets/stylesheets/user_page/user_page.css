@@ -1,7 +1,7 @@
 .userPage {
   height: 90%;
   background: #f3f5f6;
-
+  width: 100%;
 }
 
 .photoStream {
@@ -43,27 +43,30 @@
   width: 100%;
   max-width: 600px;
   max-height: 400px;
-  /*position: relative;*/
-  /*top: 50%;*/
-  /*transform: translateY(-50%);*/
 }
 
-.photoStream .albumPhotos {
-  height: 175px;
+/*.albumPhotos {
+  height: 150px;
+  width: 100%;
   background-color: #212124;
   text-align: center;
-  width: 100%;
   overflow-x: auto;
   margin-top: 15px;
+}*/
+
+.albumPhotosContainer {
+  overflow: auto;
+  height: 150px;
+  width: 100%;
 }
 
-.albumPhotos img {
+.albumPhotosContainer img {
   max-height: 75%;
   margin: 5px;
   cursor: pointer;
 }
 
-.albumPhotos img.tileSelected {
+.albumPhotosContainer img.tileSelected {
   border: solid;
   border-color: green;
 }
@@ -72,7 +75,6 @@
 
 
 .albumPhotos img:hover {
-
   -webkit-transform:scale(1.1); /* Safari and Chrome */
   -moz-transform:scale(1.1); /* Firefox */
   -ms-transform:scale(1.1); /* IE 9 */
