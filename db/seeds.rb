@@ -1,11 +1,11 @@
 Album.create!([
-  {owner_id: 1, name: "Hockey"},
+  {owner_id: 6, name: "Hockey"},
   {owner_id: 2, name: "Baseball"},
   {owner_id: 3, name: "Roaracle"},
   {owner_id: 4, name: "futbol"},
   {owner_id: 5, name: "Football"},
-  {owner_id: 1, name: "Shark Tank!"},
-  {owner_id: 6, name: "Major League Soccer!"}
+  {owner_id: 6, name: "Shark Tank!"},
+  {owner_id: 1, name: "Major League Soccer!"}
 ])
 Comment.create!([
   {photo_id: 10, user_id: 1, text: "nice ring"},

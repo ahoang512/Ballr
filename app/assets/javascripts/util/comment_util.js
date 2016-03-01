@@ -6,7 +6,6 @@ window.CommentUtil = {
   },
 
   fetchComments : function (photo_id) {
-    console.log("fetch");
     $.ajax({
       url: "api/comments",
       type: "GET",

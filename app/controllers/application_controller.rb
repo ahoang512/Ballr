@@ -7,7 +7,9 @@ class ApplicationController < ActionController::Base
 
   private
   def current_user
+
     @current_user ||= User.find_by_session_token(session[:session_token])
+
   end
 
   def signed_in?
@@ -18,6 +20,7 @@ class ApplicationController < ActionController::Base
     # only called once email and password is authenticated
     @current_user = user
     session[:session_token] = user.reset_token!
+
   end
 
   def logout

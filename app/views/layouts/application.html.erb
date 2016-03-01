@@ -6,6 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <% if current_user %>
+    
     <script type="text/javascript">
       window.current_user = <%= current_user.id %>;
       window.current_username = "<%= current_user.username %>" ;

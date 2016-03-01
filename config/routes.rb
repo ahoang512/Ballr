@@ -14,5 +14,9 @@ Rails.application.routes.draw do
   resources :users , only: [:new, :show, :create, :update, :index] do
 
   end
-  resource :session, only: [:new, :create, :destroy]
+  resource :session, only: [:new, :create, :destroy] do
+    member do
+      post 'demoLogin'
+    end
+  end
 end

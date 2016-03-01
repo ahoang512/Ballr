@@ -38,10 +38,11 @@ window.UserUtil = {
       }
     };
     $.ajax({
-      url : "/session",
+      url : "/session/demoLogin",
       type: "POST",
       data: params,
       success : function(user){
+        console.log(user.session_token);
         window.current_user = user.id;
         UserActions.receiveCurrentUser(user);
       }

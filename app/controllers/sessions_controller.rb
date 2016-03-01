@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     )
     if @user
       login(@user)
-      render json: @user
+      redirect_to "/#/front"
     else
       flash.now[:errors] = ["Invalid email or password"]
       render :new
@@ -20,5 +20,19 @@ class SessionsController < ApplicationController
   def destroy
     logout
     render json: {}
+  end
+
+  def demoLogin
+    @user = User.find_by_credentials(
+      params[:user][:email],
+      params[:user][:password]
+    )
+    if @user
+      login(@user)
+      render json: @user
+    else
+      flash.now[:errors] = ["Invalid email or password"]
+      render :new
+    end
   end
 end
