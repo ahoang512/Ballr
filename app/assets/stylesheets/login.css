@@ -64,17 +64,22 @@
 }
 
 #new_user {
-  margin-left: 0px;
-
+  margin-left: 140px;
 }
 
-#guest {
-  margin-left: 0px;
+#new_user_button {
+  width: 100px;
+  font-size: 25px;
+}
+
+#guest input{
+  margin-left: 80px;
+  width: 209px;
 
 }
 #loginButton {
   /*margin-left: 30%;*/
-  /*width: 50%;*/
+  width: 100px;
   float: right;
   margin-right: 52px;
   font-size: 25px;

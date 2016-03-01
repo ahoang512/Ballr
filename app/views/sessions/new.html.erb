@@ -19,15 +19,15 @@
       <input type="submit"  id="loginButton" value="Login">
     </form>
 
-    <form action="/users/new" method="get" class="loginExtras" id="new_user">
+    <form action="/users/new" method="get"  id="new_user">
       <input type="submit" value="New User?"
-         name="Submit"  />
+         name="Submit" class="loginExtras" id="new_user_button"/>
     </form>
-    <form action="<%= session_url %>" method="post" class="loginExtras" id="guest">
+    <form action="<%= session_url %>" method="post"  id="guest">
       <%= auth_token_input %>
       <input type="hidden" name="user[email]" value="a@a.com">
       <input type="hidden" name="user[password]" value="password">
-      <input type="submit" value="Guest Login" id="guestButton"/>
+      <input type="submit" value="Guest Login" id="guestButton" class="loginExtras"/>
     </form>
   </div>
 </div>
