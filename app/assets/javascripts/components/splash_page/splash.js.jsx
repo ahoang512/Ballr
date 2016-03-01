@@ -18,8 +18,12 @@ var Splash1 = React.createClass({
     this.history.pushState({sport: "All"}, "front");
   },
 
-  _demoLogin : function () {
-    UserUtil.demoLogin();
+  _demoLogin : function (e) {
+    if (!e) var e = window.event;
+    e.cancelBubble = true;
+    if (e.stopPropagation) e.stopPropagation();
+    window.location="/session/new";
+    // UserUtil.demoLogin();
   },
   render : function () {
     return (

@@ -29,6 +29,7 @@ class SessionsController < ApplicationController
     )
     if @user
       login(@user)
+
       render json: @user
     else
       flash.now[:errors] = ["Invalid email or password"]
