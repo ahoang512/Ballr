@@ -57,7 +57,14 @@ Comment.create!([
   {photo_id: 10, user_id: 4, text: "woooo congrats!"},
   {photo_id: 30, user_id: 4, text: "that form is on point!"},
   {photo_id: 2, user_id: 4, text: "let the celebrations begin!"},
-  {photo_id: 1, user_id: 4, text: "they called him the teenage mutant ninja hertl when he entered!"}
+  {photo_id: 1, user_id: 4, text: "they called him the teenage mutant ninja hertl when he entered!"},
+  {photo_id: 17, user_id: 6, text: "Unstoppable..\n"},
+  {photo_id: 30, user_id: 6, text: "wammy!\n"},
+  {photo_id: 32, user_id: 6, text: "how do you control the ball like that?\n"},
+  {photo_id: 8, user_id: 6, text: "Spiderman!"},
+  {photo_id: 6, user_id: 6, text: "come back!!\n"},
+  {photo_id: 16, user_id: 6, text: "holy moly"},
+  {photo_id: 34, user_id: 6, text: "that deflection ruined him"}
 ])
 Photo.create!([
   {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1444867036/xz0tgtuck8jrqvl0xvgy.jpg", name: "Whats good?", album_id: 6, sport: "Hockey"},
@@ -105,6 +112,6 @@ User.create!([
   {email: "f@f.com", password_digest: "$2a$10$h8/3y2ulGI/Rk8ZQKeY4cOUJGWcpVN4rHcnP2OWCWKIKjJutXHeFa", username: "Wondolowski", session_token: "N71CNVTxQWPDgJWeMKWQwA", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1446596480/h2oijjcnkentymqbclbz.png"},
   {email: "b@b.com", password_digest: "$2a$10$pxEp5OvErCZeEk.5CsQY4ecHJPzJq1XOKehIohak1/BYiG36jYgI6", username: "BusterPosey", session_token: "Kx3InPw716-vIw0VBU0nKg", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445216296/rw30hit29yf3mk2rohft.png"},
   {email: "c@c.com", password_digest: "$2a$10$mY74kcEQyi4OzKNhG7Ytz.mCQ6acl3jVkZKGbsiDh9tRIA2u0CWNy", username: "StephenCurry", session_token: "_MKlHUVjQeAe-Bp1yJUSbQ", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445290252/feukwg6w97c7vk1lcixu.png"},
-  {email: "d@d.com", password_digest: "$2a$10$fFOs6iOoh99clgQNcr21lOKDIyEbDSIVjwIkXGuzhi13fXqAc6RRO", username: "MarcoReus", session_token: "qcj96flvLwJekFMjCDjE9w", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445290471/phiwkmpse3wuytrp8pjd.jpg"},
-  {email: "a@a.com", password_digest: "$2a$10$Dpv562Iy06Tvya4.RV7c1.hdkDxAlA9XUluvV4RWRPBsNHyGQhOyK", username: "JoePavelski", session_token: "QklArPJgwyAhDynJlJ5orw", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445213333/3985_kkdd8i.png"}
+  {email: "d@d.com", password_digest: "$2a$10$fFOs6iOoh99clgQNcr21lOKDIyEbDSIVjwIkXGuzhi13fXqAc6RRO", username: "MarcoReus", session_token: "JdZJVwhWkfC_qSEkF4xZPA", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445290471/phiwkmpse3wuytrp8pjd.jpg"},
+  {email: "a@a.com", password_digest: "$2a$10$Dpv562Iy06Tvya4.RV7c1.hdkDxAlA9XUluvV4RWRPBsNHyGQhOyK", username: "JoePavelski", session_token: "9m4IdwfOhkiCT_SQsGzz9g", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445213333/3985_kkdd8i.png"}
 ])
