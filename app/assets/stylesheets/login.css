@@ -1,5 +1,5 @@
 .loginBox {
-  opacity: 0.8;
+  /*opacity: 0.8;*/
   width: 400px;
   height: auto;
   margin: auto;
@@ -73,8 +73,7 @@
 }
 
 #guest input{
-  margin-left: 80px;
-  width: 209px;
+
 
 }
 #loginButton {
@@ -92,8 +91,13 @@
 }
 
 #guestButton {
-  font-size: 25px;
-  width: 50%;
+  margin-left: 80px;
+  width: 209px;
+  font-size: 20px;
+  height: 30px;
+  color: white;
+  background-color: #60CEE9;
+  border: 0px;
   /*margin-left: 30%;*/
 }
 

@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <% if current_user %>
-    
+
     <script type="text/javascript">
       window.current_user = <%= current_user.id %>;
       window.current_username = "<%= current_user.username %>" ;
@@ -15,7 +15,7 @@
   <script src="http://widget.cloudinary.com/global/all.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 

@@ -77,9 +77,17 @@ var PhotoStream = React.createClass({
             {
               this.props.photos.map(function(photo){
                 if (photo.id === this.state.selected){
-                  return <img src={photo.url} onClick={this._imgClick} id={photo.id} className="tileSelected"/>;
+                  return (
+                    <div>
+                      <img src={photo.url} onClick={this._imgClick} id={photo.id} className="tileSelected"/>;
+                    </div>
+                  );
                 }else {
-                  return <img src={photo.url} onClick={this._imgClick} id={photo.id}/>
+                  return (
+                    <div>
+                      <img src={photo.url} onClick={this._imgClick} id={photo.id}/>
+                    </div>
+                  );
                 }
               }.bind(this))
             }

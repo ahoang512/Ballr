@@ -50,18 +50,24 @@
 }
 
 .albumPhotosContainer {
-  overflow: auto;
+  overflow-x: scroll;
   height: 150px;
   width: 100%;
 }
 
-.albumPhotosContainer img {
+.albumPhotosContainer div {
+  height: 100%;
+  display: inline-block;
+  float: left;
+}
+
+.albumPhotosContainer div img {
   max-height: 75%;
   margin: 5px;
   cursor: pointer;
 }
 
-.albumPhotosContainer img.tileSelected {
+.albumPhotosContainer div img.tileSelected {
   border: solid;
   border-color: green;
 }
