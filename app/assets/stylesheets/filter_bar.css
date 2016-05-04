@@ -12,12 +12,7 @@
 
 
 
-/*.filterBar h1 {
-  padding-top: 5px;
-  padding-left: 10px;
-  color: white;
-  font-size: 30px;
-}*/
+
 
 .filterList {
   height: 100%;
@@ -41,10 +36,10 @@
 }
 
 .filterList li:hover {
-  background: steelblue;;
+  background: steelblue;
   cursor: pointer;
 }
-/*
-.filterList li:first-child {
-  margin-right: 5%;
-}*/
+
+.filterSelected {
+  background: steelblue;
+}

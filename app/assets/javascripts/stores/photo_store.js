@@ -3,12 +3,15 @@
 
   var CHANGE_EVENT = "photos_changed";
 
+  var _filterSport = "All";
   var _photos = [];
   var _photoSelected = {};
   var _showSelected = 0;
   var _photoFeed = [];
   var _photo;
+
   var _status = "unselected";
+
   var resetPhotos = function (photos) {
     _photos = photos.slice();
   };
@@ -44,8 +47,6 @@
   };
 
 
-
-
   var updateShowSelected = function (dir, idx) {
     var next = dir + idx;
     if (next >= _photos.length) {
@@ -74,10 +75,18 @@
     }
   };
 
+  var resetFilter = function (sport){
+    _filterSport = sport;
+  };
+
 
   root.PhotoStore = $.extend({}, EventEmitter.prototype, {
     all : function () {
       return _photos.slice();
+    },
+
+    filterSport : function () {
+      return _filterSport;
     },
 
     showSelected : function () {
@@ -125,6 +134,10 @@
           break;
         case PhotoConstants.PHOTO_CLICKED:
           resetPhotoSelected(action.id);
+          root.PhotoStore.emit(CHANGE_EVENT);
+          break;
+        case PhotoConstants.FILTER_CLICKED:
+          resetFilter(action.sport);
           root.PhotoStore.emit(CHANGE_EVENT);
           break;
       }

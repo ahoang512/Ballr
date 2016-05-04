@@ -2,20 +2,20 @@ var FrontPage = React.createClass({
   getInitialState : function() {
     return ({user : {},
              photos : [],
-             featuredUsers : []});
+             featuredUsers : [],
+           });
   },
   componentDidMount : function() {
-    var fetch="";
-    if (this.props.location.state === null){
-      fetch = "All";
-    }else{
-      fetch = this.props.location.state.sport;
-    }
+    // var fetch="";
+    // if (this.props.location.state === null){
+    //   fetch = "All";
+    // }else{
+    //   fetch = this.props.location.state.sport;
+    // }
     if (typeof window.current_user !== 'undefined' ){
       UserUtil.getCurrentUser();
     }
-    PhotoUtil.fetchFeedPhotos(fetch);
-    UserUtil.fetchFeaturedUsers();
+    PhotoUtil.fetchFeedPhotos(PhotoStore.filterSport());
     UserStore.addChangeListener(this._onChange);
     PhotoStore.addChangeListener(this._onChange);
   },
@@ -26,7 +26,8 @@ var FrontPage = React.createClass({
   _onChange : function () {
     this.setState({user : UserStore.currentUser(),
                    photos : PhotoStore.all(),
-                   featuredUsers : UserStore.featuredUsers()});
+                   featuredUsers : UserStore.featuredUsers(),
+                   });
   },
 
   render : function () {

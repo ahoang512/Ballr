@@ -51,16 +51,21 @@ var SplashBar = React.createClass({
   _basketball : function () {
     this.history.pushState({sport: "Basketball"}, "front");
   },
+
+  _onClick : function (e) {
+    PhotoActions.filterClicked(e.target.textContent);
+    this.history.pushState({}, "front")
+  },
   render : function () {
     return (
-      <div className="splashBar group">
-        <div onClick={this._soccer}>
+      <div className="splashBar group" onClick={this._onClick}>
+        <div >
           <div className="tileLabel">Soccer</div>
         </div>
-        <div onClick={this._football}>
+        <div >
           <div className="tileLabel">Football</div>
         </div>
-        <div onClick={this._basketball}>
+        <div >
           <div className="tileLabel">Basketball</div>
         </div>
       </div>

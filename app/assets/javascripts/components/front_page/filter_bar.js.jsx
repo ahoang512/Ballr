@@ -1,39 +1,72 @@
 var FilterBar = React.createClass({
+  getInitialState : function () {
+    return ({
+      sport : "All"
+    })
+  },
+
+  componentDidMount : function () {
+    PhotoStore.addChangeListener(this._onChange);
+  },
+
+  componentWillUnmount : function () {
+    PhotoStore.removeChangeListener(this._onChange);
+  },
+  _onChange : function () {
+    this.setState({
+      sport : PhotoStore.filterSport()
+    })
+  },
   _onClick : function (e) {
-    if (e.target.className != "filterList" && e.target.textContent !== ""){
-      PhotoUtil.fetchFeedPhotos(e.target.textContent);
-    }else{
-      PhotoUtil.fetchFeedPhotos(e.currentTarget.textContent);
-    }
+    PhotoActions.filterClicked(e.target.textContent);
   },
 
   render : function () {
-    //icons
-    var football= "http://res.cloudinary.com/dayd3nm4v/image/upload/v1446675290/football_icon_xf6eyh.png";
-    var soccer="http://res.cloudinary.com/dayd3nm4v/image/upload/v1446674069/soccer_icon_mt9gov.png";
-    var basketball="http://res.cloudinary.com/dayd3nm4v/image/upload/v1446675285/basketball_icon_zj6kim.png";
-    var hockey = "http://res.cloudinary.com/dayd3nm4v/image/upload/v1446675978/hockey_icon_etceby.png";
-    var baseball="http://res.cloudinary.com/dayd3nm4v/image/upload/v1446676262/baseball_icon_yoxto2.png";
+
+    /*
+    <li key="mls">Soccer
+      <img className="filterIcons" src={soccer}/>
+    </li>
+    <li key="nhl">Hockey
+      <img className="filterIcons" src={hockey}/>
+    </li>
+    <li key="mlb">Baseball
+      <img className="filterIcons" src={baseball}/>
+    </li>
+    <li key="Basketball">Basketball
+      <img className="filterIcons" src={basketball}/>
+    </li>
+    <li key="nfl">Football
+      <img className="filterIcons" src={football}/>
+    </li>
+    */
+    var sports = ["Soccer", "Hockey", "Baseball", "Basketball", "Football"];
+    var icons = {
+      Football : "http://res.cloudinary.com/dayd3nm4v/image/upload/v1446675290/football_icon_xf6eyh.png",
+      Soccer :"http://res.cloudinary.com/dayd3nm4v/image/upload/v1446674069/soccer_icon_mt9gov.png",
+      Basketball :"http://res.cloudinary.com/dayd3nm4v/image/upload/v1446675285/basketball_icon_zj6kim.png",
+      Hockey  : "http://res.cloudinary.com/dayd3nm4v/image/upload/v1446675978/hockey_icon_etceby.png",
+      Baseball :"http://res.cloudinary.com/dayd3nm4v/image/upload/v1446676262/baseball_icon_yoxto2.png"
+    }
+    var lis = sports.map(function(sport){
+      return (
+        this.state.sport === sport ?
+        <li key={sport} className = "filterSelected">{sport}
+          <img className="filterIcons" src={icons[sport]}/>
+        </li>
+        :
+        <li key={sport}>{sport}
+          <img className="filterIcons" src={icons[sport]}/>
+        </li>
+      );
+    }.bind(this));
+
     return (
       <div className="filterBar">
         <div className="group">
-          <ul className="filterList">
-            <li key="all" onClick={this._onClick}>All</li>
-            <li key="mls" onClick={this._onClick}>Soccer
-              <img className="filterIcons" src={soccer}/>
-            </li>
-            <li key="nhl" onClick={this._onClick}>Hockey
-              <img className="filterIcons" src={hockey}/>
-            </li>
-            <li key="mlb" onClick={this._onClick}>Baseball
-              <img className="filterIcons" src={baseball}/>
-            </li>
-            <li key="Basketball" onClick={this._onClick}>Basketball
-              <img className="filterIcons" src={basketball}/>
-            </li>
-            <li key="nfl" onClick={this._onClick}>Football
-              <img className="filterIcons" src={football} onClick={this._onClick}/>
-            </li>
+          <ul className="filterList" onClick={this._onClick}>
+            <li key="all" >All</li>
+            {lis}
           </ul>
         </div>
       </div>

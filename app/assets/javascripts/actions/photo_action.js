@@ -60,6 +60,15 @@ PhotoActions = {
       actionType : PhotoConstants.TILE_CLICKED,
       id: id
     });
+  },
+
+  filterClicked : function (sport) {
+    AppDispatcher.dispatch({
+      actionType : PhotoConstants.FILTER_CLICKED,
+      sport : sport
+    });
+    PhotoUtil.fetchFeedPhotos(sport);
+
   }
 
 };
