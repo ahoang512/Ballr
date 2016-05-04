@@ -1,16 +1,20 @@
 .splash {
-  height: 100%;
-  width: 100%;
+  height: auto;
+  /*width: 100%;*/
+  width: 80%;
+  min-width: 1143px;
+  margin: auto;
+  padding-top: 15px;
 }
 
 #splash1 {
-  background: url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1456684458/steph_3_hfph5e.jpg');
+  background: url('http://res.cloudinary.com/dayd3nm4v/image/upload/q_90/v1456684458/steph_3_hfph5e.jpg');
   background-position:center;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  height: 550px;
+  /*background-size: 100% 100%;*/
+  height: 450px;
   width: 100%;
-  padding-top: 150px;
+  padding-top: 50px;
   cursor: pointer;
 }
 .hook {
@@ -18,7 +22,6 @@
   font-size: 60px;
   background-color: transparent;
   margin: auto;
-  height: 50%;
   width: 80%;
   color: white;
   /*transform: translateY(0%);*/
@@ -53,11 +56,11 @@
 #splash2 {
   display: inline-block;
   width: 100%;
-  background-color: rgb(220,220,220);
+  background-color: rgb(243,245,246);
 }
 
 .prompt {
-  height: 150px;
+  height: 130px;
   text-align: center;
 }
 
@@ -144,17 +147,17 @@
 }
 
 #footer {
-  background-color: #2b2d2e;
-  width: 100%;
+  background-color: #606161;
+  width: 100;
   margin: auto;
 }
 
 .footerContent {
   width: 550px;
   margin: auto;
-  padding-top: 25px;
-  height: 100px;
-  padding-bottom: 25px;
+  padding-top: 15px;
+  height: 30px;
+  padding-bottom: 15px;
 
 }
 
@@ -166,6 +169,6 @@
 }
 
 #footer img {
-  height: 50px;
+  height: 40px;
   cursor: pointer;
 }

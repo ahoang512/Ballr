@@ -41,7 +41,8 @@ window.PhotoUtil = {
     var params = {
       id : photo.id,
       photo: photo
-    }
+    };
+    
     $.ajax({
       url: "/api/photos/"+photo.id,
       type: "PATCH",
