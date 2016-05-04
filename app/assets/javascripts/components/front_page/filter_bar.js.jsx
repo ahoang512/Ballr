@@ -17,7 +17,6 @@ var FilterBar = React.createClass({
     return (
       <div className="filterBar">
         <div className="group">
-          <h1>Filter by</h1>
           <ul className="filterList">
             <li key="all" onClick={this._onClick}>All</li>
             <li key="mls" onClick={this._onClick}>Soccer
