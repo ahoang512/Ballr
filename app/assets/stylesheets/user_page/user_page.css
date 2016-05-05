@@ -5,13 +5,12 @@
 }
 
 .photoStream {
-  height: auto;
-  max-height: 600px;
+  height: 800px;
   background: #212124;
 }
 
 .photoStream .stream {
-  height: 85%;
+  height: 625px;
 }
 
 .photoStream .stream div {
@@ -37,32 +36,43 @@
 .photoStream .stream .photo {
   width: 70%;
   text-align: center;
+  position: relative;
+
 }
 
 .photo img {
   width: 100%;
-  max-width: 600px;
-  max-height: 400px;
+  max-width: 900px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .ownerName {
   font-size: 15px;
 }
 
+.albumPhotos {
+  background: #212124;
+  text-align: center;
+}
+
 .albumPhotosContainer {
-  overflow-x: scroll;
-  height: 150px;
-  width: 100%;
+  background: #212124;
+  margin-top: 100px;
+  width: 80%;
+  margin: auto;
+  overflow: visible;
+
 }
 
 .albumPhotosContainer div {
-  height: 100%;
   display: inline-block;
-  float: left;
 }
 
 .albumPhotosContainer div img {
-  max-height: 75%;
+  max-height: 40px;
   margin: 5px;
   cursor: pointer;
 }
@@ -75,10 +85,12 @@
 
 
 
-.albumPhotos img:hover {
-  -webkit-transform:scale(1.1); /* Safari and Chrome */
-  -moz-transform:scale(1.1); /* Firefox */
-  -ms-transform:scale(1.1); /* IE 9 */
-  -o-transform:scale(1.1); /* Opera */
-   transform:scale(1.1);
+.albumPhotosContainer:hover {
+  zoom: 225%;
+  margin-top: 0;
+  /*-webkit-transform:scale(3.5);
+  -moz-transform:scale(1.5);
+  -ms-transform:scale(1.5);
+  -o-transform:scale(1.5);
+  transform:scale(1.5);*/
 }
