@@ -1,34 +1,25 @@
 .frontPage {
-  background-color: rgb(220,220,220)
-  background-position:center;
-  background-repeat: no-repeat;
-  position: fixed;
-  height: 100%;
+  margin-top: 46px;
   width: 100%;
-  overflow-y: auto;
-
+  background: #e1e1e1;
 }
 
 .frontContainer {
+  overflow-y: scroll;
   width: 1143px;
   margin: auto;
-
+  overflow: auto;
 }
 
 .photoFeed {
-  margin-left: 275px;
   margin-top: 10px;
   padding-bottom: 5%;
   width: 75%;
-  height: 100%;
-  float: left;
-
+  float: right;
 }
 
 .photoFeed ul {
   width: 95%;
-  height: 90%;
-
 }
 .feedPhotos {
   width: 100%;
@@ -91,33 +82,4 @@
   font-weight: bolder;
   float: left;
   text-align: center;
-}
-
-
-
-
-
-
-.feedOptions {
-  background-color: rgba(173,216,230,0.5);
-  float: left;
-  width: 64%;
-  height: 5%;
-  margin-left: 6%;
-  font-size: xx-large;
-}
-
-.feedOptions div {
-  float: right;
-  margin-right: 1%;
-}
-
-.feedOptions .option:hover {
-  color: turquoise;
-  border-bottom: solid;
-    border-color: blue;
-}
-
-.divider {
-  color: cadetblue;
 }

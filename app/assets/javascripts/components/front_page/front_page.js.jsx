@@ -6,12 +6,7 @@ var FrontPage = React.createClass({
            });
   },
   componentDidMount : function() {
-    // var fetch="";
-    // if (this.props.location.state === null){
-    //   fetch = "All";
-    // }else{
-    //   fetch = this.props.location.state.sport;
-    // }
+
     if (typeof window.current_user !== 'undefined' ){
       UserUtil.getCurrentUser();
     }

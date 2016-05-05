@@ -10,6 +10,7 @@
             <div className="app">
               <NavBar/>
               {this.props.children}
+              <Footer/>
             </div>
         );
       }

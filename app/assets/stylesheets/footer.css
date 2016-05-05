@@ -1,0 +1,30 @@
+#footer {
+  background-color: black;
+  width: 100%;
+  margin: auto;
+  height: 60px;
+  position: fixed;
+  bottom: 0px;
+}
+
+.footerContent {
+  float: right;
+  width: 400px;
+  margin: auto;
+  padding-top: 15px;
+  height: 30px;
+  padding-bottom: 15px;
+
+}
+
+
+.footerContent div{
+  padding-left: 50px;
+  /*padding-right: 50px;*/
+  float: left;
+}
+
+#footer img {
+  height: 40px;
+  cursor: pointer;
+}
