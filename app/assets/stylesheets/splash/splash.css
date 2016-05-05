@@ -1,35 +1,35 @@
 .splash {
   height: auto;
-  /*width: 100%;*/
   width: 80%;
   min-width: 1143px;
   margin: auto;
-  padding-top: 15px;
+  background: white;
 }
 
 #splash1 {
-  background: url('http://res.cloudinary.com/dayd3nm4v/image/upload/q_90/v1456684458/steph_3_hfph5e.jpg');
-  background-position:center;
-  background-repeat: no-repeat;
-  /*background-size: 100% 100%;*/
-  height: 450px;
+  position: relative;
   width: 100%;
-  padding-top: 50px;
   cursor: pointer;
 }
+
+#splash1 img {
+  width: 100%;
+}
 .hook {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   font-size: 60px;
   background-color: transparent;
   margin: auto;
   width: 80%;
   color: white;
-  /*transform: translateY(0%);*/
 }
 
 
 .hook div:nth-child(1) {
-  padding-top: 9%;
   font-size: 60px;
 }
 
@@ -56,7 +56,7 @@
 #splash2 {
   display: inline-block;
   width: 100%;
-  background-color: rgb(243,245,246);
+  background-color: white;
 }
 
 .prompt {

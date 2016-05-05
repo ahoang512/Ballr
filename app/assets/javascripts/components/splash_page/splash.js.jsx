@@ -28,6 +28,7 @@ var Splash1 = React.createClass({
   render : function () {
     return (
       <div id="splash1" onClick={this._onClick} >
+        <img src="http://res.cloudinary.com/dayd3nm4v/image/upload/q_90/v1456684458/steph_3_hfph5e.jpg"/>
         <div className="hook">
           <div>YOUR GAME DAY GALLERY</div>
           <div>Share photos and gifs on ballr</div>
