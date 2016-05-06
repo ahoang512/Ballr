@@ -5,7 +5,6 @@ var Login = React.createClass({
         <div class="loginBox">
           <div class="loginLogo"><img src="/logo2.png"/></div>
           <h1>Welcome back!</h1>
-
           <form  action="<%= session_url %>" method="post">
             <label class="email">Email
             </label>

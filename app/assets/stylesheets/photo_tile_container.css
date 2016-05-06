@@ -1,23 +1,25 @@
 .photoTiles {
-  width: 280px;
-  height: 200px;
-
+  margin: 10px;
+  width: 200px;
+  height: 160px;
 }
 
+
+
 .photoLabel {
+  color: white;
   float: left;
   width: 80%;
   font-size: 30px;
   text-align: center;
-  background-color: cadetblue;
+  background-color: rgb(60,60,60);
   height: auto;
   font-size: 25px;
-  color: black;
 }
 
 .photoList {
   list-style-type: none;
-  padding: 15px;
+  /*max-height: 400px;*/
   height: 80%;
   overflow-y: auto;
   overflow-x: hidden;
@@ -25,19 +27,20 @@
 
 .photoList li.selected {
   outline:2px solid yellow;
+  background: gray;
 }
 
 .photoTileContainer li {
-  opacity: 1;
   margin: 10px;
-  float: left;
   height: 220px;
-  margin-bottom: 10px;
+  width: 220px;
+  float: left;
 }
 
-input.editName {
-  width: 70%;
+.photoTileContainer li:hover {
+  background: gray;
 }
+
 /* photo names */
 .photoTileContainer h2 {
   float: left;
@@ -48,30 +51,19 @@ input.editName {
 }
 
 .photoTileContainer div {
-  background-color: cadetblue;
+  color: white;
 }
 
 .photoTileInfo {
+  margin-left: 10px;
+  width: 200px;
   height: 20px
   margin-top: 2px;
 }
 
-/*edit button*/
-.photoTileInfo > div {
-  text-align: center;
-  float: right;
-  height: 20px;
-  width: 20%;
-  font-size: initial;
-  background: steelblue;
-}
-
-.photoTileInfo > div:hover {
-  background: yellow;
-}
-
 
 .photoButtons div {
+  color : black;
   float: left;
   font-size: medium
 }
@@ -108,8 +100,9 @@ input.editName {
 
 
 .editPhotoDetails {
-  width: 100%;
-  height: 9.9%;
+  position: static;
+  bottom: 100px;
+
 }
 
 .editPhotoDetails form label {
@@ -119,9 +112,20 @@ input.editName {
 
 
 .editPhotoDetails div {
-  background-color: cornflowerblue;
+  padding-top: 8px;
+  font-size: 23px;
+  background-color: #2458B7;
+  height: 33px;
+  margin-bottom: 10px;
 }
 
+.editPhotoDetails input,select {
+  margin-left: 5px;
+}
+
+.editPhotoDetails .editName {
+  width: 300px;
+}
 .editPhotoDetails * {
   font-size: large;
 }

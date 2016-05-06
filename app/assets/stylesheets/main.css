@@ -15,7 +15,6 @@ time, mark, audio, video {
  padding: 0;
  border: 0;
  font-size: 100%;
- /*font-family: "Open Sans", sans-serif;*/
  font-family: 'Roboto', sans-serif;
  font-weight: 400;
  vertical-align: baseline;
@@ -23,18 +22,19 @@ time, mark, audio, video {
 }
 
 html,body {
-height: 100%;
-width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 #container {
- height: auto;
- background: #e1e1e1;
+ height: 100%;
 }
 
 .app {
  height: auto;
  font-size: 0;
+ background: #e1e1e1;
+
 }
 
 .group:after {

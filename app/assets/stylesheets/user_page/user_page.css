@@ -1,7 +1,9 @@
 .userPage {
-  height: 90%;
   background: #f3f5f6;
   width: 100%;
+  height: calc(100vh - 100px);
+  margin-top: 46px;
+  overflow: auto;
 }
 
 .photoStream {
@@ -44,10 +46,6 @@
   width: 100%;
   max-width: 900px;
   padding: 10px;
-  /*position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);*/
 }
 
 .ownerName {

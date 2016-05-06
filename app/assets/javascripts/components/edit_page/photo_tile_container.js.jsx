@@ -113,7 +113,7 @@ var EditPhotoDetails = React.createClass({
           <div>Edit Photo Information</div>
           <label>
             Name
-            <input type="text" value={this.state.name} onChange={this._nameChange}/>
+            <input type="text" value={this.state.name} onChange={this._nameChange} className="editName"/>
           </label>
           <label>Sport
             <select value={this.state.sport} onChange={this._sportChange}>

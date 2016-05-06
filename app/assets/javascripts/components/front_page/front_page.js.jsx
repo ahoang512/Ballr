@@ -7,10 +7,9 @@ var FrontPage = React.createClass({
   },
   componentDidMount : function() {
 
-    if (typeof window.current_user !== 'undefined' ){
-      UserUtil.getCurrentUser();
-    }
-    PhotoUtil.fetchFeedPhotos(PhotoStore.filterSport());
+    // if (typeof window.current_user !== 'undefined' ){
+    //   UserUtil.getCurrentUser();
+    // }
     UserStore.addChangeListener(this._onChange);
     PhotoStore.addChangeListener(this._onChange);
   },

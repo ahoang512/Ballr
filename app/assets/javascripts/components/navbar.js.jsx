@@ -9,6 +9,7 @@ var NavBar = React.createClass({
     this.history.pushState(null, '/', {});
   },
   _browse: function () {
+    PhotoActions.filterClicked("All");
     this.history.pushState(null, "front", {});
   },
 
