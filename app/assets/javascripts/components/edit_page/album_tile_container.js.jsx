@@ -7,7 +7,6 @@ var AlbumTileContainer = React.createClass({
        albumSelected: 0});
   },
   componentDidMount : function () {
-    AlbumUtil.fetchUserAlbums();
     AlbumStore.addChangeListener(this._onChange);
   },
   componentWillUnmount: function(){

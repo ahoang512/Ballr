@@ -19,7 +19,6 @@
 
 .photoList {
   list-style-type: none;
-  /*max-height: 400px;*/
   height: 80%;
   overflow-y: auto;
   overflow-x: hidden;

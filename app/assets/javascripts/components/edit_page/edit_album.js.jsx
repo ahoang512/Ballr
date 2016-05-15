@@ -6,6 +6,7 @@ var EditAlbum = React.createClass({
   },
 
   componentDidMount  : function (){
+    AlbumUtil.fetchUserAlbums();
     PhotoStore.addChangeListener(this._onChange);
     AlbumStore.addChangeListener(this._onChange);
   },
@@ -22,8 +23,6 @@ var EditAlbum = React.createClass({
   },
 
   render : function () {
-
-
     return (
       <div className="editAlbum">
         <div className="editContainer group">
