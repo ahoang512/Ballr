@@ -9,8 +9,7 @@ var NavBar = React.createClass({
     this.history.pushState(null, '/', {});
   },
   _browse: function () {
-    PhotoActions.filterClicked("All");
-    this.history.pushState(null, "front", {});
+    this.history.pushState({sport: "All"}, "front", {});
   },
 
   componentDidMount : function () {
@@ -28,6 +27,8 @@ var NavBar = React.createClass({
     var loggedIn = true;
     if (typeof window.current_user === 'undefined'){
       loggedIn = false;
+    }else {
+      UserUtil.getCurrentUser();
     }
 
 
@@ -75,7 +76,8 @@ var LoggedIn = React.createClass({
     ApiUtil.destroySession();
   },
   _library : function () {
-    this.history.pushState(null, '/user/'+window.current_user+'/edit', {});
+    var user = UserStore.currentUser();
+    this.history.pushState(null, '/user/'+user.id+'/edit', {});
   },
   render : function () {
     return(

@@ -22,22 +22,22 @@ var SplashBar = React.createClass({
     return (
       <div className="splashBar group" >
         <div className="top group" >
-          <div id="soccer" >
-            <div  className="tileLabel" onClick={this._onClick}>Soccer</div>
+          <div id="soccer" onClick={this._onClick}>
+            <div  className="tileLabel" >Soccer</div>
           </div>
-          <div id="football">
-            <div  className="tileLabel" onClick={this._onClick}>Football</div>
+          <div id="football" onClick={this._onClick} onClick={this._onClick}>
+            <div  className="tileLabel">Football</div>
           </div>
-          <div id="basketball">
-            <div  className="tileLabel" onClick={this._onClick}>Basketball</div>
+          <div id="basketball" onClick={this._onClick}>
+            <div  className="tileLabel" >Basketball</div>
           </div>
         </div>
         <div className = "bottom group">
-          <div id="baseball">
-            <div className="tileLabel" onClick={this._onClick}>Baseball</div>
+          <div id="baseball" onClick={this._onClick}>
+            <div className="tileLabel">Baseball</div>
           </div>
-          <div id="hockey">
-            <div className="tileLabel" onClick={this._onClick}>Hockey</div>
+          <div id="hockey" onClick={this._onClick}>
+            <div className="tileLabel">Hockey</div>
           </div>
         </div>
 

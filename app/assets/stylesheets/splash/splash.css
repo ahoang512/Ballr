@@ -87,7 +87,7 @@
 
 .splashBar {
   margin: auto;
-  width: 950px;
+  width: 1050px;
   color: white;
   height: 750px;
 
@@ -95,7 +95,7 @@
 
 .splashBar .top > div {
   float: left;
-  width: 285px;
+  width: 30%;
   margin-left: 12.5px;
   margin-right: 12.5px;
   height: 335px;
@@ -105,11 +105,11 @@
 
 .splashBar .bottom {
   margin-top: 30px;
-  padding-left: 158px;
+  padding-left: 150px;
 }
 .splashBar .bottom > div {
   float: left;
-  width: 285px;
+  width: 345px;
   margin-left: 20px;
   margin-right: 20px;
   height: 344px;
@@ -134,14 +134,14 @@
   background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1456684830/calvin_stiff_k3jydv.jpg');
   background-position:center;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 140% 100%;
 }
 
 .splashBar #football:hover {
   background: url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1456684830/calvin_stiff_k3jydv.jpg');
   background-position:center;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 140% 100%;
 }
 
 
@@ -172,13 +172,13 @@
 .splashBar #hockey {
   background:  linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1467149009/lxfudty3bciptjkvwfef.jpg');
   background-position:center;
-  background-size: 100% 100%;
+  background-size: 130% 100%;
 }
 
 .splashBar #hockey:hover {
   background:  url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1467149009/lxfudty3bciptjkvwfef.jpg');
   background-position:center;
-  background-size: 100% 100%;
+  background-size: 130% 100%;
 }
 
 .top .tileLabel {

@@ -96,6 +96,7 @@
   float: left;
   background-color: silver;
   border-width: 0;
+  cursor: pointer;
 }
 
 .add {
@@ -103,7 +104,9 @@
   background-color: seagreen;
   border-left-width: 0px;
   border-width: 0;
+  cursor: pointer;
 }
+
 
 .buttons {
   height: auto;

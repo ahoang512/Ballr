@@ -9,7 +9,6 @@ var Splash1 = React.createClass({
     e.cancelBubble = true;
     if (e.stopPropagation) e.stopPropagation();
     window.location="/session/new";
-    // UserUtil.demoLogin();
   },
   render : function () {
     return (

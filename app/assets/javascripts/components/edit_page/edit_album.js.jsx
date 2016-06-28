@@ -5,8 +5,10 @@ var EditAlbum = React.createClass({
              photos : []});
   },
 
-  componentDidMount  : function (){
+  componentWillMount : function () {
     AlbumUtil.fetchUserAlbums();
+  },
+  componentDidMount  : function (){
     PhotoStore.addChangeListener(this._onChange);
     AlbumStore.addChangeListener(this._onChange);
   },

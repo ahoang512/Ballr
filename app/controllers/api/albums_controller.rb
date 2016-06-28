@@ -1,6 +1,5 @@
 class Api::AlbumsController < ApplicationController
   def index
-
     @albums = current_user.albums
     render json: @albums
   end
