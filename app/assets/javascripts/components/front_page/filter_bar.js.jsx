@@ -22,24 +22,6 @@ var FilterBar = React.createClass({
   },
 
   render : function () {
-
-    /*
-    <li key="mls">Soccer
-      <img className="filterIcons" src={soccer}/>
-    </li>
-    <li key="nhl">Hockey
-      <img className="filterIcons" src={hockey}/>
-    </li>
-    <li key="mlb">Baseball
-      <img className="filterIcons" src={baseball}/>
-    </li>
-    <li key="Basketball">Basketball
-      <img className="filterIcons" src={basketball}/>
-    </li>
-    <li key="nfl">Football
-      <img className="filterIcons" src={football}/>
-    </li>
-    */
     var sports = ["Soccer", "Hockey", "Baseball", "Basketball", "Football"];
     var icons = {
       Football : "http://res.cloudinary.com/dayd3nm4v/image/upload/v1446675290/football_icon_xf6eyh.png",

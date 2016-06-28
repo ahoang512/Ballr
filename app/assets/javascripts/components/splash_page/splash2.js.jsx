@@ -25,8 +25,7 @@ var SplashBar = React.createClass({
   },
 
   _onClick : function (e) {
-    PhotoActions.filterClicked(e.target.textContent);
-    this.history.pushState({}, "front")
+    this.history.pushState({sport: e.target.textContent}, "front")
   },
   render : function () {
     return (

@@ -1,15 +1,15 @@
 var FrontPage = React.createClass({
+  mixins : [ReactRouter.History],
+
   getInitialState : function() {
     return ({user : {},
              photos : [],
              featuredUsers : [],
+             filtered : this.props.location.state.sport
            });
   },
   componentDidMount : function() {
-
-    // if (typeof window.current_user !== 'undefined' ){
-    //   UserUtil.getCurrentUser();
-    // }
+    PhotoActions.filterClicked(this.state.filtered);
     UserStore.addChangeListener(this._onChange);
     PhotoStore.addChangeListener(this._onChange);
   },

@@ -87,7 +87,6 @@ Photo.create!([
   {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445453255/giphy_t9gxfz.gif", name: "So unlucky", album_id: 1, sport: "Hockey"},
   {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445453474/Untitled-main_rzvsfs.jpg", name: "Because its the cup", album_id: 1, sport: "Hockey"},
   {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445467600/tumblr_luinciVz3m1r5oj22o4_250_kmwbkk.gif", name: "goaaalll!", album_id: 6, sport: "Hockey"},
-  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/c_scale,h_309,w_466/v1445473966/OeOYYGTsPO8ZW_kgju3y.gif", name: "oops", album_id: 5, sport: "Football"},
   {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445548822/3rgXBKBlcvBmnhbf7W_burqf1.gif", name: "Curry with the dime", album_id: 3, sport: "Basketball"},
   {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549205/Nax6whtH6xd4s_tmzebf.gif", name: "Trey", album_id: 3, sport: "Basketball"},
   {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445549344/2015-06-17t043537z_1154834890_nocid_rtrmadp_3_nba-playoffs-golden-state-warriors-at-cleveland-cavaliers_0_bsnwbr.jpg", name: "Championship", album_id: 3, sport: "Basketball"},
