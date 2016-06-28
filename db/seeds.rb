@@ -104,7 +104,8 @@ Photo.create!([
   {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1447282364/21b2QuGkUpjNu_dxvxnf.gif", name: "What just happened?", album_id: 5, sport: "Football"},
   {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1447357111/nhl_rangers_senators_nhl_20130221_25993927_vwmtfs.jpg", name: "Deke and goal!", album_id: 1, sport: "Hockey"},
   {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1456694853/w0o560litr1nidm3yflg.jpg", name: "Kobe!", album_id: 3, sport: "Basketball"},
-  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1456695059/cpemo9h4tud2wigc4lmi.jpg", name: "the hops!", album_id: 3, sport: "Basketball"}
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1456695059/cpemo9h4tud2wigc4lmi.jpg", name: "the hops!", album_id: 3, sport: "Basketball"},
+  {url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1467149009/lxfudty3bciptjkvwfef.jpg", name: "Little Joe!", album_id: 6, sport: "Hockey"}
 ])
 User.create!([
   {email: "e@e.com", password_digest: "$2a$10$EjQ0hMUyedDFBQaLLjCyuOmESB3xTD2ZcPoT3LgRvSiMUcOJCCHx2", username: "JerryRice", session_token: "FyMaKJ-T7rreqnq4Lflqdg", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445291015/xotuhzacsf4j8zzi7wua.jpg"},
@@ -112,5 +113,5 @@ User.create!([
   {email: "b@b.com", password_digest: "$2a$10$pxEp5OvErCZeEk.5CsQY4ecHJPzJq1XOKehIohak1/BYiG36jYgI6", username: "BusterPosey", session_token: "Kx3InPw716-vIw0VBU0nKg", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445216296/rw30hit29yf3mk2rohft.png"},
   {email: "c@c.com", password_digest: "$2a$10$mY74kcEQyi4OzKNhG7Ytz.mCQ6acl3jVkZKGbsiDh9tRIA2u0CWNy", username: "StephenCurry", session_token: "_MKlHUVjQeAe-Bp1yJUSbQ", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445290252/feukwg6w97c7vk1lcixu.png"},
   {email: "d@d.com", password_digest: "$2a$10$fFOs6iOoh99clgQNcr21lOKDIyEbDSIVjwIkXGuzhi13fXqAc6RRO", username: "MarcoReus", session_token: "JdZJVwhWkfC_qSEkF4xZPA", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445290471/phiwkmpse3wuytrp8pjd.jpg"},
-  {email: "a@a.com", password_digest: "$2a$10$Dpv562Iy06Tvya4.RV7c1.hdkDxAlA9XUluvV4RWRPBsNHyGQhOyK", username: "JoePavelski", session_token: "9m4IdwfOhkiCT_SQsGzz9g", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445213333/3985_kkdd8i.png"}
+  {email: "a@a.com", password_digest: "$2a$10$Dpv562Iy06Tvya4.RV7c1.hdkDxAlA9XUluvV4RWRPBsNHyGQhOyK", username: "JoePavelski", session_token: "jU35LXHUfJp_aSO1PtSO1A", photo_url: "http://res.cloudinary.com/dayd3nm4v/image/upload/v1445213333/3985_kkdd8i.png"}
 ])
