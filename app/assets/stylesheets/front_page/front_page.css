@@ -21,17 +21,26 @@
 .photoFeed ul {
   width: 95%;
 }
+
 .feedPhotos {
   width: 100%;
   height: auto;
 }
 
+.gif {
+  opacity: .6;
+}
+
+.gif:hover{
+  opacity: 1;
+}
 
 
 .photoItems {
   width: 800px;
   margin-bottom: 15px;
   cursor: pointer;
+  background:black;
 }
 
 .photoInfo {

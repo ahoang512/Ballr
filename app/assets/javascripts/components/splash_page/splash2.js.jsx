@@ -14,16 +14,7 @@ var Splash2 = React.createClass ( {
 
 var SplashBar = React.createClass({
   mixins : [ReactRouter.History],
-  _soccer : function () {
-    this.history.pushState({sport: "Soccer"}, "front");
-  },
-  _football : function () {
-    this.history.pushState({sport: "Football"}, "front");
-  },
-  _basketball : function () {
-    this.history.pushState({sport: "Basketball"}, "front");
-  },
-
+  
   _onClick : function (e) {
     this.history.pushState({sport: e.target.textContent}, "front")
   },

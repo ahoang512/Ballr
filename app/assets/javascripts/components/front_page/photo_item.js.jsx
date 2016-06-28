@@ -12,6 +12,16 @@ var PhotoItem = React.createClass({
   componentDidMount : function () {
     var photo = this.props.photo
     var url = this.props.photo.url
+    this._updateState(photo, url);
+  },
+
+  componentWillReceiveProps : function (nextProps) {
+    var photo = nextProps.photo
+    var url = nextProps.photo.url
+    this._updateState(photo,url)
+  },
+
+  _updateState : function (photo, url) {
     var ext = url.substr(url.length - 3)
 
     if (ext === "gif") {
@@ -23,31 +33,14 @@ var PhotoItem = React.createClass({
       });
     }else {
       this.setState({
+        gif: false,
         photo_url : photo.url,
         frame_url : photo.url
       });
     }
   },
 
-  componentWillReceiveProps : function (nextProps) {
-    var photo = nextProps.photo
-    var url = nextProps.photo.url
-    var ext = url.substr(url.length - 3)
 
-    if (ext === "gif") {
-      var frame_url = url.replace("gif", "jpg")
-      this.setState({
-        gif : true,
-        photo_url : photo.url,
-        frame_url : frame_url
-      });
-    }else {
-      this.setState({
-        photo_url : photo.url,
-        frame_url : photo.url
-      });
-    }
-  },
 
   _onClick : function () {
     var photo = this.props.photo;
