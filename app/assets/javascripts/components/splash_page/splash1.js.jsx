@@ -1,8 +1,7 @@
 var Splash1 = React.createClass({
   mixins : [ReactRouter.History],
   _onClick : function () {
-    PhotoActions.filterClicked("All");
-    this.history.pushState({}, "front");
+    this.history.pushState({sport: "All"}, "front");
   },
 
   _demoLogin : function (e) {

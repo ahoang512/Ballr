@@ -14,22 +14,34 @@ var Splash2 = React.createClass ( {
 
 var SplashBar = React.createClass({
   mixins : [ReactRouter.History],
-  
+
   _onClick : function (e) {
-    this.history.pushState({sport: e.target.textContent}, "front")
+      this.history.pushState({sport: e.target.textContent}, "front")
   },
   render : function () {
     return (
-      <div className="splashBar group" onClick={this._onClick}>
-        <div >
-          <div className="tileLabel">Soccer</div>
+      <div className="splashBar group" >
+        <div className="top group" >
+          <div id="soccer" >
+            <div  className="tileLabel" onClick={this._onClick}>Soccer</div>
+          </div>
+          <div id="football">
+            <div  className="tileLabel" onClick={this._onClick}>Football</div>
+          </div>
+          <div id="basketball">
+            <div  className="tileLabel" onClick={this._onClick}>Basketball</div>
+          </div>
         </div>
-        <div >
-          <div className="tileLabel">Football</div>
+        <div className = "bottom group">
+          <div id="baseball">
+            <div className="tileLabel" onClick={this._onClick}>Baseball</div>
+          </div>
+          <div id="hockey">
+            <div className="tileLabel" onClick={this._onClick}>Hockey</div>
+          </div>
         </div>
-        <div >
-          <div className="tileLabel">Basketball</div>
-        </div>
+
+
       </div>
     )
   }

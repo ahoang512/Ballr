@@ -89,42 +89,55 @@
   margin: auto;
   width: 950px;
   color: white;
-  height: 400px;
+  height: 750px;
 
 }
 
-.splashBar > div {
+.splashBar .top > div {
   float: left;
-  width: 30%;
+  width: 285px;
   margin-left: 12.5px;
   margin-right: 12.5px;
+  height: 335px;
+  cursor: pointer;
+  box-shadow: #2b2d2e 0 4px 4px;
+}
+
+.splashBar .bottom {
+  margin-top: 30px;
+  padding-left: 158px;
+}
+.splashBar .bottom > div {
+  float: left;
+  width: 285px;
+  margin-left: 20px;
+  margin-right: 20px;
   height: 344px;
   cursor: pointer;
   box-shadow: #2b2d2e 0 4px 4px;
-
 }
 
-.splashBar > div:nth-child(1) {
+.splashBar #soccer {
   margin-left: 3%;
   background:  linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1456158502/messi0_n2gtnf.jpg');
   background-position:center;
   background-size: 100% 100%;
 }
 
-.splashBar > div:nth-child(1):hover {
+.splashBar #soccer:hover {
   background: url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1456158502/messi0_n2gtnf.jpg');
   background-position:center;
   background-size: 100% 100%;
 }
 
-.splashBar div:nth-child(2) {
+.splashBar #football {
   background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1456684830/calvin_stiff_k3jydv.jpg');
   background-position:center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
-.splashBar div:nth-child(2):hover {
+.splashBar #football:hover {
   background: url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1456684830/calvin_stiff_k3jydv.jpg');
   background-position:center;
   background-repeat: no-repeat;
@@ -132,19 +145,48 @@
 }
 
 
-.splashBar div:nth-child(3) {
+.splashBar #basketball {
   background:  linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1456158570/curry_jsfroy.jpg');
   background-position:center;
   background-size: 100% 100%;
 }
 
-.splashBar div:nth-child(3):hover {
+.splashBar #basketball:hover {
   background:  url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1456158570/curry_jsfroy.jpg');
   background-position:center;
   background-size: 100% 100%;
 }
 
-.splashBar .tileLabel {
+.splashBar #baseball {
+  background:  linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1467150259/hi-res-6503572_original_iq7kct.jpg');
+  background-position:center;
+  background-size: 120% 100%;
+}
+
+.splashBar #baseball:hover {
+  background:  url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1467150259/hi-res-6503572_original_iq7kct.jpg');
+  background-position:center;
+  background-size: 120% 100%;
+}
+
+.splashBar #hockey {
+  background:  linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1467149009/lxfudty3bciptjkvwfef.jpg');
+  background-position:center;
+  background-size: 100% 100%;
+}
+
+.splashBar #hockey:hover {
+  background:  url('http://res.cloudinary.com/dayd3nm4v/image/upload/v1467149009/lxfudty3bciptjkvwfef.jpg');
+  background-position:center;
+  background-size: 100% 100%;
+}
+
+.top .tileLabel {
+  font-size: 40px;
+  text-align: center;
+  padding-top: 140px;
+}
+.bottom .tileLabel {
   font-size: 40px;
   text-align: center;
   padding-top: 140px;
