@@ -1,9 +1,10 @@
 .fullPhotoInfoContainer {
-  height: 100px;
+  height: auto;
   margin-bottom: 10px;
 }
 
 .fullPhotoInfo {
+  border-bottom: 2px #8c8888 solid;
   font-size:  large;
   width: 800px;
   height: 100%;
@@ -19,11 +20,19 @@
 
 
 .fullPhotoInfo h2 {
+  margin-left: 20px;
   font-size: xx-large;
-  color:  navy;
+  color:  #0284cf;
+  margin-bottom: 15px;
 }
 
+.fullPhotoInfo h3 {
+  margin-left: 20px;
+}
 
+.ownerName {
+  margin-left: 20px;
+}
 
 .photoOwner {
   max-width: 100%;

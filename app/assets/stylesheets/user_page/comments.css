@@ -32,6 +32,8 @@
 
 .comment {
   height: 80px;
+  border-bottom: 2px #8c8888 solid;
+  margin-bottom: 5px;
 }
 .comment img {
   height: 60px;

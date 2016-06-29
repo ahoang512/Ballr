@@ -30,6 +30,7 @@
 }
 
 .photoTileContainer li {
+  cursor: pointer;
   margin: 10px;
   height: 220px;
   width: 220px;

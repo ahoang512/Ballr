@@ -28,7 +28,7 @@ var NavBar = React.createClass({
     if (typeof window.current_user === 'undefined'){
       loggedIn = false;
     }else {
-      UserUtil.getCurrentUser();
+      // UserUtil.getCurrentUser();
     }
 
 
@@ -76,8 +76,8 @@ var LoggedIn = React.createClass({
     ApiUtil.destroySession();
   },
   _library : function () {
-    var user = UserStore.currentUser();
-    this.history.pushState(null, '/user/'+user.id+'/edit', {});
+    // var user = UserStore.currentUser();
+    this.history.pushState(null, '/user/'+window.current_user+'/edit', {});
   },
   render : function () {
     return(
