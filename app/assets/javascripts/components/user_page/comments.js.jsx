@@ -85,6 +85,7 @@ var Comment = React.createClass({
   // this.props.comment
   render : function () {
     var comment = this.props.comment;
+    console.log(comment.text)
     return (
       <div className="comment">
         <img src={comment.user_photo}/>

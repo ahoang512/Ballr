@@ -47,7 +47,7 @@ var FullPhotoInfo = React.createClass({
           </div>
           <div className="photoData">
             <h2>{name}</h2>
-            <h3>{albumName}</h3>
+            <h3>album : {albumName}</h3>
              {username}
           </div>
         </div>
