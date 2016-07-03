@@ -67,33 +67,20 @@
 
 }
 
-.albumPhotosContainer div {
+.albumPhotosContainer li {
   display: inline-block;
 }
 
-.albumPhotosContainer div img {
+.albumPhotosContainer li img {
   max-height: 40px;
   margin: 5px;
   cursor: pointer;
 }
-.albumPhotosContainer div img:hover {
+.albumPhotosContainer li img:hover {
   transform: scale(1.50);
 }
 
-.albumPhotosContainer div img.tileSelected {
+.albumPhotosContainer li img.tileSelected {
   border: solid;
   border-color: green;
-}
-
-
-
-
-.albumPhotosContainer:hover {
-  /*zoom: 225%;*/
-  margin-top: 0;
-  /*-webkit-transform:scale(3.5);
-  -moz-transform:scale(1.5);
-  -ms-transform:scale(1.5);
-  -o-transform:scale(1.5);
-  transform:scale(1.5);*/
 }

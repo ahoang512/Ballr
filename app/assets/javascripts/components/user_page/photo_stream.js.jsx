@@ -73,25 +73,15 @@ var PhotoStream = React.createClass({
           <div className="change" onClick={this._onClick}>&#8594;</div>
         </div>
         <div className="albumPhotos">
-          <div className="albumPhotosContainer">
+          <ul className="albumPhotosContainer">
             {
               this.props.photos.map(function(photo){
-                if (photo.id === this.state.selected){
-                  return (
-                    <div>
-                      <img src={photo.url} onClick={this._imgClick} id={photo.id} className="tileSelected"/>;
-                    </div>
-                  );
-                }else {
-                  return (
-                    <div>
-                      <img src={photo.url} onClick={this._imgClick} id={photo.id}/>
-                    </div>
-                  );
-                }
+                return (<AlbumTab photo={photo}
+                                  selected = {this.state.selected}
+                        />)
               }.bind(this))
             }
-          </div>
+          </ul>
         </div>
       </div>
     );

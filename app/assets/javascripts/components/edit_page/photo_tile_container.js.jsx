@@ -20,9 +20,6 @@ var PhotoTileContainer = React.createClass({
                   photoSelected : PhotoStore.photoSelected(),
                          photos : PhotoStore.all()});
   },
-  _handleClick : function (e) {
-    PhotoActions.photoClicked(parseInt(e.currentTarget.id));
-  },
 
   render : function (){
     var state = this.state.mode === 'selected';
@@ -31,7 +28,7 @@ var PhotoTileContainer = React.createClass({
       var tiles = this.state.photos.map(function(photo){
         return (<PhotoTile photo={photo}
                            photoSelected = {this.state.photoSelected}
-                           />);
+                />);
       }.bind(this));
     }
 

@@ -56,6 +56,7 @@ PhotoActions = {
   },
 
   photoTileClicked : function (id) {
+    CommentUtil.fetchComments(id);
     AppDispatcher.dispatch ({
       actionType : PhotoConstants.TILE_CLICKED,
       id: id
