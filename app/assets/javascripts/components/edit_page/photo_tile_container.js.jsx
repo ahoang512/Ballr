@@ -28,25 +28,11 @@ var PhotoTileContainer = React.createClass({
     var state = this.state.mode === 'selected';
 
     if(this.state.photos.length !== 0){
-      var tiles =
-        this.state.photos.map(function(photo){
-          if (this.state.photoSelected.id === photo.id){
-            var selected = "selected";
-          }else{
-            var selected = "";
-          }
-          return (<li key={photo.id}
-                      id={photo.id}
-                      onClick={this._handleClick}
-                      className={selected}>
-
-                    <img src={photo.url}  className="photoTiles"/>
-                    <div className="group photoTileInfo">
-                        <h2>{photo.name}</h2>
-                    </div>
-
-                  </li>);
-        }.bind(this));
+      var tiles = this.state.photos.map(function(photo){
+        return (<PhotoTile photo={photo}
+                           photoSelected = {this.state.photoSelected}
+                           />);
+      }.bind(this));
     }
 
     return (

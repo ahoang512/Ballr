@@ -10,22 +10,22 @@ var PhotoItem = React.createClass({
   },
 
   componentDidMount : function () {
-    var photo = this.props.photo
-    var url = this.props.photo.url
+    var photo = this.props.photo;
+    var url = this.props.photo.url;
     this._updateState(photo, url);
   },
 
   componentWillReceiveProps : function (nextProps) {
-    var photo = nextProps.photo
-    var url = nextProps.photo.url
-    this._updateState(photo,url)
+    var photo = nextProps.photo;
+    var url = nextProps.photo.url;
+    this._updateState(photo,url);
   },
 
   _updateState : function (photo, url) {
-    var ext = url.substr(url.length - 3)
+    var ext = url.substr(url.length - 3);
 
     if (ext === "gif") {
-      var frame_url = url.replace("gif", "jpg")
+      var frame_url = url.replace("gif", "jpg");
       this.setState({
         gif : true,
         photo_url : photo.url,
