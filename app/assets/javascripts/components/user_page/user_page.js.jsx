@@ -24,8 +24,10 @@ var UserPage = React.createClass({
         <PhotoStream photos={this.state.photos}
            selected={this.props.location.query.photo_id}
            album={this.props.location.query.album_id}/>
-        <FullPhotoInfo/>
-        <Comments photo_id ={PhotoStore.showSelected()}/>
+        <div className="bottomStream">
+          <FullPhotoInfo/>
+          <Comments photo_id ={PhotoStore.showSelected()}/>
+        </div>
       </div>);
   }
 });

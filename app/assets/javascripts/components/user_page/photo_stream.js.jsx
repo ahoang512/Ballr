@@ -37,21 +37,15 @@ var PhotoStream = React.createClass({
 
   _onClick : function (e) {
     var idx = this._findIndex(this.state.selected);
-    switch (e.target.textContent){
-      case "←":
+    switch (e.target.className){
+      case "change l":
         PhotoActions.iterateClicked(-1, idx);
         break;
-      case "→":
+      case "change r":
         PhotoActions.iterateClicked(1, idx);
         break;
     }
   },
-
-  _imgClick : function(e) {
-    CommentUtil.fetchComments(e.target.id);
-    PhotoActions.photoTileClicked(parseInt(e.target.id));
-  },
-
 
   render : function () {
     var photos = this.props.photos;
@@ -60,28 +54,33 @@ var PhotoStream = React.createClass({
       var idx = this._findIndex(this.state.selected);
       if (typeof idx !== "undefined"){
         var url = photos[idx].url;
-        img = (<img src={url}></img>);
+        img = (<img src={url} className="image"></img>);
       }
     }
     return (
-      <div className="photoStream">
+      <div className="photoStream group">
         <div className="stream group">
-          <div className="change" onClick={this._onClick}>&#8592;</div>
+          <div className="change l group" onClick={this._onClick}>
+            <span className="left"></span>
+          </div>
           <div className="photo">
               {img}
+              <div id="albumPhotos">
+                <ul className="albumPhotosContainer">
+                  {
+                    this.props.photos.map(function(photo){
+                      return (<AlbumTab photo={photo}
+                                        selected = {this.state.selected}
+                              />)
+                    }.bind(this))
+                  }
+                </ul>
+              </div>
           </div>
-          <div className="change" onClick={this._onClick}>&#8594;</div>
-        </div>
-        <div className="albumPhotos">
-          <ul className="albumPhotosContainer">
-            {
-              this.props.photos.map(function(photo){
-                return (<AlbumTab photo={photo}
-                                  selected = {this.state.selected}
-                        />)
-              }.bind(this))
-            }
-          </ul>
+          <div className="change r" onClick={this._onClick}>
+          <span className="right"></span>
+          </div>
+
         </div>
       </div>
     );

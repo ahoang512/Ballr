@@ -4,10 +4,14 @@
 }
 
 .fullPhotoInfo {
+  background: white;
+  border-left: 2px #8c8888 solid;
   border-bottom: 2px #8c8888 solid;
+  border-right: 2px #8c8888 solid;
+  border-radius: 4px;
   font-size:  large;
   width: 800px;
-  height: 100%;
+  height: auto;
   margin: auto;
 }
 .fullPhotoInfo > div {
@@ -20,7 +24,7 @@
 
 
 .fullPhotoInfo h2 {
-  margin-left: 20px;
+  text-align: center;
   font-size: xx-large;
   color:  #0284cf;
   margin-bottom: 15px;
@@ -28,6 +32,10 @@
 
 .fullPhotoInfo h3 {
   margin-left: 20px;
+}
+
+.bottomStream {
+  background: white;
 }
 
 .ownerName {

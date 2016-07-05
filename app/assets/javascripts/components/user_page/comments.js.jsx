@@ -26,7 +26,7 @@ var Comments = React.createClass({
       return (<Comment comment={comment} />);
     });
     return (
-      <div className="commentsContainer">
+      <div className="commentsContainer group">
         {comments}
         <NewComment photo_id={this.props.photo_id}/>
       </div>

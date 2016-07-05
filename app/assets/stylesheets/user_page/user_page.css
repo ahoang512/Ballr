@@ -7,12 +7,14 @@
 }
 
 .photoStream {
-  /*height: 800px;*/
+  height: auto;
   background: #212124;
 }
 
 .photoStream .stream {
-  height: 625px;
+  overflow: hidden;
+  height: auto;
+  position: relative;
 }
 
 .photoStream .stream div {
@@ -21,30 +23,61 @@
 }
 
 .photoStream .stream .change {
+  position: absolute;
   width: 15%;
-  font-size: xx-large;
-  color: white;
-  line-height: 10;
-  text-align: center;
+  height: 100%;
+}
+
+.stream .left {
+  display: block;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 52px;
+  background: url(https://s.yimg.com/uy/build/images/sprites/icons-36c2f8d6.png) -410px -53px no-repeat;
+}
+
+.stream .right {
+  display: block;
+  position: absolute;
+  top: 45%;
+  right: 0%;
+  transform: translateY(-50%);
+  line-height: 15;
+  width: 32px;
+  height: 52px;
+  background: url(https://s.yimg.com/uy/build/images/sprites/icons-36c2f8d6.png) -410px 0px no-repeat;
+}
+
+.stream .l {
+  margin-left: 0%;
+}
+
+.stream .r {
+  margin-left: 85%;
 }
 
 .photoStream .stream .change:hover {
-  color: blue;
+  background: #1d3244;
   cursor: pointer;
 }
 
 
 
+
 .photoStream .stream .photo {
+  margin-left: 15%;
   width: 70%;
   text-align: center;
-  position: relative;
-
 }
 
-.photo img {
+.photo .image {
+  display: block;
+  margin: auto;
   width: 100%;
-  max-width: 900px;
+  max-width: 700px;
+  min-width: 600px;
   padding: 10px;
 }
 
@@ -52,19 +85,23 @@
   font-size: 15px;
 }
 
-.albumPhotos {
-  background: #212124;
-  text-align: center;
-}
 
 .albumPhotosContainer {
-  position: relative;
   background: #212124;
   margin-top: 100px;
-  width: 80%;
+  width: 100%;
   margin: auto;
   overflow: auto;
 
+}
+
+#albumPhotos {
+  margin: 0 auto;
+  height: 75px;
+  background: #212124;
+  text-align: center;
+  float: none;
+  overflow: overlay;
 }
 
 .albumPhotosContainer li {
