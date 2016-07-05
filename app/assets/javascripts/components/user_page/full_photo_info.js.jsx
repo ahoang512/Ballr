@@ -34,8 +34,8 @@ var FullPhotoInfo = React.createClass({
     if (selected > 0 && photos.length>0){
       var photo = this._findPhoto();
       var img = (<img src={photo.owner_url} className="photoOwner"/>);
-      var username = (<div className="ownerName">posted by: &nbsp;{photo.owner}</div>);
-      var name = photo.name;
+      var username = (<div className="userName">{photo.owner}</div>);
+      var photoName = photo.name;
       var albumName = photo.album;
     }
     return (
@@ -46,9 +46,9 @@ var FullPhotoInfo = React.createClass({
 
           </div>
           <div className="photoData">
-            <h2>{name}</h2>
-            <h3>album : {albumName}</h3>
-             {username}
+            {username}
+            <div id="photoName">{photoName}</div>
+            <div className="albumName">{albumName}</div>
           </div>
         </div>
       </div>

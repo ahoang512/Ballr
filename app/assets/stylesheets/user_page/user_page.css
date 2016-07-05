@@ -87,6 +87,7 @@
 
 
 .albumPhotosContainer {
+  height: 100%;
   background: #212124;
   margin-top: 100px;
   width: 100%;

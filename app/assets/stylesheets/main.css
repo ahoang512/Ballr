@@ -15,8 +15,9 @@ time, mark, audio, video {
  padding: 0;
  border: 0;
  font-size: 100%;
- font-family: 'Roboto', sans-serif;
- font-weight: 400;
+ /*font-family: 'Roboto', sans-serif;*/
+ font-family: "Proxima Nova","helvetica neue",helvetica,arial,sans-serif;
+ /*font-weight: 400;*/
  vertical-align: baseline;
  list-style-type: none;
 }
