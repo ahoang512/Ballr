@@ -71,6 +71,7 @@ var PhotoStream = React.createClass({
                     this.props.photos.map(function(photo){
                       return (<AlbumTab photo={photo}
                                         selected = {this.state.selected}
+                                        key={photo.id}
                               />)
                     }.bind(this))
                   }

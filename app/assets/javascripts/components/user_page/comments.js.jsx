@@ -23,7 +23,7 @@ var Comments = React.createClass({
 
   render : function () {
     var comments = this.state.comments.map(function(comment){
-      return (<Comment comment={comment} />);
+      return (<Comment comment={comment} key={comment.id} />);
     });
     return (
       <div className="commentsContainer group">
@@ -85,7 +85,6 @@ var Comment = React.createClass({
   // this.props.comment
   render : function () {
     var comment = this.props.comment;
-    console.log(comment.text)
     return (
       <div className="comment">
         <img src={comment.user_photo}/>
