@@ -1,7 +1,7 @@
 .userPage {
-  background: #f3f5f6;
+  background: white;
   width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 86px);
   margin-top: 46px;
   overflow: auto;
 }
